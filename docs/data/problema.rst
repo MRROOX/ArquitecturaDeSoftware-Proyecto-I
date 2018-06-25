@@ -17,10 +17,8 @@ respondidas y que sean visibles para todos los usuarios.
 AD-HOC Methodology:
 -------------------
 
-¿Qué es GitHub?
+¿Qué es la Metodología AD-HOC?
 ---------------
-
-GitHub es una plataforma de **desarrollo colaborativo de software** para alojar proyectos utilizando el sistema de control de versiones `Git <http://es.wikipedia.org/wiki/Git>`_.
 
 .. image:: images/AD_HOC.jpg
     :scale: 30 %
