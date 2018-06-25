@@ -1,13 +1,15 @@
 
 Documentación - Proyecto de Arquitectura I 
 =================================
+
+
     
 Índice:
 -------
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
    
     data/introduccion.rst
-    data/planteamientoproblema.rst
+    data/problema.rst
