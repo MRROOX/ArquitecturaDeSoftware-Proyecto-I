@@ -1,8 +1,10 @@
-Planteamiento del Problema
+Desarrollo
 =================================
 
+Planteamiento del Problema 
+--------------------------
+
 Enunciado:
------------
 
 La complejidad inherente de los actuales sistemas hace necesario diseñar una apropiada
 arquitectura para los sistemas, de modo de enfrentar los diversos cambios requeridos, así
@@ -17,15 +19,11 @@ respondidas y que sean visibles para todos los usuarios.
 AD-HOC Methodology:
 -------------------
 
-¿Qué es la Metodología AD-HOC?
----------------
-
 .. image:: images/AD_HOC.jpg
     :scale: 30 %
     :align: center
 
-.. note:: 
-    El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago.
+
 
 
 
