@@ -14,4 +14,26 @@ aplicación, pueda ser vista desde un equipo móvil (android), pero en este caso
 enviar preguntas específicas que deben ser almacenadas en el sitio web, para ser
 respondidas y que sean visibles para todos los usuarios.
 
+AD-HOC Methodology:
+-------------------
+
+¿Qué es GitHub?
+---------------
+
+GitHub es una plataforma de **desarrollo colaborativo de software** para alojar proyectos utilizando el sistema de control de versiones `Git <http://es.wikipedia.org/wiki/Git>`_.
+
+.. image:: data/images/Git.png
+    :scale: 30 %
+    :align: center
+
+.. note:: 
+    El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago.
+
+
+
+
+
+
+
+
 
