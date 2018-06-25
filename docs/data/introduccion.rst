@@ -1,7 +1,7 @@
-.. Conociendo GitHub documentation master file, created by
-   sphinx-quickstart on Wed Oct  3 20:54:28 2012.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Introducción
 =================================
+
+En la actualidad los sistemas informaticos han ido adquiriendo nuevas complejidades y se vuelve esencial diseñar arquitecturas apropiadas para enfrentar los diversos cambios requeridos en su implementacion, asi tambien los requisitos funcionales del sistemas y los requisitos no funcionales propios de cada uno de los stakeholders.
+
+
+
