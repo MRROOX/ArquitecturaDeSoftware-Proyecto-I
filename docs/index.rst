@@ -13,4 +13,5 @@ Documentación - Proyecto de Arquitectura I
    
     data/introduccion.rst
     data/problema.rst
-    data/methodology.rst
+    data/diseno.rst
+    data/imple.rst
