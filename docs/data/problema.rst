@@ -22,7 +22,7 @@ AD-HOC Methodology:
 
 GitHub es una plataforma de **desarrollo colaborativo de software** para alojar proyectos utilizando el sistema de control de versiones `Git <http://es.wikipedia.org/wiki/Git>`_.
 
-.. image:: data/images/Visual Ad-hoc Methodology.jpg
+.. image:: data/images/AD-HOC.jpg
     :scale: 30 %
     :align: center
 
