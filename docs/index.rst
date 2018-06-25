@@ -14,4 +14,4 @@ Documentación - Proyecto de Arquitectura I
     :maxdepth: 2
    
     data/introduccion.rst
-    data/dinamica-de-uso.rst
+    data/planteamientoproblema.rst
