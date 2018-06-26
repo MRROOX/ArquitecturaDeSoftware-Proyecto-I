@@ -3,11 +3,11 @@ Propósito del Sistema
 problem description, system interface, non-functional requierements
 
 
-*Contexto*
+Contexto
 -------------
 
 
-Descripción del Problema
+*Descripción del Problema
 -------------------------
 
 La complejidad inherente de los actuales sistemas hace necesario diseñar una apropiada
