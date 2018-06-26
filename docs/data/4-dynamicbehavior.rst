@@ -1,0 +1,1 @@
+How the architecture works
