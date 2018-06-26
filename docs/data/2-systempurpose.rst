@@ -8,7 +8,7 @@ Contexto
 
 
 *Descripción del Problema
--------------------------
+
 
 La complejidad inherente de los actuales sistemas hace necesario diseñar una apropiada
 arquitectura para los sistemas, de modo de enfrentar los diversos cambios requeridos, así
