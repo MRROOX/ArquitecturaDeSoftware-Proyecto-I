@@ -11,12 +11,12 @@ Documentación - Proyecto de Arquitectura I
 .. toctree::
     :maxdepth: 3
    
-    data/introduccion.rst
-    data/systempurpose.rst
-    data/structure.rst
-    data/dynamicbehavior.rst
-    data/mlogical2otherviewssection.rst
-    data/conceptualframework.rst
-    data/conclusion.rst
+    data/1-introduccion.rst
+    data/2-systempurpose.rst
+    data/3-structure.rst
+    data/4-dynamicbehavior.rst
+    data/5-mlogical2otherviewssection.rst
+    data/6-conceptualframework.rst
+    data/7-conclusion.rst
     
 
