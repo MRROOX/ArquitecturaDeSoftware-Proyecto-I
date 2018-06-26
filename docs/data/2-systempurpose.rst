@@ -2,6 +2,11 @@ Propósito del Sistema
 =========================
 problem description, system interface, non-functional requierements
 
+
+*Contexto*
+-------------
+
+
 Descripción del Problema
 -------------------------
 
@@ -14,6 +19,8 @@ visualizar en forma gráfica las temperaturas durante el dia. Se requiere ademá
 aplicación, pueda ser vista desde un equipo móvil (android), pero en este caso, se requiere
 enviar preguntas específicas que deben ser almacenadas en el sitio web, para ser
 respondidas y que sean visibles para todos los usuarios.
+
+
 
 
 
