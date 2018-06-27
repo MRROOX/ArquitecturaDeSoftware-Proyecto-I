@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.Respuesta" table="respuesta" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<many-to-one name="usuario" column="usuario_id" class="model.Usuario" cascade="save-update,lock" unique="true" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<property name="created_at" column="created_at" type="timestamp" not-null="true" lazy="false"/>
+		<property name="respuesta" column="respuesta" type="integer" not-null="true" lazy="false"/>
+		<property name="aprobado" column="aprobado" type="boolean" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>
