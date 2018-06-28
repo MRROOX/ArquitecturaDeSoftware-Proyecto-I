@@ -28,16 +28,20 @@ Usuario Moderador: Es aquel usuario que autoriza o niega las preguntas enviadas 
 Se definen los objetivos
 -------------------------
 De acuerdo a cada uno de los usuarios identificados los los objetivos que esperan cumplir cada uno de ellos.
+
 **Usuario Web**
+
 Objetivos:
 Conocer datos de parámetros medioambientales.
 Proveer de ayuda a las preguntas de usuarios móviles.
 
 **Usuario Movil**
+
 Objetivos:
 Obtener información de temperatura de diferentes situaciones.
 
 **Usuario Moderador**
+
 Objetivos:
 Autorización de la publicación de mensajes.
 
@@ -45,33 +49,39 @@ Autorización de la publicación de mensajes.
 
 Histoias de Usuario
 -------------------
+
+Luego de realizar conversaciones con los stackeholder se definen y se eligen las historias de usuarios para ser implementadas en el sistema.
+
 Yo como <Usuario> quiero <hacer alguna acción> que me entregue <algo>.
 
 **Usuario Web**
+
 Visualizar la temperatura y humedad actuales.Vis
 Visualizar un mapa de temperaturas maximas y minimas dentro de un intervalo dado.
 Visualizar en gráficos los valores históricos de temperatura y humedad para poder comparar dentro de un intervalo específico de fechas.
 Permitir responder a las preguntas del usuario móvil.
 
 **Usuario Móvil**
+
 Yo como usuario móvil quiero poder enviar preguntas acerca del clima.
 Yo como usuario móvil quiero saber cuando mis preguntas sean aprobadas para ser publicadas.
 Yo como usuario móvil quiero ser notificado cuando mis preguntas sean respondidas.
 Yo como usuario móvil quiero visualizar las respuestas a mis preguntas.
 
 **Moderador**
+
 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una notificación).
 Yo como usuario moderador quiero aprobar preguntas de usuario móvil.
 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar su contenido.
-
-
-Seleccíon de Historias de Usuarios
-----------------------------------
 
 
 
 Mockups
 -------
 
+A continuacion se presentan los mockups diseñados de acuerdo a una posterior discucion con el equipo de desarrollo, de esta forma.
 
+.. image:: images/AD_HOC.jpg
+    :scale: 30 %
+    :align: center
 
