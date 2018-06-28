@@ -1,6 +1,11 @@
 Siguiendo la Metodología AD-HOC
 =================================
 
+.. image:: images/AD_HOC.jpg
+    :scale: 30 %
+    :align: center
+
+
 Vision y Objetivo
 ------------------
 La complejidad inherente de los actuales sistemas hace necesario diseñar una apropiada
