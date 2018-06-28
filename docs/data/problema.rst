@@ -1,8 +1,11 @@
-Planteamiento del Problema
+Siguiendo la Metodología AD-HOC
 =================================
 
-Enunciado:
+
+Planteamiento del Problema
 --------------------------
+
+**Enunciado:**
 
 La complejidad inherente de los actuales sistemas hace necesario diseñar una apropiada
 arquitectura para los sistemas, de modo de enfrentar los diversos cambios requeridos, así
@@ -13,3 +16,21 @@ visualizar en forma gráfica las temperaturas durante el dia. Se requiere ademá
 aplicación, pueda ser vista desde un equipo móvil (android), pero en este caso, se requiere
 enviar preguntas específicas que deben ser almacenadas en el sitio web, para ser
 respondidas y que sean visibles para todos los usuarios.
+
+Vision y Objetivos
+------------------
+
+
+
+Histoias de Usuario
+-------------------
+
+
+Seleccíon de Historias de Usuarios
+----------------------------------
+
+Mockups
+-------
+
+
+
