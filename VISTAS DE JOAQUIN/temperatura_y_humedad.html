@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-light p-4">
+        <h4 class="text-white">Collapsed content</h4>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="row">
+      <nav class="sidebar col-sm-4 col-md-2 col-lg-2 col-md-2 bg-faded pt-0 mt-3 pr-0 pl-0">
+        <ul class="nav flex-column sidebar-ul border-right" style="width: 100%;">
+
+          <li class="nav-item">
+            <span class="ml-2">Usuario</span>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link sidebar-link">Temperatura y humedad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sidebar-link">Comparar Temperaturas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sidebar-link">Preguntas</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="col-sm-8 col-md-10 col-lg-10">
+          <div class="ml-4 mr-5">
+            <h2 class="mb-4 mt-3">Temperaturas y humedad</h2>
+            <form method="post" action="#">
+              <p>Intervalo</p>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group row">
+                    <label for="desde" class="col-sm-2 col-form-label">Del</label>
+                    <div class="col-sm-10">
+                      <div class="input-group mb-2">
+                        <input type="date" class="form-control d-inline" id="desde" placeholder="">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group row">
+                    <label for="hasta" class="col-sm-2 col-form-label">al</label>
+                    <div class="col-sm-10">
+                      <div class="input-group mb-2">
+                        <input type="date" class="form-control" id="hasta" placeholder="">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-right">
+                <button class="btn btn-outline-primary">Visualizar</button>
+              </div>
+            </form>
+             <hr>
+
+              <div class="row">
+                <div class="text-left col-md-6 mb-4">
+                  <img class="img-fluid" src="http://via.placeholder.com/700x450?text=GRAFICO+AQUI">
+                </div>
+                <div class="col-md-4">
+                  <p>Humedad (min):</p>
+                  <p>Humedad (max):</p>
+                  <p>Temperatura (min):</p>
+                  <p>Temperatura (max):</p>
+                </div>
+
+              </div>
+
+
+
+
+
+          </div>
+
+      </div>
+  </div>
+</div>
+</body>
+</html> 

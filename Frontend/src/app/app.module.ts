@@ -13,6 +13,7 @@ import { GLOBAL } from './services/global';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginGuard } from './guards/login.guard';
+import { RegisterComponent } from './components/register/register.component';
 
 export function getToken(): string {
 
@@ -39,7 +40,8 @@ const jwtConf: JwtModuleOptions = {
 @NgModule({
     declarations: [
         AppComponent,
-        LoginComponent
+        LoginComponent,
+        RegisterComponent
     ],
     imports: [
         BrowserModule,
