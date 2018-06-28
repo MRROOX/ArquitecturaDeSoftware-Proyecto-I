@@ -32,17 +32,21 @@ De acuerdo a cada uno de los usuarios identificados los los objetivos que espera
 **Usuario Web**
 
 Objetivos:
+
 Conocer datos de parámetros medioambientales.
+
 Proveer de ayuda a las preguntas de usuarios móviles.
 
 **Usuario Movil**
 
 Objetivos:
+
 Obtener información de temperatura de diferentes situaciones.
 
 **Usuario Moderador**
 
 Objetivos:
+
 Autorización de la publicación de mensajes.
 
 
@@ -56,23 +60,32 @@ Yo como <Usuario> quiero <hacer alguna acción> que me entregue <algo>.
 
 **Usuario Web**
 
-Visualizar la temperatura y humedad actuales.Vis
+Visualizar la temperatura y humedad actuales.
+
 Visualizar un mapa de temperaturas maximas y minimas dentro de un intervalo dado.
+
 Visualizar en gráficos los valores históricos de temperatura y humedad para poder comparar dentro de un intervalo específico de fechas.
+
 Permitir responder a las preguntas del usuario móvil.
 
 **Usuario Móvil**
 
 Yo como usuario móvil quiero poder enviar preguntas acerca del clima.
+
 Yo como usuario móvil quiero saber cuando mis preguntas sean aprobadas para ser publicadas.
+
 Yo como usuario móvil quiero ser notificado cuando mis preguntas sean respondidas.
+
 Yo como usuario móvil quiero visualizar las respuestas a mis preguntas.
 
 **Moderador**
 
 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una notificación).
+
 Yo como usuario moderador quiero aprobar preguntas de usuario móvil.
+
 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar su contenido.
+
 
 
 
