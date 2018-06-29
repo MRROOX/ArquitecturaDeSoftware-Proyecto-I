@@ -45,7 +45,7 @@ public class UserController {
         return 2;
     }
 
-    @GetMapping("/{usuarioid}")
+    @GetMapping("usuario/{id}")
     public Usuario show(@PathVariable(value = "usuarioid") int id) {
 
         return new Usuario();
