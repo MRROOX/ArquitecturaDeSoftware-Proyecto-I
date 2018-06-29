@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+                <h4 class="text-white">Collapsed content</h4>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+        </div>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation" (click)="toggleSidenav()">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="row">
+        <nav *ngIf="sidenav" class="sidebar col-sm-4 col-md-2 col-lg-2 col-md-2 bg-faded pt-0 mt-3 pr-0 pl-0">
+            <ul class="nav flex-column sidebar-ul border-right" style="width: 100%;">
+
+                <li class="nav-item">
+                    <span class="ml-2">
+                        <strong>Usuario</strong>
+                    </span>
+                </li>
+
+                <li class="nav-item">
+                    <a [routerLink]="['medidas']" class="nav-link sidebar-link">Temperatura y humedad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar-link">Comparar Temperaturas</a>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['responderpreguntas']" class="nav-link sidebar-link">Preguntas</a>
+                </li>
+                <li class="nav-item">
+                    <hr>
+                </li>
+                <li class="nav-item">
+                    <span class="ml-2">
+                        <strong>Moderar</strong>
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['aceptarpreguntas']" class="nav-link sidebar-link">Preguntas y comentarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar-link">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <hr>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebar-link">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="col-sm-8 col-md-10 col-lg-10">
+            <div class="ml-4 mr-5">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </div>
+</div>

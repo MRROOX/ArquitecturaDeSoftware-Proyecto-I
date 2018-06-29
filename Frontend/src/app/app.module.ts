@@ -3,25 +3,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
 import { NgModule } from '@angular/core';
-
 import { ModeradorModule } from './modules/ModeradorModule/moderador.module';
 import { UsuarioModule } from './modules/UsuarioModule/usuario.module';
-
 import { routing, appRoutingProviders } from './app.routing';
 import { GLOBAL } from './services/global';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { LoginGuard } from './guards/login.guard';
 import { RegisterComponent } from './components/register/register.component';
+import { ResponderPreguntasComponent } from './components/responderpreguntas/responderpreguntas.component';
+import { MedidasComponent } from './components/medidas/medidas.component';
 
 export function getToken(): string {
 
-    let token: any = localStorage.getItem('token');
+    let token: any = localStorage.getItem('aqct_token');
 
     if (token != null) {
 
-        return JSON.parse(localStorage.getItem('token'));
+        return JSON.parse(localStorage.getItem('aqct_token'));
 
     }
 
@@ -41,7 +40,11 @@ const jwtConf: JwtModuleOptions = {
     declarations: [
         AppComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+
+        // Componentes compartidos
+        ResponderPreguntasComponent,
+        MedidasComponent
     ],
     imports: [
         BrowserModule,

@@ -5,7 +5,7 @@ import { AuthService } from "../services/auth.service";
 @Injectable({
     providedIn: 'root'
 })
-export class LoginGuard implements CanActivate {
+export class UsuarioGuard implements CanActivate {
 
     public constructor(
         private router: Router,
@@ -16,7 +16,7 @@ export class LoginGuard implements CanActivate {
 
     public canActivate(): boolean {
 
-        return !this.authService.isAuthenticated();
+        return this.authService.isAuthenticated();
         
     }
 
