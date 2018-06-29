@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import model.Usuario;
 import model.UsuarioDAO;
 import org.orm.PersistentException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,30 +21,34 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * @author Batman
  */
-@RestController("usuario")
+@RestController
 public class UserController {
-    
-    @PostMapping
-    public int store(@RequestParam Usuario usuario){
-        
+
+    private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+    @PostMapping("usuario")
+    public int store(@RequestParam Usuario usuario) {
+
         try {
-            if(UsuarioDAO.save(usuario)){
+
+            // Encriptar contraseña de usuario
+            usuario.setPassword(this.passwordEncoder.encode(usuario.getPassword()));
+
+            if (UsuarioDAO.save(usuario)) {
                 return 1;
-            }else{            
+            } else {
                 return 0;
             }
         } catch (PersistentException ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return 2;    
+        return 2;
     }
-    
-    
+
     @GetMapping("/{usuarioid}")
-    public Usuario show(@PathVariable(value = "usuarioid") int id){
-        
-        
+    public Usuario show(@PathVariable(value = "usuarioid") int id) {
+
         return new Usuario();
     }
-    
+
 }
