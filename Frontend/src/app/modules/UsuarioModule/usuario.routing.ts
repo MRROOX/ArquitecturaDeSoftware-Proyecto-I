@@ -4,6 +4,7 @@ import { UsuarioComponent } from './usuario.component';
 import { UsuarioGuard } from '../../guards/usuario.guard';
 import { ResponderPreguntasComponent } from '../../components/responderpreguntas/responderpreguntas.component';
 import { MedidasComponent } from '../../components/medidas/medidas.component';
+import { CompararMedidasComponent } from '../../components/compararmedidas/compararmedidas.component';
 
 const appRoutes: Routes = [
     {
@@ -12,13 +13,21 @@ const appRoutes: Routes = [
         //canActivate: [UsuarioGuard],
         children: [
             {
-                path: 'responderpreguntas',
-                component: ResponderPreguntasComponent
+                path: '',
+                component: MedidasComponent
             },
             {
                 path: 'medidas',
                 component: MedidasComponent
-            }
+            },
+            {
+                path: 'compararmedidas',
+                component: CompararMedidasComponent
+            },
+            {
+                path: 'responderpreguntas',
+                component: ResponderPreguntasComponent
+            },
         ]
     }
 ];

@@ -5,6 +5,8 @@ import { ModeradorGuard } from '../../guards/moderador.guard';
 import { AceptarPreguntasComponent } from './components/aceptarpreguntas/aceptarpreguntas.component';
 import { ResponderPreguntasComponent } from '../../components/responderpreguntas/responderpreguntas.component';
 import { MedidasComponent } from '../../components/medidas/medidas.component';
+import { CompararMedidasComponent } from '../../components/compararmedidas/compararmedidas.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 const appRoutes: Routes = [
     {
@@ -13,16 +15,28 @@ const appRoutes: Routes = [
         //canActivate: [ModeradorGuard]
         children: [
             {
-                path: 'aceptarpreguntas',
-                component: AceptarPreguntasComponent
+                path: '',
+                component: MedidasComponent
+            },
+            {
+                path: 'medidas',
+                component: MedidasComponent
+            },
+            {
+                path: 'compararmedidas',
+                component: CompararMedidasComponent
             },
             {
                 path: 'responderpreguntas',
                 component: ResponderPreguntasComponent
             },
             {
-                path: 'medidas',
-                component: MedidasComponent
+                path: 'aceptarpreguntas',
+                component: AceptarPreguntasComponent
+            },
+            {
+                path: 'usuarios',
+                component: UsuariosComponent
             }
         ]
     }

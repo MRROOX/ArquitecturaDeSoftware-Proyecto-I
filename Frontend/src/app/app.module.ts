@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResponderPreguntasComponent } from './components/responderpreguntas/responderpreguntas.component';
 import { MedidasComponent } from './components/medidas/medidas.component';
+import { CompararMedidasComponent } from './components/compararmedidas/compararmedidas.component';
 
 export function getToken(): string {
 
@@ -44,7 +45,8 @@ const jwtConf: JwtModuleOptions = {
 
         // Componentes compartidos
         ResponderPreguntasComponent,
-        MedidasComponent
+        MedidasComponent,
+        CompararMedidasComponent
     ],
     imports: [
         BrowserModule,

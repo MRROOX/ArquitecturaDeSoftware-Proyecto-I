@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModeradorComponent } from './moderador.component';
 import { appRoutingProviders, routing } from './moderador.routing';
 import { AceptarPreguntasComponent } from './components/aceptarpreguntas/aceptarpreguntas.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 @NgModule({
     declarations: [
         ModeradorComponent,
-        AceptarPreguntasComponent
+        AceptarPreguntasComponent,
+        UsuariosComponent
     ],
     imports: [
         BrowserModule,
