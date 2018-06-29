@@ -1,0 +1,1 @@
+Controlador de Raspberry Pi 3 Modelo B, para el sensor de temperatura y humedad DHT22.
