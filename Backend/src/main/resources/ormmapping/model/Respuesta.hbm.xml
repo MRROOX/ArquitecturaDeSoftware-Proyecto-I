@@ -10,10 +10,10 @@ License Type: Academic
 			<generator class="native">
 			</generator>
 		</id>
-		<many-to-one name="usuario" column="usuario_id" class="model.Usuario" cascade="save-update,lock" unique="true" not-null="true" lazy="proxy" access="field">
+		<many-to-one name="usuario" cascade="lock" column="usuario_id" class="model.Usuario" not-null="true" lazy="proxy" access="field">
 		</many-to-one>
 		<property name="created_at" column="created_at" type="timestamp" not-null="true" lazy="false"/>
-		<property name="respuesta" column="respuesta" type="integer" not-null="true" lazy="false"/>
+		<property name="respuesta" column="respuesta" type="text" not-null="true" lazy="false"/>
 		<property name="aprobado" column="aprobado" type="boolean" not-null="true" lazy="false"/>
 	</class>
 </hibernate-mapping>

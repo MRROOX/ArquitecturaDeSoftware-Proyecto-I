@@ -23,7 +23,7 @@ public class RespuestaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression usuarioId;
 	public final AssociationExpression usuario;
 	public final TimestampExpression created_at;
-	public final IntegerExpression respuesta;
+	public final StringExpression respuesta;
 	public final BooleanExpression aprobado;
 	
 	public RespuestaCriteria(Criteria criteria) {
@@ -32,7 +32,7 @@ public class RespuestaCriteria extends AbstractORMCriteria {
 		usuarioId = new IntegerExpression("usuario.id", this);
 		usuario = new AssociationExpression("usuario", this);
 		created_at = new TimestampExpression("created_at", this);
-		respuesta = new IntegerExpression("respuesta", this);
+		respuesta = new StringExpression("respuesta", this);
 		aprobado = new BooleanExpression("aprobado", this);
 	}
 	

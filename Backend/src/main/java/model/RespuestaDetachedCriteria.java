@@ -23,7 +23,7 @@ public class RespuestaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression usuarioId;
 	public final AssociationExpression usuario;
 	public final TimestampExpression created_at;
-	public final IntegerExpression respuesta;
+	public final StringExpression respuesta;
 	public final BooleanExpression aprobado;
 	
 	public RespuestaDetachedCriteria() {
@@ -32,7 +32,7 @@ public class RespuestaDetachedCriteria extends AbstractORMDetachedCriteria {
 		usuarioId = new IntegerExpression("usuario.id", this.getDetachedCriteria());
 		usuario = new AssociationExpression("usuario", this.getDetachedCriteria());
 		created_at = new TimestampExpression("created_at", this.getDetachedCriteria());
-		respuesta = new IntegerExpression("respuesta", this.getDetachedCriteria());
+		respuesta = new StringExpression("respuesta", this.getDetachedCriteria());
 		aprobado = new BooleanExpression("aprobado", this.getDetachedCriteria());
 	}
 	
@@ -42,7 +42,7 @@ public class RespuestaDetachedCriteria extends AbstractORMDetachedCriteria {
 		usuarioId = new IntegerExpression("usuario.id", this.getDetachedCriteria());
 		usuario = new AssociationExpression("usuario", this.getDetachedCriteria());
 		created_at = new TimestampExpression("created_at", this.getDetachedCriteria());
-		respuesta = new IntegerExpression("respuesta", this.getDetachedCriteria());
+		respuesta = new StringExpression("respuesta", this.getDetachedCriteria());
 		aprobado = new BooleanExpression("aprobado", this.getDetachedCriteria());
 	}
 	

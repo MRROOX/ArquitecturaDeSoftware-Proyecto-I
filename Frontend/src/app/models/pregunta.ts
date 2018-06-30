@@ -1,21 +1,17 @@
-import { Rol } from "./rol";
 
-export class Usuario {
+export class Pregunta {
 
     public id: number;
     public created_at: Date;
-    public nombre: string;
-    public password: string;
-    public correo: string;
-
-    public rol: Rol;
+    public pregunta: string;
+    public descripcion: string;
+    public aprobado: boolean;
 
     public constructor(json?: any) {
 
         Object.assign(this, json);
 
         if (this.created_at) { this.created_at = new Date(this.created_at) };
-        if (this.rol) { this.rol = new Rol(this.rol) };
 
     }
 
@@ -23,9 +19,9 @@ export class Usuario {
         return {
             id: this.id,
             created_at: this.created_at,
-            nombre: this.nombre,
-            password: this.password,
-            correo: this.correo
+            pregunta: this.pregunta,
+            descripcion: this.descripcion,
+            aprobado: this.aprobado
         };
     }
 

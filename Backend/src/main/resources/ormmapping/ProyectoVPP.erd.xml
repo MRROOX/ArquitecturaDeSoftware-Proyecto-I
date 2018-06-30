@@ -247,7 +247,7 @@
     <Column name="respuesta">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>9</Type>
+      <Type>34</Type>
       <Length>0</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>

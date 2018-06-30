@@ -23,7 +23,7 @@ public class Respuesta {
 	
 	private java.sql.Timestamp created_at;
 	
-	private int respuesta;
+	private String respuesta;
 	
 	private boolean aprobado;
 	
@@ -47,11 +47,11 @@ public class Respuesta {
 		return created_at;
 	}
 	
-	public void setRespuesta(int value) {
+	public void setRespuesta(String value) {
 		this.respuesta = value;
 	}
 	
-	public int getRespuesta() {
+	public String getRespuesta() {
 		return respuesta;
 	}
 	
