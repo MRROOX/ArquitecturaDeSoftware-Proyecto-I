@@ -16,7 +16,7 @@ License Type: Academic
 		<property name="pregunta" column="pregunta" type="string" length="255" not-null="true" lazy="false"/>
 		<property name="descripcion" column="descripcion" type="text" not-null="true" lazy="false"/>
 		<property name="aprobado" column="aprobado" type="boolean" not-null="true" lazy="false"/>
-		<set name="ORM_Respuesta" lazy="true" cascade="save-update,lock" inverse="false">
+		<set name="ORM_Respuestas" lazy="true" cascade="save-update,lock" inverse="false">
 			<key column="pregunta_id" not-null="true"/>
 			<one-to-many class="model.Respuesta"/>
 		</set>

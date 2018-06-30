@@ -22,14 +22,14 @@ public class SensorCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id;
 	public final StringExpression direccion;
 	public final StringExpression ciudad;
-	public final CollectionExpression medida;
+	public final CollectionExpression medidas;
 	
 	public SensorCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		direccion = new StringExpression("direccion", this);
 		ciudad = new StringExpression("ciudad", this);
-		medida = new CollectionExpression("ORM_Medida", this);
+		medidas = new CollectionExpression("ORM_Medidas", this);
 	}
 	
 	public SensorCriteria(PersistentSession session) {
@@ -40,8 +40,8 @@ public class SensorCriteria extends AbstractORMCriteria {
 		this(ProyectoVPPPersistentManager.instance().getSession());
 	}
 	
-	public MedidaCriteria createMedidaCriteria() {
-		return new MedidaCriteria(createCriteria("ORM_Medida"));
+	public MedidaCriteria createMedidasCriteria() {
+		return new MedidaCriteria(createCriteria("ORM_Medidas"));
 	}
 	
 	public Sensor uniqueSensor() {

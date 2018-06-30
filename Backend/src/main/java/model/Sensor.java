@@ -18,8 +18,8 @@ public class Sensor {
 	}
 	
 	private java.util.Set this_getSet (int key) {
-		if (key == ORMConstants.KEY_SENSOR_MEDIDA) {
-			return ORM_medida;
+		if (key == ORMConstants.KEY_SENSOR_MEDIDAS) {
+			return ORM_medidas;
 		}
 		
 		return null;
@@ -38,7 +38,7 @@ public class Sensor {
 	
 	private String ciudad;
 	
-	private java.util.Set ORM_medida = new java.util.HashSet();
+	private java.util.Set ORM_medidas = new java.util.HashSet();
 	
 	private void setId(int value) {
 		this.id = value;
@@ -68,15 +68,15 @@ public class Sensor {
 		return ciudad;
 	}
 	
-	private void setORM_Medida(java.util.Set value) {
-		this.ORM_medida = value;
+	private void setORM_Medidas(java.util.Set value) {
+		this.ORM_medidas = value;
 	}
 	
-	private java.util.Set getORM_Medida() {
-		return ORM_medida;
+	private java.util.Set getORM_Medidas() {
+		return ORM_medidas;
 	}
 	
-	public final model.MedidaSetCollection medida = new model.MedidaSetCollection(this, _ormAdapter, ORMConstants.KEY_SENSOR_MEDIDA, ORMConstants.KEY_MEDIDA_SENSOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final model.MedidaSetCollection medidas = new model.MedidaSetCollection(this, _ormAdapter, ORMConstants.KEY_SENSOR_MEDIDAS, ORMConstants.KEY_MEDIDA_SENSOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

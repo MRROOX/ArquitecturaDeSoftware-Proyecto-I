@@ -18,8 +18,8 @@ public class Pregunta {
 	}
 	
 	private java.util.Set this_getSet (int key) {
-		if (key == ORMConstants.KEY_PREGUNTA_RESPUESTA) {
-			return ORM_respuesta;
+		if (key == ORMConstants.KEY_PREGUNTA_RESPUESTAS) {
+			return ORM_respuestas;
 		}
 		
 		return null;
@@ -54,7 +54,7 @@ public class Pregunta {
 	
 	private boolean aprobado;
 	
-	private java.util.Set ORM_respuesta = new java.util.HashSet();
+	private java.util.Set ORM_respuestas = new java.util.HashSet();
 	
 	private void setId(int value) {
 		this.id = value;
@@ -124,15 +124,15 @@ public class Pregunta {
 		return usuario;
 	}
 	
-	private void setORM_Respuesta(java.util.Set value) {
-		this.ORM_respuesta = value;
+	private void setORM_Respuestas(java.util.Set value) {
+		this.ORM_respuestas = value;
 	}
 	
-	private java.util.Set getORM_Respuesta() {
-		return ORM_respuesta;
+	private java.util.Set getORM_Respuestas() {
+		return ORM_respuestas;
 	}
 	
-	public final model.RespuestaSetCollection respuesta = new model.RespuestaSetCollection(this, _ormAdapter, ORMConstants.KEY_PREGUNTA_RESPUESTA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final model.RespuestaSetCollection respuestas = new model.RespuestaSetCollection(this, _ormAdapter, ORMConstants.KEY_PREGUNTA_RESPUESTAS, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

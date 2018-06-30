@@ -12,7 +12,7 @@ License Type: Academic
 		</id>
 		<property name="direccion" column="direccion" type="string" length="50" not-null="true" lazy="false"/>
 		<property name="ciudad" column="ciudad" type="string" length="50" not-null="true" lazy="false"/>
-		<set name="ORM_Medida" lazy="true" cascade="save-update,lock" inverse="true">
+		<set name="ORM_Medidas" lazy="true" cascade="save-update,lock" inverse="true">
 			<key column="sensor_id" not-null="true"/>
 			<one-to-many class="model.Medida"/>
 		</set>

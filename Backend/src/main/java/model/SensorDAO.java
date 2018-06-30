@@ -323,9 +323,9 @@ public class SensorDAO {
 	
 	public static boolean deleteAndDissociate(model.Sensor sensor)throws PersistentException {
 		try {
-			model.Medida[] lMedidas = sensor.medida.toArray();
-			for(int i = 0; i < lMedidas.length; i++) {
-				lMedidas[i].setSensor(null);
+			model.Medida[] lMedidass = sensor.medidas.toArray();
+			for(int i = 0; i < lMedidass.length; i++) {
+				lMedidass[i].setSensor(null);
 			}
 			return delete(sensor);
 		}
@@ -337,9 +337,9 @@ public class SensorDAO {
 	
 	public static boolean deleteAndDissociate(model.Sensor sensor, org.orm.PersistentSession session)throws PersistentException {
 		try {
-			model.Medida[] lMedidas = sensor.medida.toArray();
-			for(int i = 0; i < lMedidas.length; i++) {
-				lMedidas[i].setSensor(null);
+			model.Medida[] lMedidass = sensor.medidas.toArray();
+			for(int i = 0; i < lMedidass.length; i++) {
+				lMedidass[i].setSensor(null);
 			}
 			try {
 				session.delete(sensor);

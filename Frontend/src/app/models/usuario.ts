@@ -1,4 +1,5 @@
 import { Rol } from "./rol";
+import { Pregunta } from "./pregunta";
 
 export class Usuario {
 
@@ -9,6 +10,7 @@ export class Usuario {
     public correo: string;
 
     public rol: Rol;
+    public preguntas: Pregunta[];
 
     public constructor(json?: any) {
 
@@ -16,6 +18,7 @@ export class Usuario {
 
         if (this.created_at) { this.created_at = new Date(this.created_at) };
         if (this.rol) { this.rol = new Rol(this.rol) };
+        if (this.preguntas) { this.preguntas = this.preguntas.map(pregunta => new Pregunta(pregunta)) };
 
     }
 

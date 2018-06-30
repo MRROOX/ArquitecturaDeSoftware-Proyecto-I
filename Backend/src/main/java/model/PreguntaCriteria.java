@@ -26,7 +26,7 @@ public class PreguntaCriteria extends AbstractORMCriteria {
 	public final StringExpression pregunta;
 	public final StringExpression descripcion;
 	public final BooleanExpression aprobado;
-	public final CollectionExpression respuesta;
+	public final CollectionExpression respuestas;
 	
 	public PreguntaCriteria(Criteria criteria) {
 		super(criteria);
@@ -37,7 +37,7 @@ public class PreguntaCriteria extends AbstractORMCriteria {
 		pregunta = new StringExpression("pregunta", this);
 		descripcion = new StringExpression("descripcion", this);
 		aprobado = new BooleanExpression("aprobado", this);
-		respuesta = new CollectionExpression("ORM_Respuesta", this);
+		respuestas = new CollectionExpression("ORM_Respuestas", this);
 	}
 	
 	public PreguntaCriteria(PersistentSession session) {
@@ -52,8 +52,8 @@ public class PreguntaCriteria extends AbstractORMCriteria {
 		return new UsuarioCriteria(createCriteria("usuario"));
 	}
 	
-	public RespuestaCriteria createRespuestaCriteria() {
-		return new RespuestaCriteria(createCriteria("ORM_Respuesta"));
+	public RespuestaCriteria createRespuestasCriteria() {
+		return new RespuestaCriteria(createCriteria("ORM_Respuestas"));
 	}
 	
 	public Pregunta uniquePregunta() {

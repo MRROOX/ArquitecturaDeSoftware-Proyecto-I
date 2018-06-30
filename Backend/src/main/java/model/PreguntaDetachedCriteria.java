@@ -26,7 +26,7 @@ public class PreguntaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final StringExpression pregunta;
 	public final StringExpression descripcion;
 	public final BooleanExpression aprobado;
-	public final CollectionExpression respuesta;
+	public final CollectionExpression respuestas;
 	
 	public PreguntaDetachedCriteria() {
 		super(model.Pregunta.class, model.PreguntaCriteria.class);
@@ -37,7 +37,7 @@ public class PreguntaDetachedCriteria extends AbstractORMDetachedCriteria {
 		pregunta = new StringExpression("pregunta", this.getDetachedCriteria());
 		descripcion = new StringExpression("descripcion", this.getDetachedCriteria());
 		aprobado = new BooleanExpression("aprobado", this.getDetachedCriteria());
-		respuesta = new CollectionExpression("ORM_Respuesta", this.getDetachedCriteria());
+		respuestas = new CollectionExpression("ORM_Respuestas", this.getDetachedCriteria());
 	}
 	
 	public PreguntaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -49,15 +49,15 @@ public class PreguntaDetachedCriteria extends AbstractORMDetachedCriteria {
 		pregunta = new StringExpression("pregunta", this.getDetachedCriteria());
 		descripcion = new StringExpression("descripcion", this.getDetachedCriteria());
 		aprobado = new BooleanExpression("aprobado", this.getDetachedCriteria());
-		respuesta = new CollectionExpression("ORM_Respuesta", this.getDetachedCriteria());
+		respuestas = new CollectionExpression("ORM_Respuestas", this.getDetachedCriteria());
 	}
 	
 	public UsuarioDetachedCriteria createUsuarioCriteria() {
 		return new UsuarioDetachedCriteria(createCriteria("usuario"));
 	}
 	
-	public RespuestaDetachedCriteria createRespuestaCriteria() {
-		return new RespuestaDetachedCriteria(createCriteria("ORM_Respuesta"));
+	public RespuestaDetachedCriteria createRespuestasCriteria() {
+		return new RespuestaDetachedCriteria(createCriteria("ORM_Respuestas"));
 	}
 	
 	public Pregunta uniquePregunta(PersistentSession session) {

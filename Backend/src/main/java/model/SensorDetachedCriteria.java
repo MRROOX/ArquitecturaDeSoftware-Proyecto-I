@@ -22,14 +22,14 @@ public class SensorDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id;
 	public final StringExpression direccion;
 	public final StringExpression ciudad;
-	public final CollectionExpression medida;
+	public final CollectionExpression medidas;
 	
 	public SensorDetachedCriteria() {
 		super(model.Sensor.class, model.SensorCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		direccion = new StringExpression("direccion", this.getDetachedCriteria());
 		ciudad = new StringExpression("ciudad", this.getDetachedCriteria());
-		medida = new CollectionExpression("ORM_Medida", this.getDetachedCriteria());
+		medidas = new CollectionExpression("ORM_Medidas", this.getDetachedCriteria());
 	}
 	
 	public SensorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -37,11 +37,11 @@ public class SensorDetachedCriteria extends AbstractORMDetachedCriteria {
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		direccion = new StringExpression("direccion", this.getDetachedCriteria());
 		ciudad = new StringExpression("ciudad", this.getDetachedCriteria());
-		medida = new CollectionExpression("ORM_Medida", this.getDetachedCriteria());
+		medidas = new CollectionExpression("ORM_Medidas", this.getDetachedCriteria());
 	}
 	
-	public MedidaDetachedCriteria createMedidaCriteria() {
-		return new MedidaDetachedCriteria(createCriteria("ORM_Medida"));
+	public MedidaDetachedCriteria createMedidasCriteria() {
+		return new MedidaDetachedCriteria(createCriteria("ORM_Medidas"));
 	}
 	
 	public Sensor uniqueSensor(PersistentSession session) {

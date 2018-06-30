@@ -78,10 +78,10 @@ public class Medida {
 	
 	public void setSensor(model.Sensor value) {
 		if (sensor != null) {
-			sensor.medida.remove(this);
+			sensor.medidas.remove(this);
 		}
 		if (value != null) {
-			value.medida.add(this);
+			value.medidas.add(this);
 		}
 	}
 	

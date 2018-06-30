@@ -324,7 +324,7 @@ public class MedidaDAO {
 	public static boolean deleteAndDissociate(model.Medida medida)throws PersistentException {
 		try {
 			if (medida.getSensor() != null) {
-				medida.getSensor().medida.remove(medida);
+				medida.getSensor().medidas.remove(medida);
 			}
 			
 			return delete(medida);
@@ -338,7 +338,7 @@ public class MedidaDAO {
 	public static boolean deleteAndDissociate(model.Medida medida, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			if (medida.getSensor() != null) {
-				medida.getSensor().medida.remove(medida);
+				medida.getSensor().medidas.remove(medida);
 			}
 			
 			try {
