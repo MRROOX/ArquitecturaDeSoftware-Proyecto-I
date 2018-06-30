@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aqct.backend.controller;
 
 import java.sql.Timestamp;
@@ -25,8 +20,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -35,30 +28,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RestController
 @PreAuthorize("true")
 @RequestMapping("usuario")
-public class UserController {
+public class UsuarioController {
 
-    private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     /**
      * Retorna la lista de todos los usuarios registrados en el sistema
      *
      * @return Lista de Usuario
+     * @throws org.orm.PersistentException
      */
     @GetMapping
-    public @ResponseBody
-    List<Usuario> index() {
+    public List<Usuario> index() throws PersistentException {
 
-        List<Usuario> usuariosList = null;
-
-        try {
-
-            usuariosList = Arrays.asList(UsuarioDAO.listUsuarioByQuery(null, null));
-
-        } catch (PersistentException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return usuariosList;
+        return Arrays.asList(UsuarioDAO.listUsuarioByQuery(null, null));
 
     }
 
@@ -68,14 +51,16 @@ public class UserController {
      * @param usuario Un Usuario que se desea guardar (debe ser enviado en
      * formato JSON)
      * @return Numero id asignado al usuario registrado
+     * @throws org.orm.PersistentException
      */
     @PostMapping
     public Integer store(@RequestBody Usuario usuario) throws PersistentException {
-
+        // Rol para usuarios comunes
         Rol rol = RolDAO.getRolByORMID(1);
+
         // Encriptar contraseña de usuario
         usuario.setPassword(this.passwordEncoder.encode(usuario.getPassword()));
-        
+
         usuario.setRol(rol);
         //Instante en que se guarda el usuario en la base de datos
         usuario.setCreated_at(Timestamp.from(Instant.now()));
@@ -99,7 +84,7 @@ public class UserController {
         try {
             return UsuarioDAO.getUsuarioByORMID(id);
         } catch (Exception ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return null;
@@ -109,17 +94,12 @@ public class UserController {
      * Eliminar a un Usuario por su Id
      *
      * @param id Id del usuario que se desea eliminar
+     * @throws org.orm.PersistentException
      */
-    @DeleteMapping
-    public void destroy(@RequestParam("id") int id) {
+    @DeleteMapping("{id}")
+    public void destroy(@PathVariable("id") int id) throws PersistentException {
 
-        try {
-            Usuario usuario = UsuarioDAO.getUsuarioByORMID(id);
-            UsuarioDAO.delete(usuario);
-
-        } catch (PersistentException ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        UsuarioDAO.delete(UsuarioDAO.getUsuarioByORMID(id));
 
     }
 

@@ -80,7 +80,7 @@ public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFil
 
             String token = TOKEN_PREFIX + jwtToken;
             ObjectMapper mapper = new ObjectMapper();
-            JWTResponse jwtResponse = new JWTResponseToken(token);
+            JWTResponse jwtResponse = new JWTResponseToken(token, UserRepository.findByUsername(user.getUsername()));
 
             response.addHeader(HEADER_STRING, token);
             response.setContentType("application/json");

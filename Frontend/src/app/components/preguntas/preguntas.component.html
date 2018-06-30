@@ -1,0 +1,37 @@
+<h2 class="mb-4 mt-3">
+    Preguntas
+</h2>
+
+<div *ngIf="pregunta">
+    <div *ngFor="let pregunta of preguntas" class="card">
+        <div class="card-header">
+            {{pregunta.usuario.nombre}}
+            <span class="float-right">{{pregunta.created_at}}</span>
+        </div>
+        <div class="card-body">
+            <h4>{{pregunta.pregunta}}</h4>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum facilisis mattis. Morbi molestie metus nec lacinia
+            laoreet. Fusce varius aliquam orci, non mattis nisl fringilla vel. Integer consectetur, lorem quis ornare volutpat,
+            dolor massa viverra orci, pellentesque tristique sapien nunc eu dui.
+            <hr>
+
+            <div class="ml-5 mt-1 pt-0">
+                <small>
+                    <strong>Juanito</strong>:
+                    <span class="float-right">10:49 AM 03/02/2018</span>
+                </small>
+                <p>Duis interdum facilisis mattis. Morbi molestie metus nec lacinia laoreet</p>
+            </div>
+            <hr>
+
+
+            <textarea class="form-control" placeholder="Escribe tu comentario aqui" rows="3"></textarea>
+            <div class="text-right mt-3">
+                <button class="btn btn-primary">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

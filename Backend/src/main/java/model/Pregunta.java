@@ -109,6 +109,7 @@ public class Pregunta {
 		}
 	}
 	
+        @com.fasterxml.jackson.annotation.JsonManagedReference
 	public model.Usuario getUsuario() {
 		return usuario;
 	}
@@ -132,6 +133,7 @@ public class Pregunta {
 		return ORM_respuestas;
 	}
 	
+        @com.fasterxml.jackson.annotation.JsonManagedReference
 	public final model.RespuestaSetCollection respuestas = new model.RespuestaSetCollection(this, _ormAdapter, ORMConstants.KEY_PREGUNTA_RESPUESTAS, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {

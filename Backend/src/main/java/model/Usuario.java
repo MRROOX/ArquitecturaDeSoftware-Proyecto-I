@@ -108,6 +108,7 @@ public class Usuario {
 		return ORM_preguntas;
 	}
 	
+        @com.fasterxml.jackson.annotation.JsonBackReference
 	public final model.PreguntaSetCollection preguntas = new model.PreguntaSetCollection(this, _ormAdapter, ORMConstants.KEY_USUARIO_PREGUNTAS, ORMConstants.KEY_PREGUNTA_USUARIO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {

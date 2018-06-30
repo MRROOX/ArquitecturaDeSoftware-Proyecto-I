@@ -10,7 +10,7 @@ import org.orm.PersistentSession;
 
 public class UserRepository {
     
-    public Usuario findByUsername(String username) {
+    public static Usuario findByUsername(String username) {
         
         try {
             

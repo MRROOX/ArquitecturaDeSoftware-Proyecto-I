@@ -31,7 +31,7 @@
                     <a [routerLink]="['compararmedidas']" class="nav-link sidebar-link">Comparar Temperaturas</a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="['responderpreguntas']" class="nav-link sidebar-link">Preguntas</a>
+                    <a [routerLink]="['preguntas']" class="nav-link sidebar-link">Preguntas</a>
                 </li>
                 <li class="nav-item">
                     <hr>
@@ -51,7 +51,7 @@
                     <hr>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sidebar-link">Cerrar Sesión</a>
+                    <a (click)="cerrarSesion()" class="nav-link sidebar-link">Cerrar Sesión</a>
                 </li>
             </ul>
         </nav>

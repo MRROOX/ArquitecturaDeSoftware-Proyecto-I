@@ -11,7 +11,7 @@ import { GLOBAL } from './services/global';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { ResponderPreguntasComponent } from './components/responderpreguntas/responderpreguntas.component';
+import { PreguntasComponent } from './components/preguntas/preguntas.component';
 import { MedidasComponent } from './components/medidas/medidas.component';
 import { CompararMedidasComponent } from './components/compararmedidas/compararmedidas.component';
 
@@ -21,7 +21,7 @@ export function getToken(): string {
 
     if (token != null) {
 
-        return JSON.parse(localStorage.getItem('aqct_token'));
+        return token.token;
 
     }
 
@@ -44,7 +44,7 @@ const jwtConf: JwtModuleOptions = {
         RegisterComponent,
 
         // Componentes compartidos
-        ResponderPreguntasComponent,
+        PreguntasComponent,
         MedidasComponent,
         CompararMedidasComponent
     ],

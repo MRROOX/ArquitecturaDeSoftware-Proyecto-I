@@ -1,18 +1,27 @@
-<form class="form-signin">
+<form class="form-signin" (ngSubmit)="onSubmit()">
+
+    <div *ngIf="error" class="alert alert-danger">
+        <strong>Registro fallido!</strong><br>
+        El nombre de Usuario ya esta en uso.
+    </div>
 
     <h1 class="h3 mb-3 font-weight-normal">Registrate</h1>
 
     <label for="inputName" class="sr-only">Nombre de usuario</label>
-    <input type="text" id="inputName" class="form-control" placeholder="Nombre de usuario" required autofocus>
+    <input type="text" id="inputName" name="nombre" [(ngModel)]="usuario.nombre" class="form-control" placeholder="Nombre de usuario"
+        required autofocus>
 
     <label for="inputEmail" class="sr-only">Correo electronico</label>
-    <input type="text" id="inputEmail" class="form-control" placeholder="Correo electronico" required autofocus>
+    <input type="text" id="inputEmail" name="correo" [(ngModel)]="usuario.correo" class="form-control" placeholder="Correo electronico"
+        required autofocus>
 
     <label for="inputPassword" class="sr-only">Contraseña</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Contrasena" required>
+    <input type="password" id="inputPassword" name="password" [(ngModel)]="usuario.password" class="form-control" placeholder="Contrasena"
+        required>
 
     <label for="inputPasswordRepeat" class="sr-only">Confirmar contraseña</label>
-    <input type="password" id="inputPasswordRepeat" class="form-control" placeholder="Repite tu contrasena" required>
+    <input type="password" id="inputPasswordRepeat" name="passwordConfirmar" [(ngModel)]="passwordConfirmar" class="form-control"
+        placeholder="Repite tu contrasena" required>
 
     <button class="btn btn-lg btn-success btn-block mt-4" type="submit">Registrarme</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
