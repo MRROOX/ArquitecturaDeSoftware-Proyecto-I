@@ -6,7 +6,7 @@ import static aqct.backend.jwt.SecurityConstants.HEADER_STRING;
 import static aqct.backend.jwt.SecurityConstants.LOGIN_URL;
 import static aqct.backend.jwt.SecurityConstants.SECRET;
 import static aqct.backend.jwt.SecurityConstants.TOKEN_PREFIX;
-import model.Usuario;
+import aqct.backend.model.Usuario;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import java.io.IOException;
@@ -80,7 +80,7 @@ public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFil
 
             String token = TOKEN_PREFIX + jwtToken;
             ObjectMapper mapper = new ObjectMapper();
-            JWTResponse jwtResponse = new JWTResponseToken(token, UserRepository.findByUsername(user.getUsername()));
+            JWTResponse jwtResponse = new JWTResponseToken(token, null);
 
             response.addHeader(HEADER_STRING, token);
             response.setContentType("application/json");

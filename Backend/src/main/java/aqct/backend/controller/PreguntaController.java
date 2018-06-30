@@ -5,18 +5,15 @@
  */
 package aqct.backend.controller;
 
-import aqct.backend.jwt.UserRepository;
+import aqct.backend.model.Pregunta;
+import aqct.backend.model.PreguntaDAO;
+import aqct.backend.model.Usuario;
+import aqct.backend.model.UsuarioDAO;
 import java.security.Principal;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import model.Pregunta;
-import model.PreguntaDAO;
-import model.Usuario;
-import org.orm.PersistentException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,18 +31,23 @@ import org.springframework.web.bind.annotation.RestController;
 @PreAuthorize("true")
 @RequestMapping("pregunta")
 public class PreguntaController {
+    
+    @Autowired
+    private PreguntaDAO preguntaDAO;
+    
+    @Autowired
+    private UsuarioDAO usuarioDAO;
 
     /**
      * Lista todas las preguntas que se encuentran en la base de datos del
      * sistema
      *
      * @return Lista con las preguntas
-     * @throws org.orm.PersistentException
      */
     @GetMapping
-    public List<Pregunta> index() throws PersistentException {
+    public List<Pregunta> index(){
 
-        return Arrays.asList(PreguntaDAO.listPreguntaByQuery(null, null));
+        return this.preguntaDAO.findAll();
 
     }
 
@@ -55,22 +57,22 @@ public class PreguntaController {
      * @param pregunta Pregunta que se desea guardar
      * @param principal
      * @return id de la pregunta guardada
-     * @throws PersistentException
      */
     @PostMapping
-    public Integer store(@RequestBody Pregunta pregunta, Principal principal) throws PersistentException {
+    public Long store(@RequestBody Pregunta pregunta, Principal principal) {
         // Obtener el objeto del usuario
-        Usuario usuario = UserRepository.findByUsername(principal.getName());
+        Usuario usuario = this.usuarioDAO.findByNombre(principal.getName());
 
         // Si el usuario existe
         if ( usuario != null ) {
             // Fijar la fecha de la pregunta
-            pregunta.setCreated_at(Timestamp.from(Instant.now()));
+            pregunta.setCreatedAt(Timestamp.from(Instant.now()));
+            pregunta.setUsuario(usuario);
 
             // Guardar la pregunta
-            if (PreguntaDAO.save(pregunta)) {
-                return pregunta.getId();
-            }
+            this.preguntaDAO.save(pregunta);
+            
+            return pregunta.getId();
         }
 
         return null;
@@ -82,12 +84,11 @@ public class PreguntaController {
      *
      * @param id id de la pregunta
      * @return
-     * @throws PersistentException
      */
     @GetMapping("{id}")
-    public Pregunta show(@PathVariable("id") int id) throws PersistentException {
+    public Pregunta show(@PathVariable("id") long id) {
 
-        return PreguntaDAO.getPreguntaByORMID(id);
+        return this.preguntaDAO.findById(id).get();
 
     }
 
@@ -95,13 +96,11 @@ public class PreguntaController {
      * Eliminar una pregunta de la base de datos
      *
      * @param id id de la pregunta que se desea eliminar
-     * @throws PersistentException
      */
     @DeleteMapping("{id}")
-    public void destroy(@PathVariable("id") int id) throws PersistentException {
-
-        Pregunta pregunta = PreguntaDAO.getPreguntaByORMID(id);
-        PreguntaDAO.delete(pregunta);
+    public void destroy(@PathVariable("id") long id) {
+        
+        this.preguntaDAO.deleteById(id);
 
     }
 

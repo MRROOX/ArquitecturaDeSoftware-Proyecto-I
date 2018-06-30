@@ -1,6 +1,6 @@
 package aqct.backend.jwt;
 
-import model.Usuario;
+import aqct.backend.model.Usuario;
 
 public class JWTResponseToken extends JWTResponse {
     

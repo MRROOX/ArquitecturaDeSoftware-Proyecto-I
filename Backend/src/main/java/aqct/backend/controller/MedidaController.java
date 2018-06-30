@@ -5,11 +5,10 @@
  */
 package aqct.backend.controller;
 
-import java.util.Arrays;
+import aqct.backend.model.Medida;
+import aqct.backend.model.MedidaDAO;
 import java.util.List;
-import model.Medida;
-import model.MedidaDAO;
-import org.orm.PersistentException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,30 +26,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("medida")
 public class MedidaController {
     
+    @Autowired
+    private MedidaDAO medidaDAO;
+    
     @GetMapping
-    public List<Medida> index() throws PersistentException{
+    public List<Medida> index() {
         
-        return Arrays.asList(
-                MedidaDAO.listMedidaByQuery(null, null));
+        return this.medidaDAO.findAll();
         
     }
     
     @PostMapping
-    public Integer store(@RequestBody Medida medida) throws PersistentException{
+    public Long store(@RequestBody Medida medida) {
         
-        if(MedidaDAO.save(medida)){
-            return medida.getId();
-        }
+        this.medidaDAO.save(medida);
         
-        return null;
+        return medida.getId();
         
     }
     
     
     @GetMapping("{id}")
-    public Medida show(@PathVariable("id") int id) throws PersistentException{
+    public Medida show(@PathVariable("id") long id) {
         
-        return MedidaDAO.getMedidaByORMID(id);
+        return this.medidaDAO.findById(id).get();
         
     }
     

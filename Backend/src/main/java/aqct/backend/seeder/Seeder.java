@@ -6,7 +6,7 @@ package aqct.backend.seeder;
  */
 public class Seeder {
     
-    public static void main(String [] args) throws Exception {
+    public static void main(String [] args) {
         
         RolSeeder.seed();
         
