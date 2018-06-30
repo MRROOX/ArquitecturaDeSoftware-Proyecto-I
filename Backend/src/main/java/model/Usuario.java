@@ -40,7 +40,6 @@ public class Usuario {
 	
 	private String nombre;
 	
-	@com.fasterxml.jackson.annotation.JsonIgnore	
 	private String password;
 	
 	private String correo;
