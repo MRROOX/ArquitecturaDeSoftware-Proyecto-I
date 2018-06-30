@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Rol;
+import model.RolDAO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,84 +36,87 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
 
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    
-    
+
     /**
      * Retorna la lista de todos los usuarios registrados en el sistema
+     *
      * @return Lista de Usuario
      */
     @GetMapping
-    public @ResponseBody List<Usuario> index(){
-        
-        List<Usuario> usuariosList = null; 
-        
+    public @ResponseBody
+    List<Usuario> index() {
+
+        List<Usuario> usuariosList = null;
+
         try {
-            
+
             usuariosList = Arrays.asList(UsuarioDAO.listUsuarioByQuery(null, null));
-            
+
         } catch (PersistentException ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return usuariosList;
-        
+
     }
 
     /**
      * Pemite guardar un usuario dentro de la base de datos
-     * @param usuario Un Usuario que se desea guardar (debe ser enviado en formato JSON)
+     *
+     * @param usuario Un Usuario que se desea guardar (debe ser enviado en
+     * formato JSON)
      * @return Numero id asignado al usuario registrado
      */
     @PostMapping
-    public Integer store(@RequestBody Usuario usuario) {
+    public Integer store(@RequestBody Usuario usuario) throws PersistentException {
 
-        try {
-            // Encriptar contraseña de usuario
-            usuario.setPassword(this.passwordEncoder.encode(usuario.getPassword()));
+        Rol rol = RolDAO.getRolByORMID(1);
+        // Encriptar contraseña de usuario
+        usuario.setPassword(this.passwordEncoder.encode(usuario.getPassword()));
+        
+        usuario.setRol(rol);
 
-            if (UsuarioDAO.save(usuario)) {
-                return usuario.getId();
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+        if (UsuarioDAO.save(usuario)) {
+            return usuario.getId();
         }
+
         return null;
     }
 
     /**
      * Busca y obtiene el Usuario asosiado a un id
+     *
      * @param id Id del usuario
      * @return El objeto usuario como un JSON
      */
     @GetMapping("{id}")
     public Usuario show(@PathVariable(value = "id") Integer id) {
-        
+
         try {
             return UsuarioDAO.getUsuarioByORMID(id);
         } catch (Exception ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         return null;
     }
-    
+
     /**
      * Eliminar a un Usuario por su Id
+     *
      * @param id Id del usuario que se desea eliminar
      */
     @DeleteMapping
-    public void destroy(@RequestParam("id") int id){
-        
+    public void destroy(@RequestParam("id") int id) {
+
         try {
             Usuario usuario = UsuarioDAO.getUsuarioByORMID(id);
             UsuarioDAO.delete(usuario);
-            
+
         } catch (PersistentException ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
-    
-    
 
 }
