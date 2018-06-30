@@ -5,6 +5,8 @@
  */
 package aqct.backend.controller;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
@@ -75,6 +77,8 @@ public class UserController {
         usuario.setPassword(this.passwordEncoder.encode(usuario.getPassword()));
         
         usuario.setRol(rol);
+        //Instante en que se guarda el usuario en la base de datos
+        usuario.setCreated_at(Timestamp.from(Instant.now()));
 
         if (UsuarioDAO.save(usuario)) {
             return usuario.getId();

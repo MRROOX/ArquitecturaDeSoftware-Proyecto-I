@@ -74,10 +74,12 @@ public class Usuario {
 		return nombre;
 	}
 	
+        @com.fasterxml.jackson.annotation.JsonProperty
 	public void setPassword(String value) {
 		this.password = value;
 	}
 	
+        @com.fasterxml.jackson.annotation.JsonIgnore
 	public String getPassword() {
 		return password;
 	}
