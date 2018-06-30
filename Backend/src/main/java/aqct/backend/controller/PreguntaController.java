@@ -5,6 +5,9 @@
  */
 package aqct.backend.controller;
 
+import java.security.Principal;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
@@ -58,7 +61,12 @@ public class PreguntaController {
      * @throws PersistentException 
      */
     @PostMapping
-    public Integer store(@RequestBody Pregunta pregunta) throws PersistentException{
+    public Integer store(@RequestBody Pregunta pregunta, Principal principal) 
+                                                    throws PersistentException{
+        
+        principal.getName();
+        
+        pregunta.setCreated_at(Timestamp.from(Instant.now()));
         
         if (PreguntaDAO.save(pregunta)) {
             return pregunta.getId();
