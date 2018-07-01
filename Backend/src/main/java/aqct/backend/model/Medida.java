@@ -18,7 +18,7 @@ import org.hibernate.annotations.CreationTimestamp;
 public class Medida implements Serializable {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
     @Column(name="saturacion")
@@ -31,7 +31,7 @@ public class Medida implements Serializable {
     @CreationTimestamp
     private Timestamp createdAt;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "sensor_id")
     private Sensor sensor;
     

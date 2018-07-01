@@ -28,4 +28,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         
     }
     
+    public Usuario getUserByUsername(String username) {
+        
+        return this.usuarioDAO.findByNombre(username);
+        
+    }
+    
 }

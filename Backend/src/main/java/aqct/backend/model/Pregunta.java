@@ -1,5 +1,6 @@
 package aqct.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -21,7 +22,7 @@ import org.hibernate.annotations.CreationTimestamp;
 public class Pregunta implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "pregunta")
@@ -37,12 +38,12 @@ public class Pregunta implements Serializable {
     @CreationTimestamp
     private Timestamp createdAt;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "usuario_id")
-    @JsonManagedReference
+    @JsonBackReference
     private Usuario usuario;
     
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany
     @JoinColumn(name = "pregunta_id")
     @JsonManagedReference
     private List<Respuesta> respuestas;

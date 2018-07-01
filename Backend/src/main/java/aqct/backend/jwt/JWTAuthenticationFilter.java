@@ -16,6 +16,7 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -23,9 +24,18 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.stereotype.Component;
 
+@Component
 public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
+    
+    @Autowired
+    private UserDetailsServiceImpl userDetailsService;
+    
+    @Autowired
+    private ObjectMapper mapper;
 
+    @Autowired
     public JWTAuthenticationFilter(AuthenticationManager authManager) {
 
         super(new AntPathRequestMatcher(LOGIN_URL));
@@ -42,8 +52,7 @@ public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFil
         
         try {
 
-            ObjectMapper                            mapper      = new ObjectMapper();
-            Usuario                                 user        = mapper.readValue(request.getInputStream(), Usuario.class);
+            Usuario                                 user        = this.mapper.readValue(request.getInputStream(), Usuario.class);
             UsernamePasswordAuthenticationToken     authToken   = new UsernamePasswordAuthenticationToken(
                     user.getNombre(),
                     user.getPassword(),
@@ -79,20 +88,18 @@ public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFil
                     .compact();
 
             String token = TOKEN_PREFIX + jwtToken;
-            ObjectMapper mapper = new ObjectMapper();
-            JWTResponse jwtResponse = new JWTResponseToken(token, null);
+            JWTResponse jwtResponse = new JWTResponseToken(token, this.userDetailsService.getUserByUsername(user.getUsername()));
 
             response.addHeader(HEADER_STRING, token);
             response.setContentType("application/json");
-            response.getWriter().write( mapper.writeValueAsString( jwtResponse ) );
+            response.getWriter().write( this.mapper.writeValueAsString( jwtResponse ) );
             
         } else {
             
-            ObjectMapper mapper = new ObjectMapper();
             JWTResponse jwtResponse = new JWTErrorResponse("invalid_credentials");
             
             response.setContentType("application/json");
-            response.getWriter().write( mapper.writeValueAsString(jwtResponse) );
+            response.getWriter().write( this.mapper.writeValueAsString(jwtResponse) );
             
         }
 
@@ -107,11 +114,10 @@ public class JWTAuthenticationFilter extends AbstractAuthenticationProcessingFil
         
         try {
             
-            ObjectMapper mapper = new ObjectMapper();
             JWTResponse jwtResponse = new JWTErrorResponse("invalid_credentials");
             
             response.setContentType("application/json");
-            response.getWriter().write( mapper.writeValueAsString(jwtResponse) );
+            response.getWriter().write( this.mapper.writeValueAsString(jwtResponse) );
             
         } catch ( IOException e ) {
             

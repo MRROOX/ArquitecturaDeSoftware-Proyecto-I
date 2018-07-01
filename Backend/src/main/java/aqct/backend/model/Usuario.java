@@ -1,8 +1,10 @@
 package aqct.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,13 +23,13 @@ import org.hibernate.annotations.CreationTimestamp;
 public class Usuario implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "nombre")
+    @Column(name = "nombre", unique = true)
     private String nombre;
 
-    @Column(name = "correo")
+    @Column(name = "correo", unique = true)
     private String correo;
 
     @Column(name = "password")
@@ -40,11 +42,11 @@ public class Usuario implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rol_id")
     private Rol rol;
-    
-    @OneToMany(fetch = FetchType.LAZY)
+
+    @OneToMany
     @JoinColumn(name = "usuario_id")
-    @JsonBackReference
-    private List<Pregunta> preguntas;
+    @JsonManagedReference
+    private List<Pregunta> preguntas = new ArrayList<>();
 
     public Usuario() {
 

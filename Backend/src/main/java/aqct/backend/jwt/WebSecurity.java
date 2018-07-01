@@ -2,15 +2,17 @@ package aqct.backend.jwt;
 
 import static aqct.backend.jwt.SecurityConstants.LOGIN_URL;
 import java.util.Arrays;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -24,14 +26,23 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 @EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class WebSecurity extends WebSecurityConfigurerAdapter {
     
-    private final UserDetailsService        userDetailsService;
+    @Autowired
+    private UserDetailsServiceImpl          userDetailsService;
+    
+    @Lazy
+    @Autowired
+    private JWTAuthorizationFilter          authenticationFilter;
+    
+    @Lazy
+    @Autowired
+    private JWTAuthorizationFilter          authorizationFilter;
+    
     private final BCryptPasswordEncoder     bCryptPasswordEncoder;
     private final AuthenticationEntryPoint  authenticationEntryPoint;
     private final UrlBasedCorsConfigurationSource   corsConfigurationSource;
 
     public WebSecurity() {
-
-        this.userDetailsService = new UserDetailsServiceImpl();
+        
         this.bCryptPasswordEncoder = new BCryptPasswordEncoder();
         this.authenticationEntryPoint = new JWTAuthenticationEntryPoint();
         
@@ -46,8 +57,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     }
     
     @Bean
-    public UserDetailsService getUserDetailsService() {
-        return this.userDetailsService;
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
     
     @Bean
@@ -62,9 +73,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     
     @Bean
     public CorsConfigurationSource getCorsConfigurationSource() {
-        
         return this.corsConfigurationSource;
-        
     }
     
     @Bean(name = "mvcHandlerMappingIntrospector")
@@ -84,8 +93,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(getAuthenticationEntryPoint())
                 .and()
-                .addFilterBefore(new JWTAuthenticationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class )
-                .addFilterBefore(new JWTAuthorizationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(this.authenticationFilter, UsernamePasswordAuthenticationFilter.class )
+                .addFilterBefore(this.authorizationFilter, UsernamePasswordAuthenticationFilter.class);
         
     }
 

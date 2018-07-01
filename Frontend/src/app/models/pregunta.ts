@@ -4,7 +4,7 @@ import { Usuario } from "./usuario";
 export class Pregunta {
 
     public id: number;
-    public created_at: Date;
+    public createdAt: Date;
     public pregunta: string;
     public descripcion: string;
     public aprobado: boolean;
@@ -16,7 +16,7 @@ export class Pregunta {
 
         Object.assign(this, json);
 
-        if (this.created_at) { this.created_at = new Date(this.created_at) };
+        if (this.createdAt) { this.createdAt = new Date(this.createdAt) };
         if (this.respuestas) { this.respuestas = this.respuestas.map(respuesta => new Respuesta(respuesta)) };
         if (this.usuario) { this.usuario = new Usuario(this.usuario) };
 
@@ -25,7 +25,7 @@ export class Pregunta {
     public getJSON(): any {
         return {
             id: this.id,
-            created_at: this.created_at,
+            createdAt: this.createdAt,
             pregunta: this.pregunta,
             descripcion: this.descripcion,
             aprobado: this.aprobado

@@ -19,7 +19,7 @@ import org.hibernate.annotations.CreationTimestamp;
 public class Respuesta implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "respuesta")
@@ -32,12 +32,12 @@ public class Respuesta implements Serializable {
     @CreationTimestamp
     private Timestamp createdAt;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "pregunta_id")
     @JsonBackReference
     private Pregunta pregunta;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
     
