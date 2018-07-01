@@ -1,6 +1,5 @@
 package aqct.backend.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -38,9 +37,9 @@ public class Pregunta implements Serializable {
     @CreationTimestamp
     private Timestamp createdAt;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_id")
-    @JsonBackReference
+    //@JsonManagedReference("pregunta_usuario")
     private Usuario usuario;
     
     @OneToMany

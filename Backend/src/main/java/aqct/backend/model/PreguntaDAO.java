@@ -8,4 +8,6 @@ public interface PreguntaDAO extends CrudRepository<Pregunta, Long> {
     @Override
     public List<Pregunta> findAll();
     
+    public List<Pregunta> findAllByAprobado(boolean aprobado);
+    
 }

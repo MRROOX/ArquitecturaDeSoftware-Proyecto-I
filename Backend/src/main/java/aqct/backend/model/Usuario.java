@@ -1,7 +1,6 @@
 package aqct.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -43,10 +42,12 @@ public class Usuario implements Serializable {
     @JoinColumn(name = "rol_id")
     private Rol rol;
 
+    /*
     @OneToMany
     @JoinColumn(name = "usuario_id")
-    @JsonManagedReference
+    @JsonBackReference("pregunta_usuario")
     private List<Pregunta> preguntas = new ArrayList<>();
+    */
 
     public Usuario() {
 

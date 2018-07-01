@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Batman
  */
 @RestController
-@PreAuthorize("true")
 @RequestMapping("pregunta")
+@Secured("IS_AUTHENTICATED_FULLY")
 public class PreguntaController {
     
     @Autowired
@@ -49,6 +49,30 @@ public class PreguntaController {
 
         return this.preguntaDAO.findAll();
 
+    }
+    
+    /**
+     * Lista todas las preguntas que se encuentran aprobadas
+     * 
+     * @return Lista de preguntas aprobadas
+     */
+    @GetMapping("aprobados")
+    public List<Pregunta> indexAprobados() {
+        
+        return this.preguntaDAO.findAllByAprobado(true);
+        
+    }
+    
+    /**
+     * Lista todas las preguntas que no se encuentran aprobadas
+     * 
+     * @return Lista de preguntas no aprobadas
+     */
+    @GetMapping("noaprobados")
+    public List<Pregunta> indexNoAprobados() {
+        
+        return this.preguntaDAO.findAllByAprobado(false);
+        
     }
 
     /**

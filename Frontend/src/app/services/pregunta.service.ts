@@ -21,13 +21,18 @@ export class PreguntaService {
             .pipe(map(preguntas => preguntas.map(pregunta => new Pregunta(pregunta))));
     }
 
+    public queryAprobados(): Observable<Pregunta[]> {
+        return this.http.get<Pregunta[]>(GLOBAL.url + "pregunta/aprobados")
+            .pipe(map(preguntas => preguntas.map(pregunta => new Pregunta(pregunta))));
+    }
+
     public get(id: number): Observable<Pregunta> {
         return this.http.get<Pregunta>(GLOBAL.url + "pregunta/" + id)
             .pipe(map(pregunta => new Pregunta(pregunta)));
     }
 
     public save(pregunta: Pregunta): Observable<number> {
-        return this.http.post<number>(GLOBAL.url + "pregunta", pregunta.getJSON());
+        return this.http.post<number>(GLOBAL.url + "pregunta", pregunta);
     }
 
     public delete(id: number): Observable<any> {

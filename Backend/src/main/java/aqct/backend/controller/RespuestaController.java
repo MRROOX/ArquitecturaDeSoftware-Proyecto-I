@@ -8,7 +8,7 @@ import java.security.Principal;
 import java.sql.Timestamp;
 import java.time.Instant;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,9 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@PreAuthorize("true")
 @RequestMapping("respuesta")
-//@Secured("IS_AUTHENTICATED_FULLY")
+@Secured("IS_AUTHENTICATED_FULLY")
 public class RespuestaController {
     
     @Autowired
@@ -39,6 +38,7 @@ public class RespuestaController {
             // Fijar la fecha de la respuesta
             respuesta.setCreatedAt(Timestamp.from(Instant.now()));
             respuesta.setUsuario(usuario);
+            respuesta.setAprobado(false);
             
             this.respuestaDAO.save(respuesta);
             
@@ -56,8 +56,6 @@ public class RespuestaController {
     
     @DeleteMapping("{id}")
     public void destroy(@PathVariable("id") long id){
-        
         this.respuestaDAO.deleteById(id);
-        
     }
 }

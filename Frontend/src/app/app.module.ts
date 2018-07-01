@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
 import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
 import { ModeradorModule } from './modules/ModeradorModule/moderador.module';
 import { UsuarioModule } from './modules/UsuarioModule/usuario.module';
 import { routing, appRoutingProviders } from './app.routing';
@@ -17,11 +18,14 @@ import { CompararMedidasComponent } from './components/compararmedidas/compararm
 
 export function getToken(): string {
 
-    let token: any = localStorage.getItem('aqct_token');
+    let data: any = localStorage.getItem('aqct_token');
 
-    if (token != null) {
+    if (data != null) {
 
-        return token.token;
+        let jsonData: any = JSON.parse(data);
+        let token: string = jsonData.token;
+
+        return token;
 
     }
 
@@ -52,6 +56,7 @@ const jwtConf: JwtModuleOptions = {
         BrowserModule,
         FormsModule,
         HttpClientModule,
+        ChartsModule,
         ModeradorModule,
         UsuarioModule,
         routing,
