@@ -44,18 +44,7 @@
 
 <div class="row">
     <div class="text-left col-md-6 mb-4">
-        <div>
-            <canvas baseChart
-                    [datasets]="lineChartData"
-                    [labels]="lineChartLabels"
-                    [options]="lineChartOptions"
-                    [colors]="lineChartColors"
-                    [legend]="lineChartLegend"
-                    [chartType]="lineChartType"
-                    (chartHover)="chartHovered($event)"
-                    (chartClick)="chartClicked($event)">
-            </canvas>
-        </div>
+        <graficolineas></graficolineas>
     </div>
     <div class="col-md-4">
         <p>Humedad (min):</p>

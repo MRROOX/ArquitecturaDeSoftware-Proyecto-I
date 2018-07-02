@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { ModeradorModule } from './modules/ModeradorModule/moderador.module';
 import { UsuarioModule } from './modules/UsuarioModule/usuario.module';
 import { routing, appRoutingProviders } from './app.routing';
@@ -15,6 +16,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PreguntasComponent } from './components/preguntas/preguntas.component';
 import { MedidasComponent } from './components/medidas/medidas.component';
 import { CompararMedidasComponent } from './components/compararmedidas/compararmedidas.component';
+import { GraficoLineasComponent } from './components/graficolineas/graficolineas.component';
 
 export function getToken(): string {
 
@@ -50,13 +52,15 @@ const jwtConf: JwtModuleOptions = {
         // Componentes compartidos
         PreguntasComponent,
         MedidasComponent,
-        CompararMedidasComponent
+        CompararMedidasComponent,
+        GraficoLineasComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpClientModule,
         ChartsModule,
+        NgxPaginationModule,
         ModeradorModule,
         UsuarioModule,
         routing,

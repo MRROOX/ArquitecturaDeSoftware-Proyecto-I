@@ -3,7 +3,7 @@
 </h2>
 
 <div *ngIf="preguntas">
-    <div *ngFor="let pregunta of preguntas; let i = index" class="card">
+    <div *ngFor="let pregunta of preguntas | paginate: { id: 'preguntas', itemsPerPage: 6, currentPage: p }; index as i;" class="card">
         <div class="card-header">
             {{pregunta.usuario.nombre}}
             <span class="float-right">{{pregunta.createdAt.toLocaleString("es-cl")}}</span>
@@ -33,4 +33,5 @@
             </form>
         </div>
     </div>
+    <pagination-controls id="preguntas" (pageChange)="p = $event"></pagination-controls>
 </div>
