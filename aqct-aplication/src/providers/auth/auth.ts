@@ -17,8 +17,7 @@ import { map } from 'rxjs/operators';
 export class AuthProvider {
 
 
-  constructor(public http: HttpClient) {
-    console.log('Hello AuthProvider Provider');
+  constructor(public http: HttpClient) {    
   }
 
   createAuthorizationHeader(headers : HttpHeaders){

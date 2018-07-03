@@ -38,6 +38,14 @@ export class PreguntaServiceProvider {
           .pipe(map(preguntas => preguntas.map(pregunta => new Pregunta(pregunta))));
   }
 
+  public queryNoAprobados(): Observable<Pregunta[]> {
+    console.log("Hacer consulta no aprobados")    
+    return this.http.get<Pregunta[]>(GLOBAL.url + "pregunta/noaprobados", {
+            headers:this.createAuthorizationHeader()
+          })
+          .pipe(map(preguntas => preguntas.map(pregunta => new Pregunta(pregunta))));
+  }
+
   public get(id: number): Observable<Pregunta> {    
       return this.http.get<Pregunta>(GLOBAL.url + "pregunta/" + id, {headers:this.createAuthorizationHeader()})
           .pipe(map(pregunta => new Pregunta(pregunta)));

@@ -16,8 +16,18 @@
 
 <ion-content padding>
 
-  <ion-item *ngFor="let item of globalArray;">
-    {{item.value1}}
+  <ion-label>Preguntas Aprobadas</ion-label>  
+
+  <ion-item *ngFor="let pregunta of arrayPreguntaAprobada;">
+    {{pregunta.pregunta}}
   </ion-item>
+
+  <ion-label>Preguntas NO Aprobadas</ion-label>  
+
+  <ion-item *ngFor="let pregunta of arrayPreguntaNoAprobada;">
+    {{pregunta.pregunta}}
+  </ion-item>
+
+
 
 </ion-content>
