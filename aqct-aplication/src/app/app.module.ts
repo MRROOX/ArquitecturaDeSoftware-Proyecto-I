@@ -16,6 +16,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuarioServiceProvider } from '../providers/usuario-service/usuario-service';
 import { PreguntaServiceProvider } from '../providers/pregunta-service/pregunta-service';
+import { RespuestaPage } from '../pages/respuesta/respuesta';
 
 
 
@@ -27,7 +28,8 @@ import { PreguntaServiceProvider } from '../providers/pregunta-service/pregunta-
     ListPage,
     LoginPage,
     RegisterPage,
-    PreguntaPage
+    PreguntaPage,
+    RespuestaPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { PreguntaServiceProvider } from '../providers/pregunta-service/pregunta-
     ListPage,
     LoginPage,
     RegisterPage,
-    PreguntaPage
+    PreguntaPage,
+    RespuestaPage
   ],
   providers: [
     StatusBar,

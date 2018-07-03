@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PreguntaServiceProvider } from '../../providers/pregunta-service/pregunta-service';
 import { Pregunta } from '../../model/pregunta';
-import { Usuario } from '../../model/usuario';
 import { AuthProvider } from '../../providers/auth/auth';
+import { RespuestaPage } from '../respuesta/respuesta';
 
 /**
  * Generated class for the PreguntaPage page.
@@ -33,10 +33,9 @@ export class PreguntaPage {
 
     this.preguntaService.queryAprobados().subscribe(
       Response => {                
-        this.arrayPreguntaAprobada = Response
-        let n: number = this.arrayPreguntaAprobada.length;
+        this.arrayPreguntaAprobada = Response        
 
-        for(var i =0; i< n; i++){
+        for(var i =0; i< this.arrayPreguntaAprobada.length; i++){
             if(usuario.nombre != this.arrayPreguntaAprobada[i].usuario.nombre){
               this.arrayPreguntaAprobada.splice(i,1);
             }
@@ -46,17 +45,25 @@ export class PreguntaPage {
 
     this.preguntaService.queryNoAprobados().subscribe(
       Response => {
-        this.arrayPreguntaNoAprobada = Response;
-        let n: number = this.arrayPreguntaNoAprobada.length
+        this.arrayPreguntaNoAprobada = Response;        
 
-        for(var i =0; i< n; i++){
+        for(var i =0; i< this.arrayPreguntaNoAprobada.length; i++){          
             if(usuario.nombre != this.arrayPreguntaNoAprobada[i].usuario.nombre){
-              this.arrayPreguntaNoAprobada.splice(i,1);
+              this.arrayPreguntaNoAprobada.splice(i,1);              
             }
         }
       }
     );
 
+
+  }
+
+  preguntaSelected(pregunta:Pregunta){
+
+    console.log(pregunta.descripcion);
+    this.navCtrl.push(RespuestaPage, {
+      'pregunta':pregunta
+    });
 
   }
 
