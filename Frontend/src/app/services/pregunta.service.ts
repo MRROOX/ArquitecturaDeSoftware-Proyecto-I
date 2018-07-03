@@ -40,6 +40,10 @@ export class PreguntaService {
         return this.http.post<number>(GLOBAL.url + "pregunta", pregunta);
     }
 
+    public aprobar(id: number): Observable<any> {
+        return this.http.get(GLOBAL.url + "pregunta/aprobar/" + id);
+    }
+
     public delete(id: number): Observable<any> {
         return this.http.delete(GLOBAL.url + "pregunta/" + id);
     }

@@ -50,6 +50,12 @@ export class GraficoLineasComponent {
     }
 
     public setMedidas(medidas: Medida[]) {
+        // Resetear valores
+        this.lineChartData[0].data = [];
+        this.lineChartData[1].data = [];
+        this.lineChartLabels = [];
+
+        // Insertar nuevos registros
         for (let i = 0; i < medidas.length; i++) {
             this.lineChartData[0].data[i] = medidas[i].temperatura;
             this.lineChartData[1].data[i] = medidas[i].saturacion;

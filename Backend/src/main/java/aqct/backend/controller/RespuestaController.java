@@ -22,48 +22,63 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("respuesta")
 @Secured("IS_AUTHENTICATED_FULLY")
 public class RespuestaController {
-    
+
     @Autowired
     private RespuestaDAO respuestaDAO;
-    
+
     @Autowired
     private UsuarioDAO usuarioDAO;
-    
+
     @GetMapping("noaprobados")
     public List<Respuesta> indexNoAprobados() {
-        
+
         return this.respuestaDAO.findByAprobado(false);
-        
+
     }
-    
+
     @PostMapping
-    public Long store(@RequestBody Respuesta respuesta, Principal principal){
+    public Long store(@RequestBody Respuesta respuesta, Principal principal) {
         // Obtener el objeto del usuario
         Usuario usuario = this.usuarioDAO.findByNombre(principal.getName());
-        
+
         // Si el usuario existe
-        if ( usuario != null ) {
+        if (usuario != null) {
             // Fijar la fecha de la respuesta
             respuesta.setCreatedAt(Timestamp.from(Instant.now()));
             respuesta.setUsuario(usuario);
             respuesta.setAprobado(false);
-            
+
             this.respuestaDAO.save(respuesta);
-            
+
             return respuesta.getId();
-            
+
         }
-        
+
         return null;
     }
-    
+
     @GetMapping("{id}")
-    public Respuesta show (@PathVariable("id") long id){
+    public Respuesta show(@PathVariable("id") long id) {
         return this.respuestaDAO.findById(id).get();
     }
-    
+
+    @GetMapping("aprobar/{id}")
+    public void aprobar(@PathVariable("id") long id) {
+        // Obtener respuesta
+        Respuesta respuesta = this.respuestaDAO.findById(id).get();
+        
+        // Validar respuesta
+        if ( respuesta != null ) {
+            // Aprobar
+            respuesta.setAprobado(true);
+            
+            // Guardar
+            this.respuestaDAO.save(respuesta);
+        }
+    }
+
     @DeleteMapping("{id}")
-    public void destroy(@PathVariable("id") long id){
+    public void destroy(@PathVariable("id") long id) {
         this.respuestaDAO.deleteById(id);
     }
 }

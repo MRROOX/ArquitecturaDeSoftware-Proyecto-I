@@ -25,4 +25,12 @@ export class RespuestaService {
         return this.http.post<number>(GLOBAL.url + "respuesta", respuesta);
     }
 
+    public aprobar(id: number): Observable<any> {
+        return this.http.get(GLOBAL.url + "respuesta/aprobar/" + id);
+    }
+
+    public delete(id: number): Observable<any> {
+        return this.http.delete(GLOBAL.url + "respuesta/" + id);
+    }
+
 }

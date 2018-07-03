@@ -136,6 +136,26 @@ public class PreguntaController {
         return this.preguntaDAO.findById(id).get();
 
     }
+    
+    /**
+     * Permite actualizar una pregunta
+     * 
+     * @param id id de la pregunta
+     */
+    @GetMapping("aprobar/{id}")
+    public void update(@PathVariable("id") long id) {
+        // Obtener pregunta
+        Pregunta pregunta = this.preguntaDAO.findById(id).get();
+        
+        // Validar pregunta
+        if ( pregunta != null ) {
+            // Aprobar
+            pregunta.setAprobado(true);
+            
+            // Guardar
+            this.preguntaDAO.save(pregunta);
+        }
+    }
 
     /**
      * Eliminar una pregunta de la base de datos
