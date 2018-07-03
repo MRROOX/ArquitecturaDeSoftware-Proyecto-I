@@ -4,22 +4,19 @@ import aqct.backend.model.Rol;
 import aqct.backend.model.RolDAO;
 import aqct.backend.model.Usuario;
 import aqct.backend.model.UsuarioDAO;
-import java.security.Principal;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.sql.DataSource;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -28,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Batman
  */
 @RestController
-@PreAuthorize("true")
 @RequestMapping("usuario")
 public class UsuarioController {
     
@@ -46,6 +42,7 @@ public class UsuarioController {
      * @return Lista de Usuario
      */
     @GetMapping
+    @Secured("IS_AUTHENTICATED_FULLY")
     public List<Usuario> index() {
 
         return this.usuarioDAO.findAll();
@@ -60,6 +57,7 @@ public class UsuarioController {
      * @return Numero id asignado al usuario registrado
      */
     @PostMapping
+    @PreAuthorize("true")
     public Long store(@RequestBody Usuario usuario) {
         // Rol para usuarios comunes
         Rol rol = this.rolDAO.findById((long) 1).get();
@@ -76,6 +74,14 @@ public class UsuarioController {
         return usuario.getId();
         
     }
+    
+    @PutMapping
+    @Secured("IS_AUTHENTICATED_FULLY")
+    public void update(@RequestBody Usuario usuario) {
+        
+        this.usuarioDAO.save(usuario);
+        
+    }
 
     /**
      * Busca y obtiene el Usuario asosiado a un id
@@ -84,6 +90,7 @@ public class UsuarioController {
      * @return El objeto usuario como un JSON
      */
     @GetMapping("{id}")
+    @Secured("IS_AUTHENTICATED_FULLY")
     public Usuario show(@PathVariable(value = "id") long id) {
         return this.usuarioDAO.findById(id).get();
     }
@@ -94,6 +101,7 @@ public class UsuarioController {
      * @param id Id del usuario que se desea eliminar
      */
     @DeleteMapping("{id}")
+    @Secured("IS_AUTHENTICATED_FULLY")
     public void destroy(@PathVariable("id") long id) {
 
         this.usuarioDAO.deleteById(id);

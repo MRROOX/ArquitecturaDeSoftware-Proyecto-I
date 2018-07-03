@@ -26,6 +26,11 @@ export class PreguntaService {
             .pipe(map(preguntas => preguntas.map(pregunta => new Pregunta(pregunta))));
     }
 
+    public queryNoAprobados(): Observable<Pregunta[]> {
+        return this.http.get<Pregunta[]>(GLOBAL.url + "pregunta/noaprobados")
+        .pipe(map(preguntas => preguntas.map(pregunta => new Pregunta(pregunta))));
+    }
+
     public get(id: number): Observable<Pregunta> {
         return this.http.get<Pregunta>(GLOBAL.url + "pregunta/" + id)
             .pipe(map(pregunta => new Pregunta(pregunta)));

@@ -3,7 +3,7 @@ import { Sensor } from "./sensor";
 export class Medida {
 
     public id: number;
-    public created_at: Date;
+    public createdAt: Date;
     public saturacion: number;
     public temperatura: number;
 
@@ -13,14 +13,14 @@ export class Medida {
 
         Object.assign(this, json);
 
-        if (this.created_at) { this.created_at = new Date(this.created_at) };
+        if (this.createdAt) { this.createdAt = new Date(this.createdAt) };
 
     }
 
     public getJSON(): any {
         return {
             id: this.id,
-            created_at: this.created_at,
+            createdAt: this.createdAt,
             saturacion: this.saturacion,
             temperatura: this.temperatura,
             sensor: this.sensor != null ? this.sensor.getJSON() : null

@@ -25,41 +25,11 @@
             <th class="text-right"></th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Fulano</td>
-            <td>Fulano@hotmail.com</td>
-            <td>
-                <button type="button" class="btn btn-outline-danger">
-                    <i class="fas fa-times"></i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Mengano</td>
-            <td>Mengano@hotmail.com</td>
-            <td>
-                <button type="button" class="btn btn-outline-danger">
-                    <i class="fas fa-times"></i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Juanito</td>
-            <td>Juanito@hotmail.com</td>
-            <td>
-                <button type="button" class="btn btn-outline-danger">
-                    <i class="fas fa-times"></i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Pedrito</td>
-            <td>Pedrito@hotmail.com</td>
+    <tbody *ngIf="usuarios">
+        <tr *ngFor="let usuario of usuarios | paginate: { id: 'usuarios', itemsPerPage: 6, currentPage: p }; index as i;">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.correo}}</td>
             <td>
                 <button type="button" class="btn btn-outline-danger">
                     <i class="fas fa-times"></i>
@@ -68,3 +38,4 @@
         </tr>
     </tbody>
 </table>
+<pagination-controls id="usuarios" (pageChange)="p = $event"></pagination-controls>

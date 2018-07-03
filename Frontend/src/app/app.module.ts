@@ -66,6 +66,9 @@ const jwtConf: JwtModuleOptions = {
         routing,
         JwtModule.forRoot(jwtConf)
     ],
+    exports: [
+        NgxPaginationModule
+    ],
     providers: [
         appRoutingProviders
     ],

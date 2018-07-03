@@ -7,6 +7,7 @@ import { ModeradorComponent } from './moderador.component';
 import { appRoutingProviders, routing } from './moderador.routing';
 import { AceptarPreguntasComponent } from './components/aceptarpreguntas/aceptarpreguntas.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
         BrowserModule,
         FormsModule,
         HttpClientModule,
+        NgxPaginationModule,
         routing
     ],
     providers: [

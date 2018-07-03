@@ -8,4 +8,6 @@ public interface RespuestaDAO extends CrudRepository<Respuesta, Long> {
     @Override
     public List<Respuesta> findAll();
     
+    public List<Respuesta> findByAprobado(boolean aprobado);
+    
 }

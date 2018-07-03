@@ -7,6 +7,7 @@ import aqct.backend.model.UsuarioDAO;
 import java.security.Principal;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,6 +28,13 @@ public class RespuestaController {
     
     @Autowired
     private UsuarioDAO usuarioDAO;
+    
+    @GetMapping("noaprobados")
+    public List<Respuesta> indexNoAprobados() {
+        
+        return this.respuestaDAO.findByAprobado(false);
+        
+    }
     
     @PostMapping
     public Long store(@RequestBody Respuesta respuesta, Principal principal){

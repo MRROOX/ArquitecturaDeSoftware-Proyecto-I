@@ -2,39 +2,37 @@
     Preguntas y comentarios
 </h2>
 
-<div class="card">
-    <div class="card-header">
-        Pregunta
-        <span class="float-right">10:49 AM 03/02/2018</span>
+<div *ngIf="preguntas">
+    <div *ngFor="let pregunta of preguntas | paginate: { id: 'aceptarpreguntas', itemsPerPage: 6, currentPage: p1 }; index as i;" class="card">
+        <div class="card-header">
+            {{pregunta.usuario.nombre}}
+            <span class="float-right">{{pregunta.createdAt.toLocaleString("es-CL")}}</span>
+        </div>
+        <div class="card-body">
+            <h4>{{pregunta.pregunta}}</h4>
+            <p>{{pregunta.descripcion}}</p>
+            <hr>
+            <a (click)="aceptarPregunta(i)" class="btn btn-success">Aceptar</a>
+            <a (click)="rechazarPregunta(i)" class="btn btn-danger">Rechazar</a>
+        </div>
     </div>
-    <div class="card-body">
-        <h4>Lorem ipsum dolor sit amet?</h4>
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum facilisis mattis. Morbi molestie metus nec lacinia
-        laoreet. Fusce varius aliquam orci, non mattis nisl fringilla vel. Integer consectetur, lorem quis ornare volutpat,
-        dolor massa viverra orci, pellentesque tristique sapien nunc eu dui.
-        <hr>
-        <button class="btn btn-success">Aceptar</button>
-        <button class="btn btn-danger">Rechazar</button>
-
-    </div>
+    <pagination-controls id="aceptarpreguntas" (pageChange)="p1 = $event"></pagination-controls>
 </div>
 
+<hr>
 
-<div class="card mt-3">
-    <div class="card-header">
-        Comentario
-        <span class="float-right">10:49 AM 03/02/2018</span>
+<div *ngIf="respuestas">
+    <div *ngFor="let respuesta of respuestas | paginate: { id: 'aceptarrespuestas', itemsPerPage: 6, currentPage: p2 }; index as i;" class="card mt-3">
+        <div class="card-header">
+            {{respuesta.usuario.nombre}}
+            <span class="float-right">{{respuesta.createdAt.toLocaleString("es-CL")}}</span>
+        </div>
+        <div class="card-body">
+            <p>{{respuesta.respuesta}}</p>
+            <hr>
+            <a (click)="aceptarRespuesta(i)" class="btn btn-success">Aceptar</a>
+            <a (click)="rechazarRespuesta(i)" class="btn btn-danger">Rechazar</a>
+        </div>
     </div>
-    <div class="card-body">
-        <h4>Lorem ipsum dolor sit amet?</h4>
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum facilisis mattis. Morbi molestie metus nec lacinia
-        laoreet. Fusce varius aliquam orci, non mattis nisl fringilla vel. Integer consectetur, lorem quis ornare volutpat,
-        dolor massa viverra orci, pellentesque tristique sapien nunc eu dui.
-        <hr>
-        <button class="btn btn-success">Aceptar</button>
-        <button class="btn btn-danger">Rechazar</button>
-
-    </div>
+    <pagination-controls id="aceptarrespuestas" (pageChange)="p2 = $event"></pagination-controls>
 </div>
