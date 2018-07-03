@@ -7,11 +7,13 @@ package aqct.backend.controller;
 
 import aqct.backend.model.Pregunta;
 import aqct.backend.model.PreguntaDAO;
+import aqct.backend.model.Respuesta;
 import aqct.backend.model.Usuario;
 import aqct.backend.model.UsuarioDAO;
 import java.security.Principal;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
@@ -59,7 +61,26 @@ public class PreguntaController {
     @GetMapping("aprobados")
     public List<Pregunta> indexAprobados() {
         
-        return this.preguntaDAO.findAllByAprobado(true);
+        // Obtener preguntas
+        List<Pregunta> preguntas = this.preguntaDAO.findAllByAprobado(true);
+        
+        // Por cada pregunta
+        for ( Pregunta pregunta : preguntas ) {
+            // Filtrar respuestas
+            List<Respuesta> respuestas = new ArrayList<>();
+            
+            // Cachear respuestas
+            for ( Respuesta respuesta : pregunta.getRespuestas() ) {
+                // Si la respuesta ha sido aprobada
+                if ( respuesta.isAprobado() ) {
+                    respuestas.add(respuesta);
+                }
+            }
+            
+            pregunta.setRespuestas(respuestas);
+        }
+        
+        return preguntas;
         
     }
     

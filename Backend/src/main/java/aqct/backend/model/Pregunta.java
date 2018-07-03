@@ -42,7 +42,7 @@ public class Pregunta implements Serializable {
     //@JsonManagedReference("pregunta_usuario")
     private Usuario usuario;
     
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "pregunta_id")
     @JsonManagedReference
     private List<Respuesta> respuestas;
@@ -99,4 +99,12 @@ public class Pregunta implements Serializable {
         this.usuario = usuario;
     }
     
+    public List<Respuesta> getRespuestas() {
+        return this.respuestas;
+    }
+
+    public void setRespuestas(List<Respuesta> respuestas) {
+        this.respuestas = respuestas;
+    }
+
 }

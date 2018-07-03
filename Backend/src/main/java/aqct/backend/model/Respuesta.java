@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,12 +32,12 @@ public class Respuesta implements Serializable {
     @CreationTimestamp
     private Timestamp createdAt;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pregunta_id")
     @JsonBackReference
     private Pregunta pregunta;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
     

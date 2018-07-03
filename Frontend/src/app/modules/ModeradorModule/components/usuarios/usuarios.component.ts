@@ -22,4 +22,22 @@ export class UsuariosComponent {
         );
     }
 
+    public deleteUsuario(usuario: Usuario) {
+        // Eliminar usuario indicado
+        this.usuarioService.delete(usuario.id).subscribe(
+            Response => {
+                // Buscar indice de usuario
+                let index = this.usuarios.indexOf(usuario);
+
+                // Si el usuario está en la lista
+                if ( index >= 0 ) {
+                    // Quitar de la lista
+                    this.usuarios.splice(index, 1);
+
+                    alert("El usuario '" + usuario.nombre + "' ha sido eliminado");
+                }
+            }
+        );
+    }
+
 }

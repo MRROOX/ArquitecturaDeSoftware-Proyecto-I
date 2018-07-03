@@ -30,7 +30,7 @@ export class UsuarioService {
     }
 
     public delete(id: number): Observable<any> {
-        return this.http.get(GLOBAL.url + "usuario/" + id);
+        return this.http.delete(GLOBAL.url + "usuario/" + id);
     }
 
 }

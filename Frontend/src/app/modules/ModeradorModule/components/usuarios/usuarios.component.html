@@ -31,9 +31,9 @@
             <td>{{usuario.nombre}}</td>
             <td>{{usuario.correo}}</td>
             <td>
-                <button type="button" class="btn btn-outline-danger">
+                <a (click)="deleteUsuario(usuario)" type="button" class="btn btn-outline-danger">
                     <i class="fas fa-times"></i>
-                </button>
+                </a>
             </td>
         </tr>
     </tbody>

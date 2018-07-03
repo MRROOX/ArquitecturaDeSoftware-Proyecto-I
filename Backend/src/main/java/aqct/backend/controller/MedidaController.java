@@ -47,6 +47,7 @@ public class MedidaController {
     public Long store(@RequestBody Medida medida) {
 
         this.medidaDAO.save(medida);
+
         return medida.getId();
 
     }

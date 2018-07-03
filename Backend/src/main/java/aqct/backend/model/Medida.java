@@ -31,7 +31,7 @@ public class Medida implements Serializable {
     @CreationTimestamp
     private Timestamp createdAt;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sensor_id")
     private Sensor sensor;
     
