@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>AQCT</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ingrese su pregunta</h3>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Pregunta</ion-label>
+      <ion-input type="text" [(ngModel)] ="pregunta.pregunta" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Descripcion</ion-label>
+      <ion-input type="text" [(ngModel)] ="pregunta.descripcion" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button (click) = "ingresarPregunta()">Preguntar</button>    
+  
+</ion-content>
