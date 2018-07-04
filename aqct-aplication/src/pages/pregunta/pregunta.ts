@@ -59,8 +59,7 @@ export class PreguntaPage {
   }
 
   preguntaSelected(pregunta:Pregunta){
-
-    console.log(pregunta.descripcion);
+        
     this.navCtrl.push(RespuestaPage, {
       'pregunta':pregunta
     });

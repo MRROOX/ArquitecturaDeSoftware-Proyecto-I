@@ -17,13 +17,28 @@ import { Pregunta } from '../../model/pregunta';
 export class RespuestaPage {
 
   public pregunta :Pregunta;
+  public mensajePregunta: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pregunta = this.navParams.get('pregunta');
   }
 
   ionViewDidLoad() {
-    console.log(this.pregunta);    
+    
+    if(this.pregunta.aprobado){
+      //En caso de que la pregunta este aprobada, mostrar las respuestas aprobadas
+      if(this.pregunta.respuestas != null && this.pregunta.respuestas.length>0){
+        for(let i =0; i<this.pregunta.respuestas.length; i++){
+          if(!this.pregunta.respuestas[i].aprobado){
+            this.pregunta.respuestas.splice(i,1);
+          }
+        }
+      }
+    }else{
+      //En caso de que aun no estan aprobadas, mostrar mensaje
+      this.mensajePregunta = "Su pregunta aun se encuentra en evaluación."
+    }
+
   }
 
 }

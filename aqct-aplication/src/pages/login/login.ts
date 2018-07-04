@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, AlertController, LoadingController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { Usuario } from '../../model/usuario';
@@ -24,7 +24,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private menu: MenuController,  private authService:AuthProvider,
-              private alertCtrl: AlertController) {
+              private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
     this.usuario = new Usuario();
     //Desactivar el menu para esta vista
     this.menu.swipeEnable(false);    
@@ -34,7 +34,14 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  login(){    
+  login(){
+    
+    //Spiner bonito para mostrar espera de carga
+    let loading = this.loadingCtrl.create({
+      content: 'Por favor espera...'
+    });  
+    loading.present();
+
 
     if (this.usuario.nombre != null && this.usuario.password!=null) {
       // Obtener autorización
@@ -42,8 +49,13 @@ export class LoginPage {
           Response => {
               // Si hubo error al iniciar sesión
               if (Response.error != null) {
-                  // Guardar error
-                  console.log(Response.error);
+                  // Guardar error                  
+                  let alert = this.alertCtrl.create({
+                    title: 'Inicio de sesión fallido!',
+                    subTitle: 'Nombre de usuario o contraseña incorrecta.',
+                    buttons: ['Ok']
+                  });
+                  alert.present();                  
 
               } else {
                   // Inicio de sesión exitoso
@@ -52,22 +64,21 @@ export class LoginPage {
                   // Redireccionar a ruta correspondiente
                   this.navCtrl.setRoot(HomePage);
               }
+              loading.dismiss();
           },
-          Error => {
-              // Error al iniciar sesión
-              this.alertCtrl.create({
-                title:'Inicio de sesion fallido!',
-                message: 'Nombre de usuario o contraseña incorrecta.',
-                buttons:[
-                  {
-                    text:"Ok",                    
-                  }
-                ]
-              }).present;
-              this.error = Error;
-              
+          Error => {            
+              // Error al iniciar sesión              
+              let alert = this.alertCtrl.create({
+                title: 'Inicio de sesión fallido!',
+                subTitle: 'Error de conexión, por favor intente más tarde.',
+                buttons: ['Ok']
+              });
+              alert.present();
+              loading.dismiss();
           }
       );
+
+      
   }
     
   }

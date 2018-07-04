@@ -15,8 +15,9 @@
 
 
 <ion-content padding>
-
-  <ion-label>Preguntas Aprobadas</ion-label> 
+  <strong>
+    <ion-label>Preguntas Aprobadas</ion-label> 
+  </strong>
   
   <ion-list inset>
       <button ion-item *ngFor="let pregunta of arrayPreguntaAprobada;" (click)="preguntaSelected(pregunta)">
@@ -24,8 +25,10 @@
       </button> 
   </ion-list>
 
-  <ion-label>Preguntas en avaluacion</ion-label>  
-
+  <strong>
+    <ion-label>Preguntas en avaluacion</ion-label>  
+  </strong>
+  
   <ion-list inset>
       <button ion-item *ngFor="let pregunta of arrayPreguntaNoAprobada;" (click)="preguntaSelected(pregunta)">
         {{ pregunta.pregunta }}

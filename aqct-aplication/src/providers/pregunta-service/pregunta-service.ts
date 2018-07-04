@@ -10,7 +10,7 @@ import { Token } from '../../model/token';
 export class PreguntaServiceProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Hello PreguntaServiceProvider Provider');
+    
   }
 
 
