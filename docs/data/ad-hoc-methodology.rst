@@ -51,7 +51,7 @@ Autorización de la publicación de mensajes.
 
 
 
-Histoias de Usuario
+Historias de Usuario
 -------------------
 
 Luego de realizar conversaciones con los stackeholder se definen y se eligen las historias de usuarios para ser implementadas en el sistema.
