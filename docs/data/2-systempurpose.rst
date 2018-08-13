@@ -27,4 +27,8 @@ Los Servicios
 **Servicios provistos por el Sistema**
 
 
-
+| Interface     | ???           |
+| ------------- |:-------------:|
+| UsuarioDAO    | right-aligned |
+| MedidaDAO     | centered      |
+| SensorDAO     | are neat      |
