@@ -29,5 +29,6 @@ Los Servicios
 ==========  ===========
 Servicios   Descripcion
 ==========  ===========
-UsuarioDAO   Desc.
+UsuarioDAO   Provee acceso a la persistencia de datos, permite
+             crear, buscar, actualizar y eliminar objetos de tipo Usuario.
 ==========  ===========
