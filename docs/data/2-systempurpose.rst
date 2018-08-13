@@ -28,7 +28,7 @@ Los Servicios
 
 
 | Interface     | ???           |
-| ------------- |:-------------:|
+| ------------- | ------------- |
 | UsuarioDAO    | right-aligned |
 | MedidaDAO     | centered      |
 | SensorDAO     | are neat      |
