@@ -26,9 +26,11 @@ Los Servicios
 
 **Servicios provistos por el Sistema**
 
-===========  ===========
- Interface    Servicios
-===========  ===========
-UsuarioDAO   Provee acceso a la persistencia de datos, permite
-             crear, buscar, actualizar y eliminar objetos de tipo Usuario.
-===========  ===========
+======================    ===============================================================
+ Interface                 Servicios
+========================  ===============================================================
+ Servicio de Usuarios      Provee acceso a la persistencia de datos, permite
+                           crear, buscar, actualizar y eliminar objetos de tipo Usuario.
+ Servicio de Medidas       Entrega medidas de temperatura, humedad respecto a diferentes
+                           posibles rangos de tiempo.
+========================  ===============================================================
