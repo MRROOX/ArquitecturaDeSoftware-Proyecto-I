@@ -29,17 +29,16 @@ Los Servicios
 ==========================  ===============================================================
  Interface                   Servicios
 ==========================  ===============================================================
- Servicio de Usuarios        Provee acceso a la persistencia de datos, permite
-                             crear, buscar, actualizar y eliminar objetos de tipo Usuario.
-                           
- Servicio de Medidas         Entrega medidas de temperatura, humedad respecto a diferentes
-                             posibles rangos de tiempo.
- Servicio de Preguntas       Provee acceso a la persistencia de datos, permite
-                             crear, listar, obtener, actualizar y eliminar preguntas.
-                             Permitir registrar respuestas a preguntas.
- Servicio de Respuestas      Provee acceso a la persistencia de datos,permite
-                             crear, listar, obtener, actualizar y eliminar respuestas.
- Gráficos                    Permitir visualizar gráficos de medidas y comparar medidas de diferentes periodos.
+ Servicio de Usuarios        - Provee acceso a la persistencia de datos, permite
+                               crear, buscar, actualizar y eliminar objetos de tipo Usuario.
+ Servicio de Medidas         - Entrega medidas de temperatura, humedad respecto a diferentes
+                               posibles rangos de tiempo.
+ Servicio de Preguntas       - Provee acceso a la persistencia de datos, permite
+                               crear, listar, obtener, actualizar y eliminar preguntas.
+                             - Permitir registrar respuestas a preguntas.
+ Servicio de Respuestas      - Provee acceso a la persistencia de datos,permite
+                               crear, listar, obtener, actualizar y eliminar respuestas.
+ Gráficos                    - Permitir visualizar gráficos de medidas y comparar medidas de diferentes periodos.
 ==========================  ===============================================================
 
 Requisitos No Funcionales
