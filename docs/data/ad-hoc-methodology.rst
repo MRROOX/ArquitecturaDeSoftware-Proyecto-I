@@ -98,6 +98,6 @@ Mockups
 
 A continuacion se presentan los mockups diseñados de acuerdo a una posterior discucion con el equipo de desarrollo, de esta forma.
 
-.. image:: images/AD_HOC.jpg
+
 .. image:: images/Comparar Temperaturas.png
 
