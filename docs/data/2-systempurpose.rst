@@ -39,6 +39,7 @@ mostrar casos de usos de esos servicios, tambien podiamos agregar "servicios" de
                              posibles rangos de tiempo.
  Servicio de Preguntas       Provee acceso a la persistencia de datos, permite
                              crear, listar, obtener, actualizar y eliminar preguntas.
+                             Permitir registrar respuestas a preguntas.
  Servicio de Respuestas      Provee acceso a la persistencia de datos,permite
                              crear, listar, obtener, actualizar y eliminar respuestas.
 ==========================  ===============================================================
