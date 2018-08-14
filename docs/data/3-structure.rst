@@ -1,3 +1,11 @@
 Estructura 
 ==================================
-architectural overview, logical components and interfaces.
+
+Visión de Conjunto
+------------------
+
+Componentes Logicos
+-------------------
+
+Interfaces
+----------
