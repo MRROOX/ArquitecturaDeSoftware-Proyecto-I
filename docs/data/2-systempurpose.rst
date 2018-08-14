@@ -43,3 +43,8 @@ mostrar casos de usos de esos servicios, tambien podiamos agregar "servicios" de
  Servicio de Respuestas      Provee acceso a la persistencia de datos,permite
                              crear, listar, obtener, actualizar y eliminar respuestas.
 ==========================  ===============================================================
+
+Requisitos no funcionales
+-------------------------
+
+Caracteristicas y restricciones
