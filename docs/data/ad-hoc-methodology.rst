@@ -24,7 +24,7 @@ Se identifican los Stakeholders
 -------------------------------
 Para la realización del proyecto se ha identificado 3 tipos de usuarios.
 Usuarios Web: Es aquel usuario que se conecta al sistema desde la web.
-Usuario Móvil: Es aquel usuario que se conecta al sisde desde una App Móvil.
+Usuario Móvil: Es aquel usuario que se conecta al sistema desde una App Móvil.
 Usuario Moderador: Es aquel usuario que autoriza o niega las preguntas enviadas por un usuario.
 
 Se definen los objetivos
