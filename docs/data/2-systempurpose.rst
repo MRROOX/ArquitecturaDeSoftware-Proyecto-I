@@ -45,7 +45,7 @@ mostrar casos de usos de esos servicios, tambien podiamos agregar "servicios" de
  Gráficos                    Permitir visualizar gráficos de medidas y comparar medidas de diferentes periodos.
 ==========================  ===============================================================
 
-Requisitos no funcionales
+Requisitos No Funcionales
 -------------------------
 
 **Requisitos**
