@@ -49,9 +49,9 @@ Requisitos no funcionales
 -------------------------
 
 **Requisitos**
-- Los sensores utilizados deben poder conectarse a la base de datos para proveer las medidas registradas, sin embargo, si la conexión a la base de datos es interrumpida, el software controlador del sensor debe mantenerse en pausa hasta establecer una nueva conexión.
-- asd
+1. Los sensores utilizados deben poder conectarse a la base de datos para proveer las medidas registradas, sin embargo, si la conexión a la base de datos es interrumpida, el software controlador del sensor debe mantenerse en pausa hasta establecer una nueva conexión.
+2. asd
 
 **Restricciones**
-- El software del sensor debe estar programado en un lenguaje de bajo consumo de recursos.
-- asd
+1. El software del sensor debe estar programado en un lenguaje de bajo consumo de recursos.
+2. asd
