@@ -26,9 +26,6 @@ Los Servicios
 
 **Servicios provistos por el Sistema**
 
-Aqui el profe nos dijo que teniamos que indicar cuales eran los servicios del backend,
-mostrar casos de usos de esos servicios, tambien podiamos agregar "servicios" derivados que entrega el frontend.
-
 ==========================  ===============================================================
  Interface                   Servicios
 ==========================  ===============================================================
