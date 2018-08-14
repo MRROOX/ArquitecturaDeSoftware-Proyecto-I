@@ -42,6 +42,7 @@ mostrar casos de usos de esos servicios, tambien podiamos agregar "servicios" de
                              Permitir registrar respuestas a preguntas.
  Servicio de Respuestas      Provee acceso a la persistencia de datos,permite
                              crear, listar, obtener, actualizar y eliminar respuestas.
+ Gráficos                    Permitir visualizar gráficos de medidas y comparar medidas de diferentes periodos.
 ==========================  ===============================================================
 
 Requisitos no funcionales
