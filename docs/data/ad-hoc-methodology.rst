@@ -100,7 +100,7 @@ A continuacion se presentan los mockups diseñados de acuerdo a una posterior di
 
 
 .. image:: images/Comparar Temperaturas.png
-    :scale: 30 %
+    :scale: 60 %
     :align: center
 
 
