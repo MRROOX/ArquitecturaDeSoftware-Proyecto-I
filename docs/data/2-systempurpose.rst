@@ -29,16 +29,16 @@ Los Servicios
 Aqui el profe nos dijo que teniamos que indicar cuales eran los servicios del backend,
 mostrar casos de usos de esos servicios, tambien podiamos agregar "servicios" derivados que entrega el frontend.
 
-========================  ===============================================================
- Interface                 Servicios
-========================  ===============================================================
- Servicio de Usuarios      Provee acceso a la persistencia de datos, permite
-                           crear, buscar, actualizar y eliminar objetos de tipo Usuario.
+==========================  ===============================================================
+ Interface                   Servicios
+==========================  ===============================================================
+ Servicio de Usuarios        Provee acceso a la persistencia de datos, permite
+                             crear, buscar, actualizar y eliminar objetos de tipo Usuario.
                            
- Servicio de Medidas       Entrega medidas de temperatura, humedad respecto a diferentes
-                           posibles rangos de tiempo.
- Servicio de Preguntas     Provee acceso a la persistencia de datos, permite
-                           crear, listar, obtener, actualizar y eliminar preguntas.
- Servicio de Respuestas    Provee acceso a la persistencia de datos,permite
-                           crear, listar, obtener, actualizar y eliminar respuestas.
-========================  ===============================================================
+ Servicio de Medidas         Entrega medidas de temperatura, humedad respecto a diferentes
+                             posibles rangos de tiempo.
+ Servicio de Preguntas       Provee acceso a la persistencia de datos, permite
+                             crear, listar, obtener, actualizar y eliminar preguntas.
+ Servicio de Respuestas      Provee acceso a la persistencia de datos,permite
+                             crear, listar, obtener, actualizar y eliminar respuestas.
+==========================  ===============================================================
