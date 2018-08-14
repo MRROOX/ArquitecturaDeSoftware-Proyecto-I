@@ -84,6 +84,8 @@ Yo como usuario móvil quiero visualizar las respuestas a mis preguntas.
 
 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una notificación).
 
+
+
 Yo como usuario moderador quiero aprobar preguntas de usuario móvil.
 
 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar su contenido.
@@ -97,4 +99,5 @@ Mockups
 A continuacion se presentan los mockups diseñados de acuerdo a una posterior discucion con el equipo de desarrollo, de esta forma.
 
 .. image:: images/AD_HOC.jpg
+.. image:: images/Comparar Temperaturas.png
 
