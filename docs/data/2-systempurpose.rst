@@ -26,5 +26,28 @@ Los Servicios
 
 **Servicios provistos por el Sistema**
 
+==========================  ===============================================================
+ Interface                   Servicios
+==========================  ===============================================================
+ Servicio de Usuarios        - Provee acceso a la persistencia de datos, permite
+                               crear, buscar, actualizar y eliminar objetos de tipo Usuario.
+ Servicio de Medidas         - Entrega medidas de temperatura, humedad respecto a diferentes
+                               posibles rangos de tiempo.
+ Servicio de Preguntas       - Provee acceso a la persistencia de datos, permite
+                               crear, listar, obtener, actualizar y eliminar preguntas.
+                             - Permitir registrar respuestas a preguntas.
+ Servicio de Respuestas      - Provee acceso a la persistencia de datos,permite
+                               crear, listar, obtener, actualizar y eliminar respuestas.
+ Gráficos                    - Permitir visualizar gráficos de medidas y comparar medidas de diferentes periodos.
+==========================  ===============================================================
 
+Requisitos No Funcionales
+-------------------------
 
+**Requisitos**
+
+- Los sensores utilizados deben poder conectarse a la base de datos para proveer las medidas registradas, sin embargo, si la conexión a la base de datos es interrumpida, el software controlador del sensor debe mantenerse en pausa hasta establecer una nueva conexión.
+
+**Restricciones**
+
+- El software del sensor debe estar programado en un lenguaje de bajo consumo de recursos.

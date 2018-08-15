@@ -1,3 +1,5 @@
+.. -*- coding: utf-8 -*-
+
 Siguiendo la Metodología AD-HOC
 =================================
 
@@ -22,7 +24,7 @@ Se identifican los Stakeholders
 -------------------------------
 Para la realización del proyecto se ha identificado 3 tipos de usuarios.
 Usuarios Web: Es aquel usuario que se conecta al sistema desde la web.
-Usuario Móvil: Es aquel usuario que se conecta al sisde desde una App Móvil.
+Usuario Móvil: Es aquel usuario que se conecta al sistema desde una App Móvil.
 Usuario Moderador: Es aquel usuario que autoriza o niega las preguntas enviadas por un usuario.
 
 Se definen los objetivos
@@ -51,7 +53,7 @@ Autorización de la publicación de mensajes.
 
 
 
-Histoias de Usuario
+Historias de Usuario
 -------------------
 
 Luego de realizar conversaciones con los stackeholder se definen y se eligen las historias de usuarios para ser implementadas en el sistema.
@@ -82,6 +84,8 @@ Yo como usuario móvil quiero visualizar las respuestas a mis preguntas.
 
 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una notificación).
 
+
+
 Yo como usuario moderador quiero aprobar preguntas de usuario móvil.
 
 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar su contenido.
@@ -94,7 +98,9 @@ Mockups
 
 A continuacion se presentan los mockups diseñados de acuerdo a una posterior discucion con el equipo de desarrollo, de esta forma.
 
-.. image:: images/AD_HOC.jpg
-    :scale: 30 %
+
+.. image:: images/Comparar Temperaturas.png
+    :scale: 60 %
     :align: center
+
 
