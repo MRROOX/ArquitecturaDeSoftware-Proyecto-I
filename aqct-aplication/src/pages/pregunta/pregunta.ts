@@ -18,8 +18,10 @@ import { RespuestaPage } from '../respuesta/respuesta';
   templateUrl: 'pregunta.html',
 })
 export class PreguntaPage {
-  public arrayPreguntaAprobada: Array<Pregunta>;    
-  public arrayPreguntaNoAprobada: Array<Pregunta>;
+  public arrayPreguntaAprobada: Pregunta[];
+  public arrayPreguntaNoAprobada: Pregunta[];
+  public hasPreguntasAprobada:boolean;
+  public hasPreguntasNoAprobada:boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private preguntaService: PreguntaServiceProvider,
@@ -33,13 +35,13 @@ export class PreguntaPage {
 
     this.preguntaService.queryAprobados().subscribe(
       Response => {                
-        this.arrayPreguntaAprobada = Response        
-
+        this.arrayPreguntaAprobada = Response;                
         for(var i =0; i< this.arrayPreguntaAprobada.length; i++){
             if(usuario.nombre != this.arrayPreguntaAprobada[i].usuario.nombre){
               this.arrayPreguntaAprobada.splice(i,1);
             }
         }
+        this.hasPreguntasAprobada = (this.arrayPreguntaAprobada.length>0)?true:false;
       }
     );
 
@@ -52,6 +54,7 @@ export class PreguntaPage {
               this.arrayPreguntaNoAprobada.splice(i,1);              
             }
         }
+        this.hasPreguntasNoAprobada = (this.arrayPreguntaNoAprobada.length>0)? true:false;
       }
     );
 
