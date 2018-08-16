@@ -98,15 +98,15 @@ Mockups
 
 A continuacion se presentan los mockups diseñados de acuerdo a una posterior discucion con el equipo de desarrollo, de esta forma.
 
-**Mockaps peteneciente a Usuario Web ...**
+**Mockaps peteneciente a Usuario Web**
 
 .. image:: images/Comparar Temperaturas.png
     :scale: 60 %
     :align: center
 
-**Mockaps peteneciente a Usuario Móvil ...**
+**Mockaps peteneciente a Usuario Móvil**
 
 
 
-**Mockaps peteneciente a Usuario Moderador ...**
+**Mockaps peteneciente a Usuario Moderador**
 
