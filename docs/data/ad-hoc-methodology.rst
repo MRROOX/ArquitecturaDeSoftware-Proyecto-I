@@ -147,12 +147,14 @@ A continuacion se presentan los mockups diseñados de acuerdo a una posterior di
 
 **Mockaps peteneciente a Usuario Moderador**
 
+.. image:: images/ModerarUsuarios.png
+    :scale: 60 %
+    :align: center
+
 .. image:: images/ModerarPreguntasyComentarios.png
     :scale: 60 %
     :align: center
     
     
-.. image:: images/ModerarUsuarios.png
-    :scale: 60 %
-    :align: center
+
 
