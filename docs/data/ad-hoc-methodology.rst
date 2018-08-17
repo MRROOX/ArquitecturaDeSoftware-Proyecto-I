@@ -100,13 +100,59 @@ A continuacion se presentan los mockups diseñados de acuerdo a una posterior di
 
 **Mockaps peteneciente a Usuario Web**
 
-.. image:: images/Comparar Temperaturas.png
+.. image:: images/CompararTemperaturas.png
     :scale: 60 %
     :align: center
+    
+      
+    .. image:: images/Preguntas.png
+    :scale: 60 %
+    :align: center
+    
+    .. image:: images/TemperaturayHumedad.png
+    :scale: 60 %
+    :align: center
+    
+  
+    
 
 **Mockaps peteneciente a Usuario Móvil**
 
 
+.. image:: images/loginmovil.PNG
+    :scale: 60 %
+    :align: center
+    
+    
+    .. image:: images/menumovil.PNG
+    :scale: 60 %
+    :align: center
+    
+    
+    .. image:: images/preguntamovil.PNG
+    :scale: 60 %
+    :align: center
+    
+
+.. image:: images/estadopreguntamovils.PNG
+    :scale: 60 %
+    :align: center
+    
+    
+    .. image:: images/listapreguntamovil.PNG
+    :scale: 60 %
+    :align: center
+
+
 
 **Mockaps peteneciente a Usuario Moderador**
+
+.. image:: images/ModerarPreguntasyComentarios.png
+    :scale: 60 %
+    :align: center
+    
+    
+.. image:: images/ModerarUsuarios.png
+    :scale: 60 %
+    :align: center
 
