@@ -105,11 +105,11 @@ A continuacion se presentan los mockups diseñados de acuerdo a una posterior di
     :align: center
     
       
-    .. image:: images/Preguntas.png
+.. image:: images/Preguntas.png
     :scale: 60 %
     :align: center
     
-    .. image:: images/TemperaturayHumedad.png
+.. image:: images/TemperaturayHumedad.png
     :scale: 60 %
     :align: center
     
@@ -124,12 +124,12 @@ A continuacion se presentan los mockups diseñados de acuerdo a una posterior di
     :align: center
     
     
-    .. image:: images/menumovil.PNG
+.. image:: images/menumovil.PNG
     :scale: 60 %
     :align: center
     
     
-    .. image:: images/preguntamovil.PNG
+.. image:: images/preguntamovil.PNG
     :scale: 60 %
     :align: center
     
