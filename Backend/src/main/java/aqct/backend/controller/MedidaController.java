@@ -6,7 +6,7 @@
 package aqct.backend.controller;
 
 import aqct.backend.model.Medida;
-import aqct.backend.model.MedidaDAO;
+import aqct.backend.repository.MedidaDAO;
 import aqct.backend.model.Range;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

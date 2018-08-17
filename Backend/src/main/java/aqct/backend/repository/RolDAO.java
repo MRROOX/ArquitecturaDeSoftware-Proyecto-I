@@ -1,5 +1,6 @@
-package aqct.backend.model;
+package aqct.backend.repository;
 
+import aqct.backend.model.Rol;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 

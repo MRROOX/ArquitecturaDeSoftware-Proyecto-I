@@ -1,7 +1,7 @@
 package aqct.backend.jwt;
 
 import aqct.backend.model.Usuario;
-import aqct.backend.model.UsuarioDAO;
+import aqct.backend.repository.UsuarioDAO;
 import static java.util.Collections.emptyList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

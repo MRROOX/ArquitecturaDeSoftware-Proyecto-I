@@ -1,5 +1,6 @@
-package aqct.backend.model;
+package aqct.backend.repository;
 
+import aqct.backend.model.Medida;
 import java.sql.Timestamp;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;

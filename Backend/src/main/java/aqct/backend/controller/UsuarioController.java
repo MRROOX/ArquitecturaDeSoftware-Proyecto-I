@@ -1,9 +1,9 @@
 package aqct.backend.controller;
 
 import aqct.backend.model.Rol;
-import aqct.backend.model.RolDAO;
+import aqct.backend.repository.RolDAO;
 import aqct.backend.model.Usuario;
-import aqct.backend.model.UsuarioDAO;
+import aqct.backend.repository.UsuarioDAO;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;

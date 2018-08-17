@@ -1,9 +1,9 @@
 package aqct.backend.controller;
 
 import aqct.backend.model.Respuesta;
-import aqct.backend.model.RespuestaDAO;
+import aqct.backend.repository.RespuestaDAO;
 import aqct.backend.model.Usuario;
-import aqct.backend.model.UsuarioDAO;
+import aqct.backend.repository.UsuarioDAO;
 import java.security.Principal;
 import java.sql.Timestamp;
 import java.time.Instant;
