@@ -3,7 +3,7 @@
 Siguiendo la Metodología AD-HOC
 =================================
 
-.. image:: EstructuraOverview.jpg
+.. image:: images/AD_HOC.jpg
     :scale: 30 %
     :align: center
 
