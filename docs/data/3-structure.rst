@@ -4,7 +4,7 @@ Estructura
 Visión de Conjunto
 ------------------
 .. image:: images/EstructuraOverview.jpg
-    :scale: 100 %
+    :scale: 70 %
     :align: center
 
 
