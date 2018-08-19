@@ -3,7 +3,7 @@ Estructura
 
 Visión de Conjunto
 ------------------
-.. image:: EstructuraOverview.jpg
+.. image:: images/EstructuraOverview.jpg
     :scale: 30 %
     :align: center
 
