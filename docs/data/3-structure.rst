@@ -8,11 +8,17 @@ Visión de Conjunto
     :align: center
 El sistema se encuentra compuesto por tres componentes principales; Backend, Frontend Web, Aplicación Móvil, agregando otras dos partes adicionales; un motor de base de datos y una colección de sensores.
 
-El **Frontend** web tiene **Componentes Visuales** que le permiten a los usuarios interactuar gráficamente con ellos, contienen vistas y controladores. Los **Ocultadores de Componentes Visuales** controlan la forma en la que ciertos componentes se despliegan al usuario. Y los **Servicios** proveen interfaces entre el **Backend** y **Frontend** utilizando a HTTP como protocolo de comunicación.
+El **Frontend** web tiene **Componentes Visuales** que le permiten a los usuarios interactuar gráficamente con ellos, contienen vistas y controladores. Los **Ocultadores de Componentes Visuales** controlan la forma en la que ciertos componentes se despliegan al usuario.
 
 La **Aplicación Móvil** se describe de una forma bastante similar, pero este al no tener un acceso a navegador por URL no requiere **Ocultadores de Componentes** para impedir el acceso a ciertos componentes de URL.
 
 Los **Servicios** del **Frontend** y la **Aplicación Móvil** se comunican con el **Spring Servlet** del **Backend** utilizando el protocolo HTTP, por lo que aquí se encuentra presente un Estilo de Arquitectura Orientada a Servicios (SOA), específicamente REST. Las solicitudes pasan por varios filtros (Pipes and filters), uno de ellos es el filtro de **Autenticación** el cuál extrae credenciales a las peticiones de los usuarios.
+
+Las peticiones que llegan al **Spring Servlet** son derivadas a los **Controladores**, los cuales conocen la intención de la solicitud y generan una respuesta dependiendo de la operación que se requiere. Para generar tal respuesta, los **Controladores** solicitan datos al componente **Repository**, el cuál contiene diversas interfaces que permiten gestionar la información de la **Base de Datos** (Estilo de Arquitectura Repository). Sin embargo, **Repository** no puede hacer esto directamente ya que no conoce exactamente cuál motor de base de datos se encuentra utilizando, por lo que deriva tal tarea al **Hibernate Entity Manager**, para generar los procedimientos de comunicación con la **Base de Datos**.
+
+El **Sensor** es un componente técnico que puede comunicarse directamente con la **Base de Datos** para almacenar información respecto a las medidas que este obtiene.
+
+Los **Modelos** tienen el propósito de dar a conocer la estructura de los datos que se deben almacenar en la **Base de Datos**, por lo que **Hibernate Entity Manager** los utiliza principalmente para conocer la forma de los datos.
 
 Componentes Logicos
 -------------------
