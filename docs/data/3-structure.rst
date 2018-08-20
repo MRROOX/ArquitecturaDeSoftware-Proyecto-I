@@ -114,11 +114,11 @@ SubComponente de Frontend_Web
 
 
 
-Componente Aplicación_Movil  
+Componente Aplicación_Móvil  
 -------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Aplicación_Movil                                                            |
+| **Componente**            | Aplicación_Móvil                                                            |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -133,14 +133,14 @@ Componente Aplicación_Movil
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Aplicación_Movil 
+SubComponentes de Aplicación_Móvil 
 ------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **SubComponente**         | Aplicación_Movil_Componentes_Visuales                                       |
+| **SubComponente**         | Aplicación_Moóil_Componentes_Visuales                                       |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
+| **Responsabilidades**     | - Interactúa con el **usuario móvil**, ponentes visuales que permiten cierto|
+|                           |   acceso a componentes de URL.                                              |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
@@ -155,7 +155,7 @@ SubComponentes de Aplicación_Movil
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **SubComponente**         | Aplicación_Movil_Servicios                                                  |
+| **SubComponente**         | Aplicación_Móvil_Servicios                                                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
@@ -180,7 +180,7 @@ Componente Backend
 | **Responsabilidades**     | Se encargar de recicibir todas las peticiones del componen                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente**: Frontend_Web                                              | 
-|                           | - **Componente**: Aplicación_Movil                                          |
+|                           | - **Componente**: Aplicación_Móvil                                          |
 |                           | -                                                                           |
 |                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
