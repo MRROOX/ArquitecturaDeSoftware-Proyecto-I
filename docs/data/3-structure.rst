@@ -42,7 +42,7 @@ Componente Frontend_Web
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**. 
+|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Backend                                                   |
 |                           | - **Interface:**                                                            |
