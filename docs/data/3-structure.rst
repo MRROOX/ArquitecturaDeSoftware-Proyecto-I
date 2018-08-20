@@ -45,7 +45,7 @@ Componente Frontend_Web
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
-|                           | - Interfaces ?                                                               |
+|                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Backend                                                   |
 |                           |                                                                             |
@@ -62,8 +62,8 @@ SubComponente de Frontend_Web
 +---------------------------+----------------------------------------------------------------------------------+
 | **SubComponente**         | Frontend_Web_Componentes_Visuales                                                |
 +---------------------------+----------------------------------------------------------------------------------+
-| **Responsabilidades**     | - Contiene el contenido y los elementos visuales de las vistas                   |
-|                           |                                                                                  |
+| **Responsabilidades**     | - Se encarga de contener los contenidos visuales y elementos que componen las    |
+|                           |   vistas del frontend web del sistema.                                            |
 |                           | -                                                                                |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |                          |                           |                                                                                  |
@@ -80,7 +80,8 @@ SubComponente de Frontend_Web
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Frontend_Web_Servicios                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | -                                                                           |
+| **Responsabilidades**     | -  Contiene todos los servicios que son necesarios para interactuar con el  |
+|                           |    backend.                                                                 |
 |                           |                                                                             |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
 +---------------------------+-----------------------------------------------------------------------------+
