@@ -45,7 +45,7 @@ Componente Frontend_Web
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
-|                           | -Interfaces ?                                                                |
+|                           | -Interfaces ?                                                               |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Backend                                                   |
 |                           |                                                                             |
@@ -59,21 +59,21 @@ Componente Frontend_Web
 SubComponente de Frontend_Web 
 ------------------------------
 
-+---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Frontend_Web_Componentes_Visuales                                           |
-+---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Contiene el contenido y los elementos visuales de las vistas              |
-|                           |                                                                             |
-|                           | -                                                                           |
-+---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Services                                     |                          
-|                           | - **Componente:** Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales|
-+---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
-+---------------------------+-----------------------------------------------------------------------------+
-| **Problemas**             |                                                                             |
-+---------------------------+-----------------------------------------------------------------------------+
++---------------------------+----------------------------------------------------------------------------------+
+| **Componente**            | Frontend_Web_Componentes_Visuales                                                |
++---------------------------+----------------------------------------------------------------------------------+
+| **Responsabilidades**     | - Contiene el contenido y los elementos visuales de las vistas                   |
+|                           |                                                                                  |
+|                           | -                                                                                |
++---------------------------+----------------------------------------------------------------------------------+
+| **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |                          |                           |                                                                                  |
+|                           | - **SubComponente:** Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales  |
++---------------------------+----------------------------------------------------------------------------------+
+| **Notas**                 |                                                                                  |
+|                           |                                                                                  |
++---------------------------+----------------------------------------------------------------------------------+
+| **Problemas**             |                                                                                  |
++---------------------------+----------------------------------------------------------------------------------+
 
 
 
@@ -101,7 +101,7 @@ SubComponente de Frontend_Web
 |                           |                                                                             |
 |                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -141,7 +141,7 @@ SubComponentes de Aplicación_Movil
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
