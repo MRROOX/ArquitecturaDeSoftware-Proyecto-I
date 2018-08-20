@@ -57,11 +57,8 @@ Documents the architectural or system-level constraints on the component that th
 List of issues awaiting resolution. There may also be some notes on possible implementation strategies or impact on other components. As the understanding of the system and its architecture increases this list should eventually become empty.
  
  
-Lista de Componentes
---------------------
-
 Componente Frontend
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Frontend                                                                    |
@@ -82,7 +79,7 @@ Componente Frontend
 
 
 Componente AppMovil
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | AppMovil                                                                    |
@@ -102,8 +99,8 @@ Componente AppMovil
 
 
 
-Componente SpringServel
-~~~~~~~~~~~~~~~~~~~~~~~
+Componente SpringServlet
+------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | SpringServlet                                                               |
