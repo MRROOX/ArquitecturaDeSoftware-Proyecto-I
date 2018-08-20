@@ -172,3 +172,33 @@ Respuesta
 +---------------------------+-----------------------------------------------------------------------------+
 | **Descripción**           | Permite acceder, guardar, listar y encontrar medidas entre un rango de      |
 |                           | fechas.                                                                     |
++---------------------------+-----------------------------------------------------------------------------+
+| **Operaciones**           | - **Operación:** medida_index()                                             |
+|                           | - **Ruta:** medida                                                          |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista todas las mediciones registradas.                  |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** medida_indexOf( Rango rango_fecha )                        |
+|                           | - **Ruta:** medida/range                                                    |
+|                           | - **Metodo:** POST                                                          |
+|                           | - **Descripción:** Lista todas las medidas encontradas en el rango de       |
+|                           |     fechas establecido                                                      |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** medida_store( medida_data )                                |
+|                           | - **Ruta:** medida                                                          |
+|                           | - **Metodo:** POST                                                          |
+|                           | - **Descripción:** Guarda todos los datos de una nueva medida               |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** medida_show ( medida id )                                  |
+|                           | - **Ruta:** medida/{id}                                                     |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** permite obtener la medida correspondiente al id          |
++---------------------------+-----------------------------------------------------------------------------+
+| **Protocolo**             | No existen restricciones en el orden de las operaciones                     |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
