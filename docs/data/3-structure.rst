@@ -63,7 +63,7 @@ SubComponente de Frontend_Web
 | **SubComponente**         | Frontend_Web_Componentes_Visuales                                                |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Responsabilidades**     | - Se encarga de contener los contenidos visuales y elementos que componen las    |
-|                           |   vistas del frontend web del sistema.                                            |
+|                           |   vistas del frontend web del sistema.                                           |
 |                           | -                                                                                |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |                          |                           |                                                                                  |
@@ -120,7 +120,9 @@ Componente Aplicación_Móvil
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Aplicación_Móvil                                                            |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
+| **Responsabilidades**     | -Interactúa con el **usuario móvil**, ponentes visuales que permiten cierto |
+|                           | - Es el intermediario entre las operaciones de los usuarios móvil y el      |
+|                           |   **backend**.                                                              |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:**  Backend                                                  |
 |                           | -                                                                           |
@@ -139,9 +141,10 @@ SubComponentes de Aplicación_Móvil
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Aplicación_Moóil_Componentes_Visuales                                       |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario móvil**, ponentes visuales que permiten cierto|
-|                           |   acceso a componentes de URL.                                              |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | - Se encarga de contener los contenidos visuales y elementos que componen   |
+|                           |   las vistas de la aplicación movil.                                        |
+|                           | - Es intermediario entre las operaciones de los usuarios móvil y el         |
+|                           |   **backend**.                                                              |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
 |                           |                                                                             |
