@@ -136,13 +136,13 @@ Respuesta
 +---------------------------+-----------------------------------------------------------------------------+
 | **Interface**             | Respuesta_controller                                                        |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Descripción**           | Permite acceder, aprobar, eliminar respuesta, ademas de listar por 		  |
-|                           | respuestas no aprobadas.                                                    |
+| **Descripción**           | Permite acceder, aprobar, eliminar, ademas de listar por respuestas no      |
+|                           | aprobadas.                                                                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Operaciones**           | - **Operación:** respuesta_indexNoAprobado()                                |
 |                           | - **Ruta:** respuesta/noaprobados                                           |
 |                           | - **Metodo:** GET                                                           |
-|                           | - **Descripción:** Lista las respuestas no aprobadas con sus datos.		  |
+|                           | - **Descripción:** Lista las respuestas no aprobadas con sus datos.         |
 +                           +-----------------------------------------------------------------------------+
 |                           | - **Operación:** respuesta_store( respuesta_data )                          |
 |                           | - **Ruta:** respuesta                                                       |
