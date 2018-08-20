@@ -44,8 +44,8 @@ Componente Frontend_Web
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**. 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Backend
-|                           | - **Interface:** 
+| **Colaboradores**         | - **Componente:** Backend                                                   |
+|                           | - **Interface:**                                                            |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
 |                           | componente servicios de la aplicación movil                                 |
@@ -59,7 +59,7 @@ Componente Aplicación_Movil
 -------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Aplicación_Movil                                                                    |
+| **Componente**            | Aplicación_Movil                                                            |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -80,7 +80,7 @@ Componente Backend
 ------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend                                                            |
+| **Componente**            | Backend                                                                     |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
 +---------------------------+-----------------------------------------------------------------------------+
