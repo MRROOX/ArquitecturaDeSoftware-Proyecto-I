@@ -1,3 +1,14 @@
 Comportamiento Dinámico
 =====================
-How the architecture works
+
+Escenarios
+----------
+
+Especificación
+~~~~~~~~~~~~~~
+
+Modelo de Interacción de Componentes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Mecanismos
+----------
