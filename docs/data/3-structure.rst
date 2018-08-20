@@ -60,7 +60,7 @@ SubComponente de Frontend_Web
 ------------------------------
 
 +---------------------------+----------------------------------------------------------------------------------+
-| **Componente**            | Frontend_Web_Componentes_Visuales                                                |
+| **SubComponente**         | Frontend_Web_Componentes_Visuales                                                |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Responsabilidades**     | - Contiene el contenido y los elementos visuales de las vistas                   |
 |                           |                                                                                  |
@@ -78,7 +78,7 @@ SubComponente de Frontend_Web
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Frontend_Web_Servicios                                                      |
+| **SubComponente**         | Frontend_Web_Servicios                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | -                                                                           |
 |                           |                                                                             |
@@ -95,7 +95,7 @@ SubComponente de Frontend_Web
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales                  |
+| **SubComponente**         | Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | -                                                                           |
 |                           |                                                                             |
@@ -135,7 +135,7 @@ SubComponentes de Aplicación_Movil
 ------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Aplicación_Movil_Componentes_Visuales                                       |
+| **SubComponente**         | Aplicación_Movil_Componentes_Visuales                                       |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
@@ -152,7 +152,7 @@ SubComponentes de Aplicación_Movil
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Aplicación_Movil_Servicios                                                  |
+| **SubComponente**         | Aplicación_Movil_Servicios                                                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
@@ -191,7 +191,7 @@ SubComponentes de Backend
 ------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend_Spring_Servlet                                                      |
+| **SubComponente**         | Backend_Spring_Servlet                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Se encarga de recicibir todas las peciciones                              |
 |                           |                                                                             |
@@ -208,7 +208,7 @@ SubComponentes de Backend
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend_Autenticacion                                                       |
+| **SubComponente**         | Backend_Autenticacion                                                       |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | -  Realiza operaciones para comprobar una solicitud de autentificacion      |
 |                           |                                                                             |
@@ -225,7 +225,7 @@ SubComponentes de Backend
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend_Controladores                                                       |
+| **SubComponente**         | Backend_Controladores                                                       |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | -   Reciben solicitudes y generan una respuesta, dependiendo de la          |
 |                           |    operación que se requiere.                                               |
@@ -243,7 +243,7 @@ SubComponentes de Backend
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend_Repository                                                          |
+| **SubComponente**         | Backend_Repository                                                          |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | -  Se encarga de gestionar la informacion de la base de datos               |
 |                           |                                                                             |
@@ -260,7 +260,7 @@ SubComponentes de Backend
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend_Entity_Manager                                                      |
+| **SubComponente**         | Backend_Entity_Manager                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Se encarga de realizar los procedeimientos de comunicacion para conectar  |
 |                           |   con la base de datos.                                                     |
@@ -277,7 +277,7 @@ SubComponentes de Backend
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend_Modelos                                                             |
+| **SubComponente**         | Backend_Modelos                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Dan a conocer la estructura de los datos que se deben almacenar en la base|
 |                           |   de datos.                                                                 |
