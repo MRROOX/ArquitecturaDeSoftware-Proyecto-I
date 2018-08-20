@@ -129,3 +129,40 @@ Pregunta
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
+
+Respuesta
+~~~~~~~~~
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Interface**             | Respuesta_controller                                                        |
++---------------------------+-----------------------------------------------------------------------------+
+| **Descripción**           | Permite acceder, aprobar, eliminar respuesta, ademas de listar por 		  |
+|                           | respuestas no aprobadas.                                                    |
++---------------------------+-----------------------------------------------------------------------------+
+| **Operaciones**           | - **Operación:** respuesta_indexNoAprobado()                                |
+|                           | - **Ruta:** respuesta/noaprobados                                           |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista las respuestas no aprobadas con sus datos.		  |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** respuesta_store( respuesta_data )                          |
+|                           | - **Ruta:** respuesta                                                       |
+|                           | - **Metodo:** POST                                                          |
+|                           | - **Descripción:** Guarda todos los datos de una nueva respuesta            |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** respuesta_aprobar ( respuesta id )                         |
+|                           | - **Ruta:** respuesta/aprobar/{id}                                          |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Permita aprobar una respuesta con la id especificada     |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** respuesta_destroy ( respuesta id )                         |
+|                           | - **Ruta:** respuesta/{id}                                                  |
+|                           | - **Metodo:** DELETE                                                        |
+|                           | - **Descripción:** Elimina la respuesta correspondiente al id               |
++---------------------------+-----------------------------------------------------------------------------+
+| **Protocolo**             | No existen restricciones en el orden de las operaciones                     |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
