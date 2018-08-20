@@ -34,15 +34,16 @@ Componentes Logicos
 Interfaces
 ----------
 
-==========================  ====================================================
- **Interface**              Usuario_controller
- **Descripción**            Permite acceder, eliminar, crear y actualizar un usuario.
- **Operaciones**            * **Operación:** usuario_index()
-                            * **Ruta:** usuario                            
-                            * **Metodo:** GET                            
-                            * **Descripción:** Lista cada usuario con sus datos (nombre, correo)
-
-
++---------------------------+-----------------------------------------------------------------------------+
+| **Interface**             | Usuario_controller                                                          |
++---------------------------+-----------------------------------------------------------------------------|
+| **Descripción**           | Permite acceder, eliminar, crear y actualizar un usuario.                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Operaciones**           | * **Operación:** usuario_index()                                            |
+|                           | * **Ruta:** usuario                                                         |
+|                           | * **Metodo:** GET                                                           |
+|                           | * **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
++---------------------------+-----------------------------------------------------------------------------+
                             * **Operación:** usuario_store( usuario_data )
                             * **Ruta:** usuario
                             * **Metodo:** POST
@@ -69,18 +70,3 @@ Interfaces
  **Protocol**               No existen restricciones en el orden de las operaciones
  **Notas**                  Esta interface es provista en el componente servicios del frontend y el componente servicios de la aplicación movil
  **Problemas**
-==========================  ====================================================
-
-Grid table:
-
-+------------+------------+-----------+
-| Header 1   | Header 2   | Header 3  |
-+============+============+===========+
-| body row 1 | column 2   | column 3  |
-+------------+------------+-----------+
-| body row 2 | Cells may span columns.|
-+------------+------------+-----------+
-| body row 3 | Cells may  | - Cells   |
-+------------+ span rows. | - contain |
-| body row 4 |            | - blocks. |
-+------------+------------+-----------+
