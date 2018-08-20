@@ -71,5 +71,5 @@ Interfaces
 | **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
 |                           | componente servicios de la aplicación movil                                 |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Problemas**             | |
+| **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
