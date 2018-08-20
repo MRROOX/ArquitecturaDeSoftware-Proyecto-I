@@ -6,6 +6,7 @@ Visión de Conjunto
 .. image:: images/EstructuraOverview.jpg
     :scale: 70 %
     :align: center
+
 El sistema se encuentra compuesto por tres componentes principales; Backend, Frontend Web, Aplicación Móvil, agregando otras dos partes adicionales; un motor de base de datos y una colección de sensores.
 
 El **Frontend** web tiene **Componentes Visuales** que le permiten a los usuarios interactuar gráficamente con ellos, contienen vistas y controladores. Los **Ocultadores de Componentes Visuales** controlan la forma en la que ciertos componentes se despliegan al usuario.
@@ -20,9 +21,10 @@ El **Sensor** es un componente técnico que puede comunicarse directamente con l
 
 Los **Modelos** tienen el propósito de dar a conocer la estructura de los datos que se deben almacenar en la **Base de Datos**, por lo que **Hibernate Entity Manager** los utiliza principalmente para conocer la forma de los datos.
 
-Componentes Logicos
+Sección de Componentes
 -------------------
-En esta seccion se describe cada uno de los componentes en la arquitectura.
+
+En esta seccion se describe cada uno de los componentes pertenecientes a cada una de las las arquitectura que componen nuestro sistema.
 
 ==========================  ====================================================
  **Componente**              Identificador único
@@ -45,10 +47,68 @@ Componente Frontend_Web
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Backend                                                   |
-|                           | - **Interface:**                                                            |
+|                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
-|                           | componente servicios de la aplicación movil                                 |
+| **Notas**                 |                                                                             |
+|                           |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+SubComponentes de Frontend_Web 
+------------------------------
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | Frontend_Web_Servicios                                                      |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
+|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
+|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |                          
+|                           |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 |                                                                             |
+|                           |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+
+SubComponentes de Frontend_Web 
+------------------------------
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | Frontend_Web_Servicios                                                      |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
+|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
+|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+|                           |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 |                                                                             |
+|                           |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+SubComponentes de Frontend_Web 
+------------------------------
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales                  |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
+|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
+|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+|                           |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 |                                                                             |
+|                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
