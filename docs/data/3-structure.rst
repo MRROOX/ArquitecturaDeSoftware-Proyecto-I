@@ -63,8 +63,60 @@ Interfaces
 |                           | - **Operación:** usuario_update ( usuario id, usuario new_data)             |
 |                           | - **Ruta:** usuario                                                         |
 |                           | - **Metodo:** PUT                                                           |
-|                           | - **Descripción:** Actualiza los datos del usuario especificado en el id no |
-|                           |   los nuevos datos (new_data)                                               |
+|                           | - **Descripción:** Actualiza los datos del usuario especificado en el id    |
++---------------------------+-----------------------------------------------------------------------------+
+| **Protocolo**             | No existen restricciones en el orden de las operaciones                     |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Interface**             | Pregunta_controller                                                         |
++---------------------------+-----------------------------------------------------------------------------+
+| **Descripción**           | Permite acceder, eliminar, crear, actualizar y listar por preguntas         |
+|                           | aprobadas y no aprobadas.                                                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Operaciones**           | - **Operación:** pregunta_index()                                           |
+|                           | - **Ruta:** pregunta                                                        |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada pregunta con sus datos, ademas extrae las     |
+|                           |   respuestas de cada pregunta                                               |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** pregunta_indexAprobados()                                  |
+|                           | - **Ruta:** pregunta/aprobados                                              |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada pregunta *aprobada* con sus datos, además     |
+|                           |   respuestas de cada pregunta                                               |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** pregunta_indexNoAprobados()                                |
+|                           | - **Ruta:** pregunta/noaprobados                                            |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada pregunta *no aprobada* con sus datos.         |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** pregunta_store( pregunta_data )                            |
+|                           | - **Ruta:** pregunta                                                        |
+|                           | - **Metodo:** POST                                                          |
+|                           | - **Descripción:** Guarda todos los datos de una nueva pregunta             |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** pregunta_show ( pregunta id )                              |
+|                           | - **Ruta:** pregunta/{id}                                                   |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Muestra todos los datos de una pregunta especificada en  |
+|                           |   el id                                                                     |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** pregunta_destroy ( pregunta id )                           |
+|                           | - **Ruta:** pregunta/{id}                                                   |
+|                           | - **Metodo:** DELETE                                                        |
+|                           | - **Descripción:** Elimina la pregunta correspondiente al id                |
++                           +-----------------------------------------------------------------------------+
+|                           | - **Operación:** usuario_update ( usuario id )                              |
+|                           | -  **Ruta:** pregunta/aprobar/{id}                                          |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Cambia el estado de una pregunta *no aprobada* a         |
+|                           |   *aprobada*.                                                               |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Protocolo**             | No existen restricciones en el orden de las operaciones                     |
 +---------------------------+-----------------------------------------------------------------------------+
