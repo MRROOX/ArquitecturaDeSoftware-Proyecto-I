@@ -66,10 +66,10 @@ Interfaces
 |                           | - **Descripción:** Actualiza los datos del usuario especificado en el id no |
 |                           |   los nuevos datos (new_data)                                               |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Protocol**              | No existen restricciones en el orden de las operaciones                     |
+| **Protocolo**             | No existen restricciones en el orden de las operaciones                     |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
 |                           | componente servicios de la aplicación movil                                 |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Problemas**             | adwwadwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaq |
+| **Problemas**             | |
 +---------------------------+-----------------------------------------------------------------------------+
