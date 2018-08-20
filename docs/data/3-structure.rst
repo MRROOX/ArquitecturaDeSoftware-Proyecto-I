@@ -37,13 +37,10 @@ Interfaces
 ==========================  ====================================================
  **Interface**              Usuario_controller
  **Descripción**            Permite acceder, eliminar, crear y actualizar un usuario.
- **Operaciones**            **Operación:** usuario_index()
- 
-                            **Ruta:** usuario
-                            
-                            **Metodo:** GET
-                            
-                            **Descripción:** Lista cada usuario con sus datos (nombre, correo)
+ **Operaciones**            * **Operación:** usuario_index()
+                            * **Ruta:** usuario                            
+                            * **Metodo:** GET                            
+                            * **Descripción:** Lista cada usuario con sus datos (nombre, correo)
 
 
                             **Operación:** usuario_store( usuario_data )
