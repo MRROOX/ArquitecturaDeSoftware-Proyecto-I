@@ -184,7 +184,7 @@ Medida
 |                           | - **Ruta:** medida/range                                                    |
 |                           | - **Metodo:** POST                                                          |
 |                           | - **Descripción:** Lista todas las medidas encontradas en el rango de       |
-|                           |     fechas establecido                                                      |
+|                           |     fechas establecido.                                                     |
 +                           +-----------------------------------------------------------------------------+
 |                           | - **Operación:** medida_store( medida_data )                                |
 |                           | - **Ruta:** medida                                                          |
