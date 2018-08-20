@@ -22,6 +22,7 @@ Los **Modelos** tienen el propósito de dar a conocer la estructura de los datos
 
 Componentes Logicos
 -------------------
+En esta seccion se describe cada uno de los componentes en la arquitectura. Un component es documentado siguienfo el siguiente template.
 
 ==========================  ====================================================
  **Componente**              Identificador único
@@ -30,6 +31,103 @@ Componentes Logicos
  **Notas**                   aqui no sé que va
  **Problemas**               problemas que quedan por resolver en este nivel
 ==========================  ====================================================
+
+                    Tabla 1: Componente 1
+
+Tabla 1 contiene un ejemplo de especificacion de un componente, a continuacion se discute la forma y la semantica de cada punto de la especificacion.
+**Component**
+Cada componente debe ser un nombre unico y posibilitar a numero de version. Esta seccion puede incluso ocntener referencias la documentacion del diseño del componente y a su implementacion. En caso de un componente complejo este debera ser descompuesto en subcomponentes, incluso agregar las referencias al capitulo o a al decomuento de arquitectura describiendo la estructura de el componente.
+
+**Responsabilidad**
+Describe el proposito or la descripcion del trabajo del componente en terminos de 1. la responsabilidad del componente y 2. las interfaces que es provista o proporcionada.
+
+Una responsabilidad es a "pieza de funcionalidad" y especifica el proposito del componente. Esta puede ser informacion que el componente conoce, o una accion que este sabe como realizar.
+
+Interfaces can be listed by reference to named interface specifications in section 3.3.3, or by explicitly listing and describing the use cases or operations that constitute the interface in the same way as they are described in section 3.3.3. Referencing named interfaces facilitates component “plug and play”. It can also be useful to document the rationale for the component, i.e. give the underlying reasons why the component is designed the way it is.
+ 
+ **Collaborators**
+ 
+Lists the other components from which the component requests services in order to achieve its purpose. Besides the collaborators it is often useful to list also the specific use cases, operations or interfaces of the collaborators that are used.
+
+**Notes**
+Documents the architectural or system-level constraints on the component that the design of the component must satisfy and contains further information needed to use and understand the component. The notes section includes issues such as: • Multiplicity: How many instances of this component exist in the architecture? Are the instances created and destroyed dynamically? If so, under what conditions and how does creation and destruction occur? • Concurrency: Is the component multi-threaded? Does it contain data that needs to be protected against simultaneous reading and writing? • Persistency:  Does the component or its data need to exist beyond the lifetime of the system? • Parameterization: Describes the variability of a component, i.e., ways in which a component can be parameterized or configured.  This is especially important when a different configuration of the component changes the depiction of the architecture.
+
+**Issues**
+
+List of issues awaiting resolution. There may also be some notes on possible implementation strategies or impact on other components. As the understanding of the system and its architecture increases this list should eventually become empty.
+ 
+ 
+Componente Frontend
+-------------------
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | Frontend                                                                    |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Operación:** usuario_index()                                            |
+|                           | - **Ruta:** usuario                                                         |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+
+
+Componente AppMovil
+-------------------
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | AppMovil                                                                    |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Operación:** usuario_index()                                            |
+|                           | - **Ruta:** usuario                                                         |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+
+
+Componente SpringServlet
+------------------------
+
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | SpringServlet                                                               |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Operación:** usuario_index()                                            |
+|                           | - **Ruta:** usuario                                                         |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+
+
+
+
+
+
+ 
+
+
+
 
 Interfaces
 ----------
