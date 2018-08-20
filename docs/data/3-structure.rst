@@ -97,10 +97,10 @@ SubComponente de Frontend_Web
 
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **SubComponente**         | Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales                  |
+| **SubComponente**         | Frontend_Web_Ocultadores_De_Componentes_Visuales                            |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | -                                                                           |
-|                           |                                                                             |
+| **Responsabilidades**     | -  Se encarga de restringir el acceso de los elementos visuales para los    |
+|                           |    distintos usuarios.                                                      |
 |                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
