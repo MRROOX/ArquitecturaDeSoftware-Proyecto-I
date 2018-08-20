@@ -43,25 +43,28 @@ Interfaces
                             * **Descripción:** Lista cada usuario con sus datos (nombre, correo)
 
 
-                            **Operación:** usuario_store( usuario_data )
-                            **Ruta:** usuario
-                            **Metodo:** POST
-                            **Descripción:** Guarda todos los datos de un nuevo usuario
+                            * **Operación:** usuario_store( usuario_data )
+                            * **Ruta:** usuario
+                            * **Metodo:** POST
+                            * **Descripción:** Guarda todos los datos de un nuevo usuario
 
-                            **Operación:** usuario_show ( usuario id )
-                            **Ruta:** usuario/{id}
-                            **Metodo:** GET
-                            **Descripción:** Muestra todos los datos del usuario especificado en el id
 
-                            **Operación:** usuario_destroy ( usuario id )
-                            **Ruta:** usuario/{id}
-                            **Metodo:** DELETE
-                            **Descripción:** Elimina al usuario correspondiente al id 
+                            * **Operación:** usuario_show ( usuario id )
+                            * **Ruta:** usuario/{id}
+                            * **Metodo:** GET
+                            * **Descripción:** Muestra todos los datos del usuario especificado en el id
 
-                            **Operación:** usuario_update ( usuario id, usuario new_data)
-                            **Ruta:** usuario
-                            **Metodo:** PUT
-                            **Descripción:** Actualiza los datos del usuario especificado en el id no los nuevos datos (new_data)
+
+                            * **Operación:** usuario_destroy ( usuario id )
+                            * **Ruta:** usuario/{id}
+                            * **Metodo:** DELETE
+                            * **Descripción:** Elimina al usuario correspondiente al id 
+
+
+                            * **Operación:** usuario_update ( usuario id, usuario new_data)
+                            * **Ruta:** usuario
+                            * **Metodo:** PUT
+                            * **Descripción:** Actualiza los datos del usuario especificado en el id no los nuevos datos (new_data)
 
  **Protocol**               No existen restricciones en el orden de las operaciones
  **Notas**                  Esta interface es provista en el componente servicios del frontend y el componente servicios de la aplicación movil
