@@ -45,6 +45,7 @@ Componente Frontend_Web
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+|                           | -Interfaces ?                                                                |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Backend                                                   |
 |                           |                                                                             |
@@ -61,12 +62,12 @@ SubComponente de Frontend_Web
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Frontend_Web_Componentes_Visuales                                           |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
-+---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |                          
+| **Responsabilidades**     | - Contiene el contenido y los elementos visuales de las vistas              |
 |                           |                                                                             |
+|                           | -                                                                           |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Componente:** Frontend_Web_Services                                     |                          
+|                           | - **Componente:** Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales|
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
@@ -75,18 +76,16 @@ SubComponente de Frontend_Web
 +---------------------------+-----------------------------------------------------------------------------+
 
 
-SubComponente de Frontend_Web 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Frontend_Web_Servicios                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
+| **Responsabilidades**     | -                                                                           |
+|                           |                                                                             |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
-|                           |                                                                             |
+| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
+|                           | - **SubComponente:** Backend_Spring_Servlet                                 |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
@@ -94,15 +93,13 @@ SubComponente de Frontend_Web
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Frontend_Web 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales                  |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | -                                                                           |
+|                           |                                                                             |
+|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
 |                           |                                                                             |
@@ -153,8 +150,6 @@ SubComponentes de Aplicación_Movil
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Aplicación_Movil 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Aplicación_Movil_Servicios                                                  |
@@ -179,12 +174,12 @@ Componente Backend
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Backend                                                                     |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
+| **Responsabilidades**     | Se encargar de recicibir todas las peticiones del componen                  |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Operación:** usuario_index()                                            |
-|                           | - **Ruta:** usuario                                                         |
-|                           | - **Metodo:** GET                                                           |
-|                           | - **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
+| **Colaboradores**         | - **Componente**: Frontend_Web                                              | 
+|                           | - **Componente**: Aplicación_Movil                                          |
+|                           | -                                                                           |
+|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
 |                           | componente servicios de la aplicación movil                                 |
@@ -196,13 +191,13 @@ SubComponentes de Backend
 ------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
-| **Componente**            | Backend_Spring_Servlet               |
+| **Componente**            | Backend_Spring_Servlet                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | - Se encarga de recicibir todas las peciciones                              |
+|                           |                                                                             |
+|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -211,17 +206,15 @@ SubComponentes de Backend
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Backend 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Backend_Autenticacion                                                       |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | -  Realiza operaciones para comprobar una solicitud de autentificacion      |
+|                           |                                                                             |
+|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Backeng_Controladores                                  |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -230,17 +223,16 @@ SubComponentes de Backend
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Backend 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Backend_Controladores                                                       |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | -   Reciben solicitudes y generan una respuesta, dependiendo de la          |
+|                           |    operación que se requiere.                                               |
+|                           |                                                                             |
+|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Backend_Repository                                     |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -249,19 +241,15 @@ SubComponentes de Backend
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-
-
-SubComponentes de Backend 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Backend_Repository                                                          |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | -  Se encarga de gestionar la informacion de la base de datos               |
+|                           |                                                                             |
+|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Backend_Entity_Manager                                 |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -270,17 +258,15 @@ SubComponentes de Backend
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Backend 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Backend_Entity_Manager                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | - Se encarga de realizar los procedeimientos de comunicacion para conectar  |
+|                           |   con la base de datos.                                                     |
+|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Backend_Modelos                                        |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -289,17 +275,15 @@ SubComponentes de Backend
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Backend 
-------------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Backend_Modelos                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
-|                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+| **Responsabilidades**     | - Dan a conocer la estructura de los datos que se deben almacenar en la base|
+|                           |   de datos.                                                                 |
+|                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **SubComponente:** Backend_Entity_Manager                                 |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -311,22 +295,6 @@ SubComponentes de Backend
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
 
 
