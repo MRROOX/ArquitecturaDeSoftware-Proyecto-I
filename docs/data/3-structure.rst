@@ -31,6 +31,7 @@ En esta seccion se describe cada uno de los componentes en la arquitectura. Un c
  **Notas**                   aqui no sé que va
  **Problemas**               problemas que quedan por resolver en este nivel
 ==========================  ====================================================
+
                     Tabla 1: Componente 1
 
 Tabla 1 contiene un ejemplo de especificacion de un componente, a continuacion se discute la forma y la semantica de cada punto de la especificacion.
@@ -54,6 +55,75 @@ Documents the architectural or system-level constraints on the component that th
 **Issues**
 
 List of issues awaiting resolution. There may also be some notes on possible implementation strategies or impact on other components. As the understanding of the system and its architecture increases this list should eventually become empty.
+ 
+ 
+Lista de Componentes
+---------------------
+
+Componente Frontend
+~~~~~~~~
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | Frontend                                                                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Operación:** usuario_index()                                            |
+|                           | - **Ruta:** usuario                                                         |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+
+
+Componente AppMovil
+~~~~~~~~
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | AppMovil                                                                  |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Operación:** usuario_index()                                            |
+|                           | - **Ruta:** usuario                                                         |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+
+
+Componente SpringServel
+~~~~~~~~
++---------------------------+-----------------------------------------------------------------------------+
+| **Componente**            | SpringServlet                                                                |
++---------------------------+-----------------------------------------------------------------------------+
+| **Responsabilidades**     | Permite acceder, eliminar, crear y actualizar un usuario.                   |
++---------------------------+-----------------------------------------------------------------------------+
+| **Colaboradores**         | - **Operación:** usuario_index()                                            |
+|                           | - **Ruta:** usuario                                                         |
+|                           | - **Metodo:** GET                                                           |
+|                           | - **Descripción:** Lista cada usuario con sus datos (nombre, correo)        |
++---------------------------+-----------------------------------------------------------------------------+
+| **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
+|                           | componente servicios de la aplicación movil                                 |
++---------------------------+-----------------------------------------------------------------------------+
+| **Problemas**             |                                                                             |
++---------------------------+-----------------------------------------------------------------------------+
+
+
+
+
+
+
+
  
 
 
