@@ -26,7 +26,7 @@ Sección de Componentes
 
 En esta seccion se describe cada uno de los componentes pertenecientes a cada una de las las arquitectura que componen nuestro sistema.
                     
-Componente Frontend_Web  
+Componente Frontend Web  
 -----------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
@@ -67,7 +67,6 @@ Componentes Visuales
 
 Servicios
 ~~~~~~~~~
-
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Frontend_Web_Servicios                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -135,9 +134,6 @@ Componente Aplicación_Móvil
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponentes de Aplicación_Móvil 
-----------------------------------
-
 Componentes Visuales
 ~~~~~~~~~~~~~~~~~~~~
 +---------------------------+-----------------------------------------------------------------------------+
@@ -159,7 +155,6 @@ Componentes Visuales
 
 Servicios
 ~~~~~~~~~
-
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Aplicación_Móvil_Servicios                                                  |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -200,9 +195,6 @@ Componente Backend
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-
-SubComponentes de Backend 
--------------------------
 
 Spring Servlet
 ~~~~~~~~~~~~~~
@@ -343,9 +335,6 @@ Sensor
 Sección de Interfaces
 ---------------------
 En esta sección se describen y especifican los servicios o interfaces que provee el sistema.
-
-Interfaces
-----------
 
 Usuario
 ~~~~~~~~
