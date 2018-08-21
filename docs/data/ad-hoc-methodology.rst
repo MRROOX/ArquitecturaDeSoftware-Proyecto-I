@@ -98,7 +98,7 @@ Mockups
 
 A continuacion se presentan los mockups diseñados de acuerdo a una posterior discucion con el equipo de desarrollo, de esta forma.
 
-**Mockaps peteneciente a Usuario Web**
+**Mockups peteneciente a Usuario Web**
 
 .. image:: images/CompararTemperaturas.png
     :scale: 60 %
@@ -116,7 +116,7 @@ A continuacion se presentan los mockups diseñados de acuerdo a una posterior di
   
     
 
-**Mockaps peteneciente a Usuario Móvil**
+**Mockups peteneciente a Usuario Móvil**
 
 
 .. image:: images/loginmovil.PNG
@@ -145,7 +145,7 @@ A continuacion se presentan los mockups diseñados de acuerdo a una posterior di
 
 
 
-**Mockaps peteneciente a Usuario Moderador**
+**Mockups peteneciente a Usuario Moderador**
 
 .. image:: images/ModerarUsuarios.png
     :scale: 60 %
