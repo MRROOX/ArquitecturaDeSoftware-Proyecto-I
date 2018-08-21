@@ -251,8 +251,7 @@ Controladores
 | **Colaboradores**         | - **SubComponente:** Backend_Repository                                     |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 | El sub-componente controladores se crea y se destruye de manera dinamica a  |
-|                           | medida que es solicitado por el subcomponente de Spring Servlet.            |
+| **Notas**                 | El sub-componente controladores se crea una sola vez                        |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -287,8 +286,8 @@ Entity Manager
 | **Colaboradores**         | - **SubComponente:** Backend_Modelos                                        |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
+| **Notas**                 | El sub-componente Entity Manager se crea una sola vez, y esta instancia     |
+|                           | persiste para todo el sistema mientras esta funcionando.                    |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
