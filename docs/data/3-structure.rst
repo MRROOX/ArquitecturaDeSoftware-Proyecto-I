@@ -94,8 +94,9 @@ Servicios
 |                           | - **Interface:** Respuesta_controller                                       |
 |                           | - **Interface:** Medida_controller                                          |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
+| **Notas**                 | El sub-componente se crea y se destruye de manera dinamica a medida que se  |
+|                           | necesitan los componentes visuales. Pueden existir distintas instancias del |
+|                           | componente.
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -111,8 +112,8 @@ Ocultadores de componentes visuales
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
+| **Notas**                 | El sub-componente se crea una vez y persiste mientras el sistema esta en    |
+|                           | uso.                                                                        |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -131,7 +132,7 @@ Componente Aplicación_Móvil
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Backend                                                   |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
+| **Notas**                 | El componente se crea una sola vez y persiste mientra el |
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
