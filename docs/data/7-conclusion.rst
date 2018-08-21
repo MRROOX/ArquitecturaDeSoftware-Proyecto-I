@@ -49,7 +49,7 @@ Para el desarrollo del sistema se escogió el uso de una arquitectura RESTful en
 7.	Preparado para lazy loading
 8.	Provee un modo producción y un modo desarrollo
 9.	Listo para Ahead of Time Compilation
-10.	Angular es MUY bien pagado en el mundo front-end empresarial
+10.	Angular es bien apreciado en el mundo front-end empresarial
 
 **Desventajas de uso Angular**
 
