@@ -3,6 +3,9 @@ Otras Vistas
 
 Vista de Procesos
 -----------------
+.. image:: images/ProcessView.png
+    :scale: 40 %
+    :align: center
 
 Vista de Desarrollo
 -------------------
