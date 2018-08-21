@@ -89,6 +89,13 @@ Servicios
 |                           |- Interfaces previstas:                                                      |
 |                           |   - Usuario_controller: Provee acciones para acceder a un usuario y         |
 |                           |     registrar un usuario.                                                   |
+|                           |   - Pregunta_controller: Provee las acciones para listar todas las preguntas|
+|                           |     por diferentes criterios (no aprobadas, aprobadas o todas). Además le   |
+|                           |     permite al moderador aprobar preguntas.                                 |
+|                           |   - Respuesta_controller: Provee los metodos al moderador para aprobar      |
+|                           |     respuestas, ademas de listar por respuestas aprobadas o no aprobadas.   |
+|                           |   - Medida_controller: Provee los metodos para listar todas medidas         |
+|                           |     registradas, como tambien por un rango de fechas                        |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |
 |                           | - **SubComponente:** Backend_Spring_Servlet                                 |
