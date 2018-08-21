@@ -178,6 +178,11 @@ Servicios
 | **Responsabilidades**     | - Interactúa con el **usuario web** y el **usuario moderador**, a través    |
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+|                           | - Interfaces provistas:                                                     |
+|                           |    - Usuario_controller: Provee metodos para registrar y acceder a un       |
+|                           |      usuario.                                                               |
+|                           |    - Respuesta_controller: Provee metodos para crear preguntas y listar por |
+|                           |      criterio de preguntas aprobadas y no aprobadas.                        |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Aplicación_Móvil_Componentes_Visuales                     |
 |                           |                                                                             |
