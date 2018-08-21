@@ -56,10 +56,12 @@ Componentes Visuales
 +---------------------------+----------------------------------------------------------------------------------+
 | **Responsabilidades**     | - Se encarga de contener los contenidos visuales y elementos que componen las    |
 |                           |   vistas del frontend web del sistema.                                           |
-|                           | -                                                                                |
+|                           | - Interfaces provistas:                                                          |
+|                           |    - Grafico_medidas: Provee los metodos para modificar los diferentes valores   |
+|                           |      medidas y las grafica.                                                      |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |
-|                           |                                                                                  |
+|                           | - **Interface:** Grafico_medidas                                                 |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Notas**                 |  El componente se crea una vez y persiste mientras el sistema esta en uso.       |
 +---------------------------+----------------------------------------------------------------------------------+
@@ -531,8 +533,8 @@ Grafico
 +---------------------------+-----------------------------------------------------------------------------+
 | **Protocolo**             | No existen restricciones en el orden de las operaciones                     |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
+| **Notas**                 | Esta interface es provista en el componente de Forntend, especificamente en |
+|                           | el sub-componente *componentes visuales*.                                   |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
