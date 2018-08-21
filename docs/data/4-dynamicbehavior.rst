@@ -33,7 +33,7 @@ Definición de **Actores**.
 |  ACT - <02>            | Visitante Móvil                                          |
 +------------------------+----------------------------------------------------------+
 |  Descripción           | Corresponde al visitante movil que accede para realizar  |
-|                        | preguntas.                             |
+|                        | preguntas.                                               |
 +------------------------+----------------------------------------------------------+
 
 
