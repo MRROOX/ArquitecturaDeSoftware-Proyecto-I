@@ -70,7 +70,6 @@ Componentes Visuales
 +---------------------------+----------------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |
 |                           |                                                                                  |
-|                           | - **SubComponente:** Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales  |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Notas**                 |  El componente se crea una vez y persiste mientras el sistema esta en uso.       |
 +---------------------------+----------------------------------------------------------------------------------+
@@ -97,8 +96,7 @@ Servicios
 |                           |   - Medida_controller: Provee los metodos para listar todas medidas         |
 |                           |     registradas, como tambien por un rango de fechas                        |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |
-|                           | - **SubComponente:** Backend_Spring_Servlet                                 |
+| **Colaboradores**         | - **SubComponente:** Backend_Spring_Servlet                                 |
 |                           | - **Interface:** Usuario_controller                                         |
 |                           | - **Interface:** Pregunta_controller                                        |
 |                           | - **Interface:** Respuesta_controller                                       |
@@ -184,8 +182,9 @@ Servicios
 |                           |    - Respuesta_controller: Provee metodos para crear preguntas y listar por |
 |                           |      criterio de preguntas aprobadas y no aprobadas.                        |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Aplicación_Móvil_Componentes_Visuales                     |
-|                           |                                                                             |
+| **Colaboradores**         | - **Componente:** Backend_Spring_Servlet                                    |
+|                           | - **Interface:** Usuario_controller                                         |
+|                           | - **Interface:** Pregunta_controller                                        |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
@@ -204,8 +203,7 @@ Componente Backend
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente**: Frontend_Web                                              | 
 |                           | - **Componente**: Aplicación_Móvil                                          |
-|                           | -                                                                           |
-|                           | -                                                                           |
+|                           | - **Componente**: Base_de_datos                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 | Esta interface es provista en el componente servicios del frontend y el     |
 |                           | componente servicios de la aplicación movil                                 |
@@ -214,17 +212,16 @@ Componente Backend
 +---------------------------+-----------------------------------------------------------------------------+
 
 SubComponentes de Backend 
-------------------------------
+-------------------------
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Backend_Spring_Servlet                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Se encarga de recicibir todas las peciciones                              |
-|                           |                                                                             |
-|                           | -                                                                           |
+| **Responsabilidades**     | - Se encarga de recicibir todas las peticiones y derivarlas a los           |
+|                           |   respectivos controladores.                                                 |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
-|                           |                                                                             |
+| **Colaboradores**         | - **SubComponente:** Backend_Controladores                                  |
+|                           | - **SubComponente:** Backend_Autenticación                                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
