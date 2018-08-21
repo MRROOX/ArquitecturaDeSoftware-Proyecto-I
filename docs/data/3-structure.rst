@@ -90,12 +90,12 @@ Servicios
 |                           |   - Usuario_controller: Provee acciones para acceder a un usuario y         |
 |                           |     registrar un usuario                                                    |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
+| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |
 |                           | - **SubComponente:** Backend_Spring_Servlet                                 |
 |                           | - **Interface:** Usuario_controller                                         |
 |                           | - **Interface:** Pregunta_controller                                        |
 |                           | - **Interface:** Respuesta_controller                                       |
-|                           | - **Interface:** Medida_controller
+|                           | - **Interface:** Medida_controller                                          |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
