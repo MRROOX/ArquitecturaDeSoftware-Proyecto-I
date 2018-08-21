@@ -29,7 +29,7 @@
      {{ mensajePregunta }}
   </ion-label>
 
-  <ion-list inset *ngIf = "pregunta.preguntas">
+  <ion-list inset *ngIf = "pregunta.respuestas">
     <ion-item *ngFor="let respuesta of pregunta.respuestas;">
       {{ respuesta.respuesta }}
     </ion-item>
