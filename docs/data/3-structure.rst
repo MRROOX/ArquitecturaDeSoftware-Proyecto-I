@@ -29,12 +29,13 @@ En esta seccion se describe cada uno de los componentes pertenecientes a cada un
 ==========================  ====================================================
  **Componente**              Identificador único
  **Responsabilidades**       describir lo que hace, y las interfaces que provee
+                            ====================================================
+                             basura
  **Colaboradores**           otros componentes con los que interactua.
  **Notas**                   aqui no sé que va
  **Problemas**               problemas que quedan por resolver en este nivel
 ==========================  ====================================================
-
-                    Tabla 1: Componente 1
+                    
 
 Componente Frontend_Web  
 -----------------------
@@ -219,7 +220,7 @@ Spring Servlet
 | **SubComponente**         | Backend_Spring_Servlet                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Se encarga de recicibir todas las peticiones y derivarlas a los           |
-|                           |   respectivos controladores.                                                 |
+|                           |   respectivos controladores.                                                |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Backend_Controladores                                  |
 |                           | - **SubComponente:** Backend_Autenticación                                  |
@@ -250,8 +251,8 @@ Controladores
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Backend_Controladores                                                       |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | -   Reciben solicitudes y generan una respuesta, dependiendo de la          |
-|                           |    operación que se requiere.                                               |
+| **Responsabilidades**     | - Reciben solicitudes y generan una respuesta, dependiendo de la            |
+|                           |   operación que se requiere.                                                |
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Backend_Repository                                     |  
