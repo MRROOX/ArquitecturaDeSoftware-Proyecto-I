@@ -50,15 +50,17 @@ Componente Frontend_Web
 | **Colaboradores**         | - **Componente:** Backend                                                   |
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
+| **Notas**                 | El componente se crea una sola vez y persiste durante todo el tiempo.       |
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-SubComponente de Frontend_Web 
+SubComponentes de Frontend_Web 
 ------------------------------
 
+Componentes Visuales
+~~~~~~~~~~~~~~~~~~~~
 +---------------------------+----------------------------------------------------------------------------------+
 | **SubComponente**         | Frontend_Web_Componentes_Visuales                                                |
 +---------------------------+----------------------------------------------------------------------------------+
@@ -69,24 +71,31 @@ SubComponente de Frontend_Web
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |                          |                           |                                                                                  |
 |                           | - **SubComponente:** Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales  |
 +---------------------------+----------------------------------------------------------------------------------+
-| **Notas**                 |                                                                                  |
+| **Notas**                 |  El componente se crea una vez y persiste mientras el sistema esta en uso.       |
 |                           |                                                                                  |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Problemas**             |                                                                                  |
 +---------------------------+----------------------------------------------------------------------------------+
 
-
+Servicios
+~~~~~~~~~
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Frontend_Web_Servicios                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | -  Contiene todos los servicios que son necesarios para interactuar con el  |
-|                           |    backend.                                                                 |
-|                           |                                                                             |
+| **Responsabilidades**     | - Contiene todos los servicios que son necesarios para interactuar con el   |
+|                           |   backend.                                                                  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+|                           | - Interfaces previstas:                                                     |
+|                           |   - Usuario_controller: Provee acciones para acceder a un usuario y         |
+|                           |     registrar un usuario                                                    |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
 |                           | - **SubComponente:** Backend_Spring_Servlet                                 |
+|                           | - **Interface:** Usuario_controller                                         |
+|                           | - **Interface:** Pregunta_controller                                        |
+|                           | - **Interface:** Respuesta_controller                                       |
+|                           | - **Interface:** Medida_controller
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
