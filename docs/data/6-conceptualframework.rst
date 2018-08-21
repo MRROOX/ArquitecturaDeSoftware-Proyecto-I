@@ -1,3 +1,8 @@
 Marco Conceptual
 =====
-concepts needed for understanding architecture
+
+Dominio Léxico
+--------------
+
+Diagrama Léxico
+---------------
