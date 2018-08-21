@@ -60,7 +60,7 @@ Componentes Visuales
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |
 |                           | - **Interface:** Grafico_medidas                                                 |
 +---------------------------+----------------------------------------------------------------------------------+
-| **Notas**                 |  El componente se crea una vez y persiste mientras el sistema esta en uso.       |
+| **Notas**                 |  El sub-componente se crea una vez y persiste mientras el sistema esta en uso.   |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Problemas**             |                                                                                  |
 +---------------------------+----------------------------------------------------------------------------------+
@@ -90,9 +90,8 @@ Servicios
 |                           | - **Interface:** Respuesta_controller                                       |
 |                           | - **Interface:** Medida_controller                                          |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 | El sub-componente se crea y se destruye de manera dinamica a medida que se  |
-|                           | necesitan los componentes visuales. Pueden existir distintas instancias del |
-|                           | componente.
+| **Notas**                 | El sub-componente se crea se crea una sola vez y se inyecta en los          |
+|                           | componentes visuales. Pueden existir distintas instancias del componente.   |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -128,8 +127,8 @@ Componente Aplicación Móvil
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **Componente:** Backend                                                   |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 | El componente se crea una sola vez y persiste mientra el |
-|                           |                                                                             |
+| **Notas**                 | El componente se crea una sola vez y persiste mientra el sistema está en    |
+|                           | ejecución.                                                                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -147,8 +146,8 @@ Componentes Visuales
 | **Colaboradores**         | - **SubComponente:** Aplicación_Móvil_Servicios                             |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
+| **Notas**                 | El sub-componente se crea una vez y persiste mientras el sistema esta en    |
+|                           | uso.                                                                        |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -171,8 +170,8 @@ Servicios
 |                           | - **Interface:** Usuario_controller                                         |
 |                           | - **Interface:** Pregunta_controller                                        |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
+| **Notas**                 | El sub-componente se crea se crea una sola vez y se inyecta en los          |
+|                           | componentes visuales. Pueden existir distintas instancias del componente.   |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -237,12 +236,14 @@ Controladores
 |                           |   operación que se requiere.                                                |
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **SubComponente:** Backend_Repository                                     |  
+| **Colaboradores**         | - **SubComponente:** Backend_Repository                                     |
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 | El sub-componente controladores se crea una sola vez                        |
+| **Notas**                 | El sub-componente controladores se crea una sola vez y es persistente       |
+|                           | la ejecución del sistema. Se instancia una sola vez en la arquitectura.     |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Problemas**             |                                                                             |
+| **Problemas**             | Las referencias ciclicas en los modelos generan conflictos al generar el    |
+|                           | JSON.                                                                       |
 +---------------------------+-----------------------------------------------------------------------------+
 
 Repository
@@ -257,8 +258,9 @@ Repository
 | **Colaboradores**         | - **SubComponente:** Backend_Entity_Manager                                 |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Notas**                 |                                                                             |
-|                           |                                                                             |
+| **Notas**                 | Este sub-componente es persistente y se crea una sola vez durante la        |
+|                           | ajecución del sistema. Solo existe una sola instancia de este componente en |
+|                           | la arquitectura.
 +---------------------------+-----------------------------------------------------------------------------+
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
