@@ -18,3 +18,8 @@ Diagrama Léxico
 .. image:: images/DiagramaLexico.png
     :scale: 70 %
     :align: center
+
+Restricciones
+~~~~~~~~~~~~~
+- Una **Pregunta** o **Respuesta** no puede ser visualizada si el **Moderador** no la aprueba.
+- En caso de que no existan **Medidas**, el gráfico puede mostrarse vacío.
