@@ -117,7 +117,6 @@ Ocultadores de componentes visuales
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | -  Se encarga de restringir el acceso de los elementos visuales para los    |
 |                           |    distintos usuarios.                                                      |
-|                           | -                                                                           |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
 |                           |                                                                             |
@@ -135,14 +134,12 @@ Componente Aplicación_Móvil
 +---------------------------+-----------------------------------------------------------------------------+
 | **Componente**            | Aplicación_Móvil                                                            |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | -Interactúa con el **usuario móvil**, ponentes visuales que permiten cierto |
+| **Responsabilidades**     | - Interactúa con el **usuario móvil**, permitiendole crear preguntas acerca |
+|                           |   del clima.
 |                           | - Es el intermediario entre las operaciones de los usuarios móvil y el      |
 |                           |   **backend**.                                                              |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:**  Backend                                                  |
-|                           | -                                                                           |
-|                           | -                                                                           |
-|                           | -                                                                           |
+| **Colaboradores**         | - **Componente:** Backend                                                  |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
