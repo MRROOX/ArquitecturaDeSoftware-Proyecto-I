@@ -25,18 +25,7 @@ Sección de Componentes
 ----------------------
 
 En esta seccion se describe cada uno de los componentes pertenecientes a cada una de las las arquitectura que componen nuestro sistema.
-
-==========================  ====================================================
- **Componente**              Identificador único
- **Responsabilidades**       describir lo que hace, y las interfaces que provee
-                            ====================================================
-                             basura
- **Colaboradores**           otros componentes con los que interactua.
- **Notas**                   aqui no sé que va
- **Problemas**               problemas que quedan por resolver en este nivel
-==========================  ====================================================
                     
-
 Componente Frontend_Web  
 -----------------------
 
