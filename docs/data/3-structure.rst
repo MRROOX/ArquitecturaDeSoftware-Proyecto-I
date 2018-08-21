@@ -339,6 +339,9 @@ Sensor
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
+Sección de Interfaces
+---------------------
+En esta sección se describen y especifican los servicios o interfaces que provee el sistema.
 
 Interfaces
 ----------
