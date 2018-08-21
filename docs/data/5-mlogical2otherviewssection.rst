@@ -1,3 +1,14 @@
 Otras Vistas
 ==========================
-mapping logical components to proccesses, files and hardeware nodes222222
+
+Vista de Procesos
+-----------------
+
+Vista de Desarrollo
+-------------------
+.. image:: images/EstructuraOverview.jpg
+    :scale: 70 %
+    :align: center
+
+Vista Física
+------------
