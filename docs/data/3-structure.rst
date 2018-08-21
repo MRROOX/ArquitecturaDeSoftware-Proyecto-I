@@ -139,7 +139,7 @@ Componente Aplicación_Móvil
 |                           | - Es el intermediario entre las operaciones de los usuarios móvil y el      |
 |                           |   **backend**.                                                              |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Backend                                                  |
+| **Colaboradores**         | - **Componente:** Backend                                                   |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
 |                           |                                                                             |
