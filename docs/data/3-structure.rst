@@ -4,7 +4,7 @@ Estructura
 Visión de Conjunto
 ------------------
 .. image:: images/EstructuraOverview.jpg
-    :scale: 40 %
+    :scale: 70 %
     :align: center
 
 El sistema se encuentra compuesto por tres componentes principales; Backend, Frontend Web, Aplicación Móvil, agregando otras dos partes adicionales; un motor de base de datos y una colección de sensores.
