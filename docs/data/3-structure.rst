@@ -58,7 +58,7 @@ Componentes Visuales
 |                           |   vistas del frontend web del sistema.                                           |
 |                           | - Interfaces provistas:                                                          |
 |                           |    - Grafico_medidas: Provee los metodos para modificar los diferentes valores   |
-|                           |      medidas y las grafica.                                                      |
+|                           |      medidas para posteriormente graficar.                                       |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |
 |                           | - **Interface:** Grafico_medidas                                                 |
