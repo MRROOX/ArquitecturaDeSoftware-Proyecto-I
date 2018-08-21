@@ -135,7 +135,7 @@ Componente Aplicación_Móvil
 | **Componente**            | Aplicación_Móvil                                                            |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Interactúa con el **usuario móvil**, permitiendole crear preguntas acerca |
-|                           |   del clima.
+|                           |   del clima.                                                                |
 |                           | - Es el intermediario entre las operaciones de los usuarios móvil y el      |
 |                           |   **backend**.                                                              |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -148,17 +148,19 @@ Componente Aplicación_Móvil
 +---------------------------+-----------------------------------------------------------------------------+
 
 SubComponentes de Aplicación_Móvil 
-------------------------------
+----------------------------------
 
+Componentes Visuales
+~~~~~~~~~~~~~~~~~~~~
 +---------------------------+-----------------------------------------------------------------------------+
-| **SubComponente**         | Aplicación_Moóil_Componentes_Visuales                                       |
+| **SubComponente**         | Aplicación_Móvil_Componentes_Visuales                                       |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Responsabilidades**     | - Se encarga de contener los contenidos visuales y elementos que componen   |
 |                           |   las vistas de la aplicación movil.                                        |
 |                           | - Es intermediario entre las operaciones de los usuarios móvil y el         |
 |                           |   **backend**.                                                              |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **SubComponente:** Frontend_Web_Componentes_Visuales                      |  
+| **Colaboradores**         | - **SubComponente:** Aplicación_Móvil_Servicios                             |  
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
@@ -167,7 +169,8 @@ SubComponentes de Aplicación_Móvil
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-
+Servicios
+~~~~~~~~~
 
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Aplicación_Móvil_Servicios                                                  |
@@ -176,7 +179,7 @@ SubComponentes de Aplicación_Móvil
 |                           |   de componentes visuales que permiten cierto acceso a componentes de URL.  |
 |                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Colaboradores**         | - **Componente:** Frontend_Web_Componentes_Visuales                         |  
+| **Colaboradores**         | - **Componente:** Aplicación_Móvil_Componentes_Visuales                     |
 |                           |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 | **Notas**                 |                                                                             |
