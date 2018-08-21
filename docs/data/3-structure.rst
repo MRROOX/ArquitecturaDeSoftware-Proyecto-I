@@ -83,10 +83,10 @@ Servicios
 +---------------------------+-----------------------------------------------------------------------------+
 | **SubComponente**         | Frontend_Web_Servicios                                                      |
 +---------------------------+-----------------------------------------------------------------------------+
-| **Responsabilidades**     | - Contiene todos los servicios que son necesarios para interactuar con el   |
+| **Responsabilidades**     | * Contiene todos los servicios que son necesarios para interactuar con el   |
 |                           |   backend.                                                                  |
-|                           | - Es intermediario entre las operaciones de los usuarios y el **backend**.  |
-|                           | - Interfaces previstas:                                                     |
+|                           | * Es intermediario entre las operaciones de los usuarios y el **backend**.  |
+|                           | * Interfaces previstas:                                                     |
 |                           |   * Usuario_controller: Provee acciones para acceder a un usuario y         |
 |                           |     registrar un usuario.                                                   |
 +---------------------------+-----------------------------------------------------------------------------+
@@ -121,13 +121,6 @@ Ocultadores de componentes visuales
 | **Problemas**             |                                                                             |
 +---------------------------+-----------------------------------------------------------------------------+
 
-* Elemento 1
-
-* Elemento 2
-
-  * Elemento 2.1
-
-* Elemento 3
 
 Componente Aplicación_Móvil  
 ---------------------------
