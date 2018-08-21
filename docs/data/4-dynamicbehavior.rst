@@ -1,20 +1,15 @@
 Comportamiento Dinámico
 =====================
 
-Escenarios
-----------
+Especificación De Escenarios
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para describir el comportamiento dinamico utilizaremos el diagrama de **casos de usos**.
+
+
 .. image:: images/DiagramaDeCasosDeUsov2.jpg
     :scale: 70 %
     :align: center
-
-
-
-
-====================== ============================
-table test             asdf
-====================== ============================
-Especificación
-~~~~~~~~~~~~~~
 
 Modelo de Interacción de Componentes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
