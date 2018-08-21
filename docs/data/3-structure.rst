@@ -68,11 +68,11 @@ Componentes Visuales
 |                           |   vistas del frontend web del sistema.                                           |
 |                           | -                                                                                |
 +---------------------------+----------------------------------------------------------------------------------+
-| **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |                          |                           |                                                                                  |
+| **Colaboradores**         | - **SubComponente:** Frontend_Web_Services                                       |
+|                           |                                                                                  |
 |                           | - **SubComponente:** Frontend_Web_Servicios_Ocultadores_De_Componentes_Visuales  |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Notas**                 |  El componente se crea una vez y persiste mientras el sistema esta en uso.       |
-|                           |                                                                                  |
 +---------------------------+----------------------------------------------------------------------------------+
 | **Problemas**             |                                                                                  |
 +---------------------------+----------------------------------------------------------------------------------+
