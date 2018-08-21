@@ -34,7 +34,7 @@ Definición de **Actores**.
 +------------------------+----------------------------------------------------------+
 |  Descripción           |  Corresponde al visistante web que accede a la           |
 |                        |  información sobre paramestros medioambientales y        |
-|                        |  responder preguntas.                                    |
+|                        |  responder preguntas en el sistema web.                  |
 +------------------------+----------------------------------------------------------+
 
 
@@ -42,14 +42,15 @@ Definición de **Actores**.
 |  ACT - <02>            | Visitante Móvil                                          |
 +------------------------+----------------------------------------------------------+
 |  Descripción           | Corresponde al visitante movil que accede para realizar  |
-|                        | preguntas.                                               |
+|                        | preguntas.                             |
 +------------------------+----------------------------------------------------------+
 
 
 +------------------------+----------------------------------------------------------+
 |  ACT - <03>            | Visitante Moderador                                      |
 +------------------------+----------------------------------------------------------+
-|  Descripción           |                                                          |
+|  Descripción           |  Corresponde al usuario que accede para filtrar las      |
+|                        |  preguntas y las respuestas de los demas visitantes.     |
 +------------------------+----------------------------------------------------------+
 
 
