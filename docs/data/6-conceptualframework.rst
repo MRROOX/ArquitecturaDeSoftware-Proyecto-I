@@ -15,3 +15,6 @@ Dominio Léxico
 
 Diagrama Léxico
 ---------------
+.. image:: images/DiagramaLexico.png
+    :scale: 70 %
+    :align: center
