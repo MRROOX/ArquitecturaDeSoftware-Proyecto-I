@@ -10,7 +10,7 @@ Dominio Léxico
 - **Pregunta**: Es una pregunta sobre el clima, que puede ser creada por cualquier tipo de usuario.
 - **Respuesta**: Es un registro que puede ser creado por cualquier tipo de usuario, para poder responder una pregunta.
 - **Moderador**: Un tipo de usuario que puede gestionar las cuentas de usuario del sistema, y moderar/sancionar preguntas y respuestas indebidas.
-- **Usuario**: Cualquier tipo de persona que utiliza el sistema y registra una cuenta de usuario en el.
+- **Usuario**: Cualquier tipo de persona que utiliza el sistema y registra una cuenta de usuario en el, puede ser un visitante web, visistante móvil o moderador.
 
 
 Diagrama Léxico
