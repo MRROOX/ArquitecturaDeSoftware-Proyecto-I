@@ -88,7 +88,6 @@ Selección de historias de usuario
 ---------------------------------
 En primer lugar se definen los criterios para la selección de las historias de usuarios que se implementarán. Cada uno de los siguientes criterios se aplica asignando una nota entre 1-10.
 
-
  - **Complejidad de implementación:** Nota de 1 hasta 10, donde 1 es muy fácil de implementar, y 10 es muy difícil su implementación.
  - **Relevancia para el Usuario:** Nota de 1 hasta 10, donde 1 es de muy poca relevancia, y 10 es muy importante o crucial su implementación.
  - **Disponibilidad de herramientas para reuso:** Nota de 1 hasta 10, donde 1 significa que no existen herramientas o librerias para su reuso, y 10 significa que existen suficientes librerias y son de fácil implementación.
