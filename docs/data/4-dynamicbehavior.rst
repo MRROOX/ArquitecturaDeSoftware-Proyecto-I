@@ -88,7 +88,7 @@ Definición de **casos de usos**.
 | Secuencia Normal       |Paso | Acción                                             |
 |                        +-----+----------------------------------------------------+
 |                        |  1  | Escoger la pregunta a responder                    |
-|                        +-----+----------------------------------------------------+ 
+|                        +-----+----------------------------------------------------+
 |                        |  2  | Rellenar el campo con el contenido a enviar.       |
 |                        +-----+----------------------------------------------------+
 |                        |  3  | Presionar el botón "Enviar"                        |
@@ -104,7 +104,7 @@ Definición de **casos de usos**.
 +------------------------+----------------------------------------------------------+
 |  Descripción           | El actor puede acceder a las diferentes preguntas y      |
 |                        | respuestas que han sido aprobadas.                       |
-+------------------------+----------------------------------------------------------+
++------------------------+-----+----------------------------------------------------+
 | Secuencia Normal       |Paso | Acción                                             |
 |                        +-----+----------------------------------------------------+
 |                        |  1  | Dirigirse al menú de preguntas y respuestas.       |
@@ -120,7 +120,7 @@ Definición de **casos de usos**.
 |  Descripción           | Permite al moderador aprobar y/o eliminar preguntas.     |
 +------------------------+----------------------------------------------------------+
 | Pre-condición          | Hay preguntas por aprobar.                               |
-+------------------------+----------------------------------------------------------+
++------------------------+-----+----------------------------------------------------+
 | Secuencia Normal       |Paso | Acción                                             |
 |                        +-----+----------------------------------------------------+
 |                        |  1  | Dirigirse al panel de preguntas no aprobadas.      |
@@ -144,7 +144,7 @@ Definición de **casos de usos**.
 |  Actores               |          ACT - <02>                                      |
 +------------------------+----------------------------------------------------------+
 |  Descripción           | El actor puede registrar preguntas medioambientales.     |
-+------------------------+----------------------------------------------------------+
++------------------------+-----+----------------------------------------------------+
 | Secuencia Normal       |Paso | Acción                                             |
 |                        +-----+----------------------------------------------------+
 |                        |  1  | Dirigirse al menú de preguntas y respuestas.       |
@@ -167,7 +167,7 @@ Definición de **casos de usos**.
 |  Descripción           | El actor puede acceder a las diferentes preguntas que él |
 |                        | registró, y puede ver las respuestas de las preguntas    |
 |                        | aprobadas.                                               |
-+------------------------+----------------------------------------------------------+
++------------------------+-----+----------------------------------------------------+
 | Secuencia Normal       |Paso | Acción                                             |
 |                        +-----+----------------------------------------------------+
 |                        |  1  | Dirigirse al menú de preguntas y respuestas.       |
