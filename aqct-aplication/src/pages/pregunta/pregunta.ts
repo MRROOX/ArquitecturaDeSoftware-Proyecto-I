@@ -20,51 +20,62 @@ import { RespuestaPage } from '../respuesta/respuesta';
 export class PreguntaPage {
   public arrayPreguntaAprobada: Pregunta[];
   public arrayPreguntaNoAprobada: Pregunta[];
-  public hasPreguntasAprobada:boolean;
-  public hasPreguntasNoAprobada:boolean;
+  public hasPreguntasAprobada: boolean;
+  public hasPreguntasNoAprobada: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private preguntaService: PreguntaServiceProvider,
-              private authService: AuthProvider) {
+    private preguntaService: PreguntaServiceProvider,
+    private authService: AuthProvider) {
 
   }
 
   ionViewDidLoad() {
 
+    this.cargarDatos();
+
+  }
+
+  private cargarDatos() {
     let usuario = this.authService.getToken().usuario;
 
     this.preguntaService.queryAprobados().subscribe(
-      Response => {                
-        this.arrayPreguntaAprobada = Response;                
-        for(var i =0; i< this.arrayPreguntaAprobada.length; i++){
-            if(usuario.nombre != this.arrayPreguntaAprobada[i].usuario.nombre){
-              this.arrayPreguntaAprobada.splice(i,1);
-            }
-        }
-        this.hasPreguntasAprobada = (this.arrayPreguntaAprobada.length>0)?true:false;
+      Response => {
+        this.arrayPreguntaAprobada = Response;
+
+        this.arrayPreguntaAprobada = this.arrayPreguntaAprobada.filter( 
+          pregunta => pregunta.usuario.id == usuario.id
+        );
+
+        this.hasPreguntasAprobada = (this.arrayPreguntaAprobada.length > 0) ? true : false;
       }
     );
 
     this.preguntaService.queryNoAprobados().subscribe(
       Response => {
-        this.arrayPreguntaNoAprobada = Response;        
+        this.arrayPreguntaNoAprobada = Response;
 
-        for(var i =0; i< this.arrayPreguntaNoAprobada.length; i++){          
-            if(usuario.nombre != this.arrayPreguntaNoAprobada[i].usuario.nombre){
-              this.arrayPreguntaNoAprobada.splice(i,1);              
-            }
-        }
-        this.hasPreguntasNoAprobada = (this.arrayPreguntaNoAprobada.length>0)? true:false;
+        this.arrayPreguntaNoAprobada = this.arrayPreguntaNoAprobada.filter(
+          pregunta => pregunta.usuario.id == usuario.id
+        );
+
+        this.hasPreguntasNoAprobada = (this.arrayPreguntaNoAprobada.length > 0) ? true : false;
       }
     );
-
-
   }
 
-  preguntaSelected(pregunta:Pregunta){
-        
+  public doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.cargarDatos();
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
+
+  preguntaSelected(pregunta: Pregunta) {
+
     this.navCtrl.push(RespuestaPage, {
-      'pregunta':pregunta
+      'pregunta': pregunta
     });
 
   }

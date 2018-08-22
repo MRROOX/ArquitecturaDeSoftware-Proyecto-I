@@ -5,25 +5,30 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Preguntas</ion-title>      
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Preguntas</ion-title>
+  </ion-navbar>
+</ion-header>
 
 
 <ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
   <strong>
-    <ion-label>Preguntas Aprobadas</ion-label> 
+    <ion-label>Preguntas Aprobadas</ion-label>
   </strong>
-  
+
   <ion-list inset>
     <button ion-item *ngFor="let pregunta of arrayPreguntaAprobada;" (click)="preguntaSelected(pregunta)">
       {{ pregunta.pregunta }}
     </button>
-    
+
     <ion-card *ngIf="!hasPreguntasAprobada">
       <ion-card-content>
         No se han encontrado preguntas aprobadas
@@ -33,20 +38,20 @@
   </ion-list>
 
   <strong>
-    <ion-label>Preguntas en evaluación</ion-label>  
+    <ion-label>Preguntas en evaluación</ion-label>
   </strong>
-  
+
   <ion-list inset>
-      <button ion-item *ngFor="let pregunta of arrayPreguntaNoAprobada;" (click)="preguntaSelected(pregunta)">
-        {{ pregunta.pregunta }}
-      </button>
-      
-      <ion-card *ngIf="!hasPreguntasNoAprobada">
-        <ion-card-content>
-          No se han encontrado preguntas para evaluar
-        </ion-card-content>
-      </ion-card>
-  
+    <button ion-item *ngFor="let pregunta of arrayPreguntaNoAprobada;" (click)="preguntaSelected(pregunta)">
+      {{ pregunta.pregunta }}
+    </button>
+
+    <ion-card *ngIf="!hasPreguntasNoAprobada">
+      <ion-card-content>
+        No se han encontrado preguntas para evaluar
+      </ion-card-content>
+    </ion-card>
+
   </ion-list>
 
 </ion-content>

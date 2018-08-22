@@ -12,8 +12,11 @@
 
 </ion-header>
 
-
 <ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
 
   <ion-card>
@@ -22,16 +25,25 @@
     </ion-card-header>
     <ion-card-content>
       {{pregunta.descripcion}}
-    </ion-card-content>    
+    </ion-card-content>
   </ion-card>
 
   <ion-label *ngIf="mensajePregunta">
-     {{ mensajePregunta }}
+    {{ mensajePregunta }}
   </ion-label>
 
-  <ion-list inset *ngIf = "pregunta.respuestas">
+  <ion-list inset *ngIf="pregunta.respuestas">
     <ion-item *ngFor="let respuesta of pregunta.respuestas;">
-      {{ respuesta.respuesta }}
+      <div class="row" (click)="modalDetalles(respuesta)">
+        <div class="row">
+          <span>
+            R: {{ respuesta.respuesta }}
+          </span>
+        </div>
+        <strong class="row">
+          Usuario: {{ respuesta.usuario.nombre}}
+        </strong>
+      </div>
     </ion-item>
   </ion-list>
 

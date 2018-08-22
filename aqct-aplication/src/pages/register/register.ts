@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, ToastController, AlertController } from 'ionic-angular';
 import { Usuario } from '../../model/usuario';
 import { UsuarioServiceProvider } from '../../providers/usuario-service/usuario-service';
 import { LoginPage } from '../login/login';
@@ -17,8 +17,14 @@ export class RegisterPage {
 
   private passwordConfirmar:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              private menu: MenuController, private usuarioService: UsuarioServiceProvider) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private menu: MenuController, 
+    private usuarioService: UsuarioServiceProvider,
+    private toastCtrl: ToastController,
+    private alertCtrl: AlertController
+  ) {
     this.usuario = new Usuario();
     //Desactivar el menu para esta vista
     this.menu.swipeEnable(false);
@@ -39,10 +45,22 @@ export class RegisterPage {
             this.usuarioService.save(this.usuario).subscribe(
                 Response => {
                     // El usuario se ha registrado
+                    let toast = this.toastCtrl.create({
+                      message: 'Usuario registrado excitosamente',
+                      duration: 2000,
+                      position: 'top'
+                    });
+                    toast.present();
                     this.navCtrl.setRoot(LoginPage);
                 },
                 Error => {
                     // Error al registrarse
+                    let alert = this.alertCtrl.create({
+                      title: 'Registro fallido!',
+                      subTitle: 'Error al registrar, por favor intente con otros datos.',
+                      buttons: ['Ok']
+                    });
+                    alert.present();
                     console.log(Error);
                 }
             );

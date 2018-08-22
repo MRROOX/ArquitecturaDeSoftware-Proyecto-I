@@ -64,6 +64,7 @@ export class LoginPage {
                   // Redireccionar a ruta correspondiente
                   this.navCtrl.setRoot(HomePage);
               }
+              //esconder el loading spinner
               loading.dismiss();
           },
           Error => {            
@@ -74,6 +75,7 @@ export class LoginPage {
                 buttons: ['Ok']
               });
               alert.present();
+              //esconder el loading spinner
               loading.dismiss();
           }
       );
