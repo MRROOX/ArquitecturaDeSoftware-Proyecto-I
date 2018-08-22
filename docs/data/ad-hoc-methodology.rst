@@ -66,7 +66,8 @@ Yo como <Usuario> quiero <hacer alguna acción> que me entregue <algo>.
 
  - HU-WEB - 02 Visualizar un mapa de temperaturas maximas y minimas dentro de un intervalo dado.
 
- - HU-WEB - 03 Visualizar en gráficos los valores históricos de temperatura y humedad para poder comparar dentro de un intervalo específico de fechas.
+ - HU-WEB - 03 Visualizar en gráficos los valores históricos de temperatura y humedad para poder comparar dentro de un intervalo      
+   específico de fechas.
 
  - HUW - 04 Permitir responder a las preguntas del usuario móvil.
 
@@ -82,11 +83,13 @@ Yo como <Usuario> quiero <hacer alguna acción> que me entregue <algo>.
 
 **Moderador**
 
- - HU-MOD - 01 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una notificación).
+ - HU-MOD - 01 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una 
+   notificación).
 
  - HU-MOD - 02 Yo como usuario moderador quiero aprobar preguntas de usuario móvil.
 
- - HU-MOD - 03 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar su contenido.
+ - HU-MOD - 03 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar 
+   su contenido.
 
 
 Selección de historias de usuario
