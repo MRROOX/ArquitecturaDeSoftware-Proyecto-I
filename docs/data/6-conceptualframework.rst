@@ -23,3 +23,4 @@ Restricciones
 ~~~~~~~~~~~~~
 - Una **Pregunta** o **Respuesta** no puede ser visualizada si el **Moderador** no la aprueba.
 - En caso de que no existan **Medidas**, el gráfico puede mostrarse vacío.
+- Para que exista una **Pregunta** o una **Respuesta**, debe haber un **Usuario** que la haya creado.
