@@ -109,7 +109,7 @@ Usuario web
 +------------------------+---------------------+---------------------------------+-------------------------------+
 
 Considerando cada uno de los criterios mensionados en la tabla, se implementarán las historias de usuario, **HU-WEB - 01**,
-**HU-WEB - 03**, **HU-WEB - 04**. La hostoria de usuario **HU-WEB - 02** no se implementó debido a su complejidad y la falta de 
+**HU-WEB - 03**, **HU-WEB - 04**. La historia de usuario **HU-WEB - 02** no se implementó debido a su complejidad y la falta de 
 librerías y conocimientos en el área de mapas geográficos.
 
 Usuario movil
@@ -118,14 +118,17 @@ Usuario movil
 | **Historia de usuario**| **Complejidad de**  | **Relevancia para el Usuario:** | **Disponibilidad de**         |
 |                        | **implementación:** |                                 | **herramientas para reuso:**  |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-MOV - 01            |                     |                                 |                               |
+| HU-MOV - 01            |       1/10          |           10/10                 |            10/10              |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-MOV - 02            |                     |                                 |                               |
+| HU-MOV - 02            |       7/10          |          6/10                   |            8/10               |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-MOV - 03            |                     |                                 |                               |
+| HU-MOV - 03            |       7/10          |          6/10                   |           8/10                |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-MOV - 04            |                     |                                 |                               |
+| HU-MOV - 04            |      1/10           |          9/10                   |          10/10                |
 +------------------------+---------------------+---------------------------------+-------------------------------+
+Para el usuario movil, se implementarán las historias **HU-MOV - 01** y **HU-MOV - 04**. Las historias de usuario 
+**HU-MOV - 02** y **HU-MOV - 03** no se implementarán por el hecho de que manejar lás notificaciones es muy complejo
+y requiere más tiempo que del que se dispone.
 
 Usuario moderador
 ~~~~~~~~~~~~~~~~~
@@ -133,12 +136,13 @@ Usuario moderador
 | **Historia de usuario**| **Complejidad de**  | **Relevancia para el Usuario:** | **Disponibilidad de**         |
 |                        | **implementación:** |                                 | **herramientas para reuso:**  |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-MOD - 01            |                     |                                 |                               |
+| HU-MOD - 01            |       7/10          |          6/10                   |          8/10                 |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-MOD - 02            |                     |                                 |                               |
+| HU-MOD - 02            |       1/10          |          10/10                  |          10/10                |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-MOD - 03            |                     |                                 |                               |
+| HU-MOD - 03            |       7/10          |          7/10                   |         8/10                  |
 +------------------------+---------------------+---------------------------------+-------------------------------+
+Para el usuario moderador, se implementará la historia **HU-MOD - 02**. Las historias **HU-MOD - 01** y **HU-MOD - 03** no se implementarán por el hecho de que es complejo implementar un sistema de notificaciones y no se cuenta con el tiempo suficiente.
 
 Mockups
 -------
