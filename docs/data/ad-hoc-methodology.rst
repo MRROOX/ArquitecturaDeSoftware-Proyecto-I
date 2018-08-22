@@ -62,39 +62,39 @@ Yo como <Usuario> quiero <hacer alguna acción> que me entregue <algo>.
 
 **Usuario Web**
 
-HU-WEB - 01 Visualizar la temperatura y humedad actuales.
+ - HU-WEB - 01 Visualizar la temperatura y humedad actuales.
 
-HU-WEB - 02 Visualizar un mapa de temperaturas maximas y minimas dentro de un intervalo dado.
+ - HU-WEB - 02 Visualizar un mapa de temperaturas maximas y minimas dentro de un intervalo dado.
 
-HU-WEB - 03 Visualizar en gráficos los valores históricos de temperatura y humedad para poder comparar dentro de un intervalo específico de fechas.
+ - HU-WEB - 03 Visualizar en gráficos los valores históricos de temperatura y humedad para poder comparar dentro de un intervalo específico de fechas.
 
-HUW - 04 Permitir responder a las preguntas del usuario móvil.
+ - HUW - 04 Permitir responder a las preguntas del usuario móvil.
 
 **Usuario Móvil**
 
-HU-MOV - 01 Yo como usuario móvil quiero poder enviar preguntas acerca del clima.
+ - HU-MOV - 01 Yo como usuario móvil quiero poder enviar preguntas acerca del clima.
 
-HU-MOV - 02 Yo como usuario móvil quiero saber cuando mis preguntas sean aprobadas para ser publicadas.
+ - HU-MOV - 02 Yo como usuario móvil quiero saber cuando mis preguntas sean aprobadas para ser publicadas.
 
-HU-MOV - 03 Yo como usuario móvil quiero ser notificado cuando mis preguntas sean respondidas.
+ - HU-MOV - 03 Yo como usuario móvil quiero ser notificado cuando mis preguntas sean respondidas.
 
-HU-MOV - 04 Yo como usuario móvil quiero visualizar las respuestas a mis preguntas.
+ - HU-MOV - 04 Yo como usuario móvil quiero visualizar las respuestas a mis preguntas.
 
 **Moderador**
 
-HU-MOD - 01 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una notificación).
+ - HU-MOD - 01 Yo como usuario moderador quiero saber cuando alguien realiza una pregunta para poder aprobar o no (recibir una notificación).
 
-HU-MOD - 02 Yo como usuario moderador quiero aprobar preguntas de usuario móvil.
+ - HU-MOD - 02 Yo como usuario moderador quiero aprobar preguntas de usuario móvil.
 
-HU-MOD - 03 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar su contenido.
+ - HU-MOD - 03 Yo como usuario moderador quiero saber cuando alguien responde a una de las preguntas ya aprobadas para filtrar su contenido.
 
 
 Selección de historias de usuario
 ---------------------------------
 En primer lugar se definen los criterios para la selección de las historias de usuarios que se implementarán. Cada uno de los siguientes criterios se aplica asignando una nota entre 1-10.
-- **Complejidad de implementación:** Nota de 1 hasta 10, donde 1 es muy fácil de implementar, y 10 es muy difícil su implementación.
-- **Relevancia para el Usuario:** Nota de 1 hasta 10, donde 1 es de muy poca relevancia, y 10 es muy importante o crucial su implementación.
-- **Disponibilidad de herramientas para reuso:** Nota de 1 hasta 10, donde 1 significa que no existen herramientas o librerias para su reuso, y 10 significa que existen suficientes librerias y son de fácil implementación.
+ - **Complejidad de implementación:** Nota de 1 hasta 10, donde 1 es muy fácil de implementar, y 10 es muy difícil su implementación.
+ - **Relevancia para el Usuario:** Nota de 1 hasta 10, donde 1 es de muy poca relevancia, y 10 es muy importante o crucial su implementación.
+ - **Disponibilidad de herramientas para reuso:** Nota de 1 hasta 10, donde 1 significa que no existen herramientas o librerias para su reuso, y 10 significa que existen suficientes librerias y son de fácil implementación.
 
 
 Usuario web
