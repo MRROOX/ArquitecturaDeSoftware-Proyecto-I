@@ -99,14 +99,18 @@ Usuario web
 | **Historia de usuario**| **Complejidad de**  | **Relevancia para el Usuario:** | **Disponibilidad de**         |
 |                        | **implementación:** |                                 | **herramientas para reuso:**  |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-WEB - 01            |                     |                                 |                               |
+| HU-WEB - 01            |       1/10          |          10/10                  |          8/10                 |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-WEB - 02            |                     |                                 |                               |
+| HU-WEB - 02            |      8/10           |          5/10                   |           4/10                |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-WEB - 03            |                     |                                 |                               |
+| HU-WEB - 03            |     4/10            |          9/10                   |            8/10               |
 +------------------------+---------------------+---------------------------------+-------------------------------+
-| HU-WEB - 04            |                     |                                 |                               |
+| HU-WEB - 04            |       1/10          |          9/10                   |           10/10               |
 +------------------------+---------------------+---------------------------------+-------------------------------+
+
+Considerando cada uno de los criterios mensionados en la tabla, se implementarán las historias de usuario, **HU-WEB - 01**,
+**HU-WEB - 03**, **HU-WEB - 04**. La hostoria de usuario **HU-WEB - 02** no se implementó debido a su complejidad y la falta de 
+librerías y conocimientos en el área de mapas geográficos.
 
 Usuario movil
 ~~~~~~~~~~~~~
